@@ -1,0 +1,6 @@
+framework module Pods_Scruffy {
+  umbrella header "Pods-Scruffy-umbrella.h"
+
+  export *
+  module * { export * }
+}

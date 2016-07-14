@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E383088830931537A81479F /* Pods_Scruffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF053657D8792BFE9AB174AA /* Pods_Scruffy.framework */; };
 		B14DEF561D2E9E80003CE6EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DEF551D2E9E80003CE6EE /* AppDelegate.swift */; };
 		B14DEF581D2E9E80003CE6EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DEF571D2E9E80003CE6EE /* ViewController.swift */; };
 		B14DEF5B1D2E9E80003CE6EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF591D2E9E80003CE6EE /* Main.storyboard */; };
 		B14DEF5D1D2E9E80003CE6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */; };
 		B14DEF601D2E9E80003CE6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF5E1D2E9E80003CE6EE /* LaunchScreen.storyboard */; };
+		B1806A371D368A6B008FAE92 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1806A361D368A6B008FAE92 /* FeedsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B4143BE2BB98DEACB00B663 /* Pods-Scruffy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scruffy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scruffy/Pods-Scruffy.debug.xcconfig"; sourceTree = "<group>"; };
+		842B13ACA9ABB20C39CA6E7F /* Pods-Scruffy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scruffy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scruffy/Pods-Scruffy.release.xcconfig"; sourceTree = "<group>"; };
 		B14DEF521D2E9E80003CE6EE /* Scruffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scruffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14DEF551D2E9E80003CE6EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14DEF571D2E9E80003CE6EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B14DEF5F1D2E9E80003CE6EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B14DEF611D2E9E80003CE6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1806A361D368A6B008FAE92 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		FF053657D8792BFE9AB174AA /* Pods_Scruffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scruffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E383088830931537A81479F /* Pods_Scruffy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15F05FC82DF81092EC92442D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B4143BE2BB98DEACB00B663 /* Pods-Scruffy.debug.xcconfig */,
+				842B13ACA9ABB20C39CA6E7F /* Pods-Scruffy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B14DEF491D2E9E80003CE6EE = {
 			isa = PBXGroup;
 			children = (
 				B14DEF541D2E9E80003CE6EE /* Scruffy */,
 				B14DEF531D2E9E80003CE6EE /* Products */,
+				15F05FC82DF81092EC92442D /* Pods */,
+				E36EB318CEB20E9FAFDC19E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +74,21 @@
 			children = (
 				B14DEF551D2E9E80003CE6EE /* AppDelegate.swift */,
 				B14DEF571D2E9E80003CE6EE /* ViewController.swift */,
+				B1806A361D368A6B008FAE92 /* FeedsViewController.swift */,
 				B14DEF591D2E9E80003CE6EE /* Main.storyboard */,
 				B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */,
 				B14DEF5E1D2E9E80003CE6EE /* LaunchScreen.storyboard */,
 				B14DEF611D2E9E80003CE6EE /* Info.plist */,
 			);
 			path = Scruffy;
+			sourceTree = "<group>";
+		};
+		E36EB318CEB20E9FAFDC19E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF053657D8792BFE9AB174AA /* Pods_Scruffy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B14DEF641D2E9E80003CE6EE /* Build configuration list for PBXNativeTarget "Scruffy" */;
 			buildPhases = (
+				39ADA00FE6F6E86D28874939 /* [CP] Check Pods Manifest.lock */,
 				B14DEF4E1D2E9E80003CE6EE /* Sources */,
 				B14DEF4F1D2E9E80003CE6EE /* Frameworks */,
 				B14DEF501D2E9E80003CE6EE /* Resources */,
+				9C5EACC18FC51E9CD4789B63 /* [CP] Embed Pods Frameworks */,
+				45C8B0A17A0D6DA0D6D7F33A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,11 +160,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39ADA00FE6F6E86D28874939 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		45C8B0A17A0D6DA0D6D7F33A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scruffy/Pods-Scruffy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C5EACC18FC51E9CD4789B63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scruffy/Pods-Scruffy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B14DEF4E1D2E9E80003CE6EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1806A371D368A6B008FAE92 /* FeedsViewController.swift in Sources */,
 				B14DEF581D2E9E80003CE6EE /* ViewController.swift in Sources */,
 				B14DEF561D2E9E80003CE6EE /* AppDelegate.swift in Sources */,
 			);
@@ -249,6 +328,7 @@
 		};
 		B14DEF651D2E9E80003CE6EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4143BE2BB98DEACB00B663 /* Pods-Scruffy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Scruffy/Info.plist;
@@ -260,6 +340,7 @@
 		};
 		B14DEF661D2E9E80003CE6EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 842B13ACA9ABB20C39CA6E7F /* Pods-Scruffy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Scruffy/Info.plist;
@@ -288,6 +369,7 @@
 				B14DEF661D2E9E80003CE6EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
