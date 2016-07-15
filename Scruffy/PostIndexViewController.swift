@@ -10,6 +10,8 @@ import UIKit
 
 class PostIndexViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +33,18 @@ class PostIndexViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // 1
+        if let identifier = segue.identifier {
+            // 2
+            if identifier == "displayEditProfile" {
+                // 3
+                print("Transitioning to the Edit Post View Controller")
+            }
+        }
+    }
+    
+    
 }
