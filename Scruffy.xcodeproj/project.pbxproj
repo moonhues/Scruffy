@@ -14,6 +14,12 @@
 		B14DEF5D1D2E9E80003CE6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */; };
 		B14DEF601D2E9E80003CE6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF5E1D2E9E80003CE6EE /* LaunchScreen.storyboard */; };
 		B1806A371D368A6B008FAE92 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1806A361D368A6B008FAE92 /* FeedsViewController.swift */; };
+		B1825AC61D38859400C015A4 /* PetsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825AC51D38859400C015A4 /* PetsInfoViewController.swift */; };
+		B1825AC81D3886C200C015A4 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825AC71D3886C200C015A4 /* UserInfoViewController.swift */; };
+		B1825ACA1D38870500C015A4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825AC91D38870500C015A4 /* UserProfileViewController.swift */; };
+		B1825ACC1D3887F200C015A4 /* PostIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */; };
+		B1825ACE1D38882B00C015A4 /* EditPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825ACD1D38882B00C015A4 /* EditPostViewController.swift */; };
+		B1825AD01D38883A00C015A4 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825ACF1D38883A00C015A4 /* CreatePostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		B14DEF5F1D2E9E80003CE6EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B14DEF611D2E9E80003CE6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1806A361D368A6B008FAE92 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		B1825AC51D38859400C015A4 /* PetsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsInfoViewController.swift; sourceTree = "<group>"; };
+		B1825AC71D3886C200C015A4 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		B1825AC91D38870500C015A4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIndexViewController.swift; sourceTree = "<group>"; };
+		B1825ACD1D38882B00C015A4 /* EditPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPostViewController.swift; sourceTree = "<group>"; };
+		B1825ACF1D38883A00C015A4 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		FF053657D8792BFE9AB174AA /* Pods_Scruffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scruffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +87,12 @@
 				B14DEF551D2E9E80003CE6EE /* AppDelegate.swift */,
 				B14DEF571D2E9E80003CE6EE /* ViewController.swift */,
 				B1806A361D368A6B008FAE92 /* FeedsViewController.swift */,
+				B1825AC51D38859400C015A4 /* PetsInfoViewController.swift */,
+				B1825AC71D3886C200C015A4 /* UserInfoViewController.swift */,
+				B1825AC91D38870500C015A4 /* UserProfileViewController.swift */,
+				B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */,
+				B1825ACD1D38882B00C015A4 /* EditPostViewController.swift */,
+				B1825ACF1D38883A00C015A4 /* CreatePostViewController.swift */,
 				B14DEF591D2E9E80003CE6EE /* Main.storyboard */,
 				B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */,
 				B14DEF5E1D2E9E80003CE6EE /* LaunchScreen.storyboard */,
@@ -214,7 +232,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1806A371D368A6B008FAE92 /* FeedsViewController.swift in Sources */,
+				B1825ACA1D38870500C015A4 /* UserProfileViewController.swift in Sources */,
+				B1825ACE1D38882B00C015A4 /* EditPostViewController.swift in Sources */,
+				B1825ACC1D3887F200C015A4 /* PostIndexViewController.swift in Sources */,
 				B14DEF581D2E9E80003CE6EE /* ViewController.swift in Sources */,
+				B1825AC81D3886C200C015A4 /* UserInfoViewController.swift in Sources */,
+				B1825AC61D38859400C015A4 /* PetsInfoViewController.swift in Sources */,
+				B1825AD01D38883A00C015A4 /* CreatePostViewController.swift in Sources */,
 				B14DEF561D2E9E80003CE6EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
