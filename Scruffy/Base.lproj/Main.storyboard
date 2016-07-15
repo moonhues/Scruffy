@@ -134,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="8FK-Vb-5aK" firstAttribute="top" secondItem="HrC-Rz-Ngz" secondAttribute="bottom" constant="50" id="2Bb-rJ-Bf4"/>
@@ -211,39 +211,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DF1-EH-U7x">
-                                <rect key="frame" x="107" y="89" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DF1-EH-U7x">
+                                <rect key="frame" x="107" y="89" width="200" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="D5Z-kv-JuI"/>
                                     <constraint firstAttribute="width" constant="200" id="KLJ-XF-hbl"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="about " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcP-Lc-xey">
-                                <rect key="frame" x="50" y="369" width="51.5" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0h8-5S-Oir">
-                                <rect key="frame" x="50" y="386" width="314" height="242"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Cooper is a Portuguese Water Dog. He is affectionate, playful, loyal (!!!) and would most certainly be a wonderful addition to any family. 
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rdM-p8-Ho3">
+                                <rect key="frame" x="50" y="369" width="314" height="291"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="about " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcP-Lc-xey">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="242" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0h8-5S-Oir">
+                                        <rect key="frame" x="0.0" y="41" width="314" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="250" id="dTF-a2-is4"/>
+                                        </constraints>
+                                        <string key="text">Cooper is a Portuguese Water Dog. He is affectionate, playful, loyal (!!!) and would most certainly be a wonderful addition to any family. 
 
 If you are not ready to bring Cooper home yet, we are also looking for a fosterer who can care for him until his next loving home :)</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0h8-5S-Oir" secondAttribute="bottom" constant="20" id="J9M-RY-33K"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="qcP-Lc-xey" firstAttribute="top" secondItem="DF1-EH-U7x" secondAttribute="bottom" constant="80" id="6aI-zW-Smb"/>
-                            <constraint firstItem="UDh-PM-0GS" firstAttribute="top" secondItem="0h8-5S-Oir" secondAttribute="bottom" constant="65" id="Dou-EN-ywF"/>
-                            <constraint firstItem="0h8-5S-Oir" firstAttribute="leading" secondItem="TSk-Rs-6sL" secondAttribute="leadingMargin" constant="30" id="PxI-pr-Mxp"/>
-                            <constraint firstItem="0h8-5S-Oir" firstAttribute="top" secondItem="qcP-Lc-xey" secondAttribute="bottom" constant="25" id="WdS-QM-nxf"/>
-                            <constraint firstItem="DF1-EH-U7x" firstAttribute="top" secondItem="G7H-G3-UWl" secondAttribute="bottom" constant="25" id="c9x-N7-WXw"/>
+                            <constraint firstItem="DF1-EH-U7x" firstAttribute="top" secondItem="G7H-G3-UWl" secondAttribute="bottom" constant="25" id="CbV-BV-FQd"/>
                             <constraint firstItem="DF1-EH-U7x" firstAttribute="centerX" secondItem="TSk-Rs-6sL" secondAttribute="centerX" id="cxS-GW-eMJ"/>
-                            <constraint firstItem="qcP-Lc-xey" firstAttribute="leading" secondItem="TSk-Rs-6sL" secondAttribute="leadingMargin" constant="30" id="nQb-7Z-B5T"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0h8-5S-Oir" secondAttribute="trailing" constant="30" id="pQR-0a-e5m"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -279,7 +283,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                 <state key="normal" title="Edit Post 3 | Delete Post 3"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6NR-mk-qVq" firstAttribute="top" secondItem="uSU-gc-GIl" secondAttribute="bottom" constant="25" id="9lO-Qw-W5c"/>
                             <constraint firstItem="amf-KM-PPg" firstAttribute="leading" secondItem="bpW-c5-z9n" secondAttribute="leadingMargin" constant="30" id="Pgl-g1-wzQ"/>
@@ -344,7 +348,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="be3-AB-V1s" firstAttribute="centerX" secondItem="XzP-fy-NLX" secondAttribute="centerX" id="HPz-0r-poI"/>
                             <constraint firstItem="3Ar-sL-qVz" firstAttribute="top" secondItem="be3-AB-V1s" secondAttribute="bottom" constant="50" id="MQM-6Y-zzL"/>
@@ -373,33 +377,49 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2O-kq-rto">
-                                <rect key="frame" x="107" y="124" width="200" height="200"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ez-Uk-BRm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fnp-hI-xVn">
+                                        <rect key="frame" x="107" y="89" width="200" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="2qa-FZ-f1t"/>
+                                            <constraint firstAttribute="width" constant="200" id="FRz-5R-xcH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jzk-47-h2L">
+                                        <rect key="frame" x="50" y="369" width="314" height="291"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="about " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjr-NA-Ycz">
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="242" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="20D-Gc-VJi">
+                                                <rect key="frame" x="0.0" y="41" width="314" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="250" id="HNm-KH-AHE"/>
+                                                </constraints>
+                                                <string key="text">Cooper is a Portuguese Water Dog. He is affectionate, playful, loyal (!!!) and would most certainly be a wonderful addition to any family. 
+
+If you are not ready to bring Cooper home yet, we are also looking for a fosterer who can care for him until his next loving home :)</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="20D-Gc-VJi" secondAttribute="bottom" constant="20" id="ZoI-Iy-GWk"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="V0i-ge-FHF"/>
-                                    <constraint firstAttribute="height" constant="200" id="kGo-7d-ahB"/>
+                                    <constraint firstItem="Fnp-hI-xVn" firstAttribute="centerX" secondItem="9ez-Uk-BRm" secondAttribute="centerX" id="MAx-hT-bhY"/>
                                 </constraints>
-                                <state key="normal" title="add image">
-                                    <color key="titleColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="add description" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UU1-f3-zq8">
-                                <rect key="frame" x="50" y="364" width="314" height="288"/>
-                                <color key="textColor" red="0.77896634620000005" green="0.77896634620000005" blue="0.77896634620000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="D2O-kq-rto" firstAttribute="centerX" secondItem="YRV-58-Lpe" secondAttribute="centerX" id="2Lg-Oj-ZvY"/>
-                            <constraint firstItem="jm8-09-XCY" firstAttribute="top" secondItem="UU1-f3-zq8" secondAttribute="bottom" constant="40" id="3WJ-tM-SBa"/>
-                            <constraint firstItem="UU1-f3-zq8" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leadingMargin" constant="30" id="GpT-A5-9zy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UU1-f3-zq8" secondAttribute="trailing" constant="30" id="Mgv-C8-ZXA"/>
-                            <constraint firstItem="UU1-f3-zq8" firstAttribute="top" secondItem="D2O-kq-rto" secondAttribute="bottom" constant="40" id="kVE-gK-Te4"/>
-                            <constraint firstItem="D2O-kq-rto" firstAttribute="top" secondItem="rnF-ag-twM" secondAttribute="bottom" constant="60" id="oVO-cH-BZh"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rB7-gK-XnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -427,38 +447,38 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y2u-dQ-S2l">
                                 <rect key="frame" x="40" y="145" width="334" height="210"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhN-47-kFZ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhN-47-kFZ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-hh-nIW">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-hh-nIW">
                                         <rect key="frame" x="0.0" y="45" width="334" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contact number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qug-yf-Mvw">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contact number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qug-yf-Mvw">
                                         <rect key="frame" x="0.0" y="90" width="334" height="30"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wby-n0-aAw">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wby-n0-aAw">
                                         <rect key="frame" x="0.0" y="135" width="334" height="30"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="organization name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gu4-kf-084">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="organization name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gu4-kf-084">
                                         <rect key="frame" x="0.0" y="180" width="334" height="30"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Y2u-dQ-S2l" firstAttribute="top" secondItem="O7z-A4-VNt" secondAttribute="bottom" constant="30" id="0np-b8-Xpr"/>
                             <constraint firstItem="O7z-A4-VNt" firstAttribute="top" secondItem="aDY-V2-wog" secondAttribute="bottom" constant="30" id="8T5-Oy-HbT"/>
@@ -490,27 +510,28 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="120" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8i9-fg-0f5">
-                                <rect key="frame" x="40" y="84" width="334" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="120" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8i9-fg-0f5">
+                                <rect key="frame" x="40" y="84" width="334" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="0ud-mW-GU7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="0ud-mW-GU7"/>
                                 </constraints>
                                 <string key="text">Cooper is a Portuguese Water Dog. He is affectionate, playful, loyal (!!!) and would most certainly be a wonderful addition to any family. 
 
 If you are not ready to bring Cooper home yet, we are also looking for a fosterer who can care for him until his next loving home :)</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2m-S1-pBY">
-                                <rect key="frame" x="40" y="234" width="81" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2m-S1-pBY">
+                                <rect key="frame" x="40" y="314" width="81" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="65" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNi-YC-lDI">
-                                <rect key="frame" x="40" y="278" width="334" height="65"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="65" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNi-YC-lDI">
+                                <rect key="frame" x="40" y="358" width="334" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="100" id="t2s-tZ-nrU"/>
+                                </constraints>
                                 <string key="text">Veronica Tan 
 veron@vt.sg
 65 8368 8288 </string>
@@ -518,18 +539,19 @@ veron@vt.sg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="SNi-YC-lDI" secondAttribute="trailing" constant="20" id="3mw-oG-xzW"/>
                             <constraint firstItem="X2m-S1-pBY" firstAttribute="top" secondItem="8i9-fg-0f5" secondAttribute="bottom" constant="30" id="74F-7w-5fk"/>
                             <constraint firstItem="mHf-sn-mEN" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="20" id="EjC-ck-E3M"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8i9-fg-0f5" secondAttribute="trailing" constant="20" id="Fxv-eC-Av9"/>
-                            <constraint firstItem="SNi-YC-lDI" firstAttribute="top" secondItem="X2m-S1-pBY" secondAttribute="bottom" constant="20" id="PuQ-cL-PlB"/>
+                            <constraint firstItem="SNi-YC-lDI" firstAttribute="top" secondItem="X2m-S1-pBY" secondAttribute="bottom" constant="15" id="PuQ-cL-PlB"/>
                             <constraint firstItem="X2m-S1-pBY" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="20" id="QvJ-GM-PFh"/>
                             <constraint firstItem="8i9-fg-0f5" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="20" id="XGr-W1-76S"/>
                             <constraint firstItem="mHf-sn-mEN" firstAttribute="top" secondItem="R12-gM-HGL" secondAttribute="bottom" constant="20" id="gcp-Bj-LAb"/>
                             <constraint firstItem="SNi-YC-lDI" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="20" id="l3E-R5-DzZ"/>
-                            <constraint firstItem="8i9-fg-0f5" firstAttribute="top" secondItem="mHf-sn-mEN" secondAttribute="bottom" constant="20" id="rQw-KN-acT"/>
+                            <constraint firstItem="8i9-fg-0f5" firstAttribute="top" secondItem="mHf-sn-mEN" secondAttribute="bottom" constant="15" id="rQw-KN-acT"/>
+                            <constraint firstItem="wxB-90-b8x" firstAttribute="top" secondItem="SNi-YC-lDI" secondAttribute="bottom" constant="20" id="z0k-21-QEm"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
