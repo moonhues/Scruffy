@@ -396,47 +396,45 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-cB-F0G">
-                                <rect key="frame" x="50" y="74" width="314" height="218"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-cB-F0G">
+                                <rect key="frame" x="30" y="74" width="354" height="246"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="QT3-cB-F0G" secondAttribute="height" multiplier="157:109" id="BfW-Sm-pHi"/>
                                     <constraint firstAttribute="width" secondItem="QT3-cB-F0G" secondAttribute="height" multiplier="36:25" id="hf9-9E-9Lt"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZME-GL-oXh">
-                                <rect key="frame" x="30" y="307" width="354" height="41"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZME-GL-oXh">
+                                <rect key="frame" x="30" y="335" width="354" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIj-4s-QQI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIj-4s-QQI">
                                 <rect key="frame" x="179" y="643" width="56" height="34"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <state key="normal" title="Publish"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="128" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VeF-Vq-0Cd">
-                                <rect key="frame" x="30" y="363" width="354" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5Y-5K-bsQ">
+                                <rect key="frame" x="30" y="380" width="354" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="n8d-yZ-TGL"/>
+                                    <constraint firstAttribute="height" constant="250" id="rJF-Ry-l92"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="QT3-cB-F0G" secondAttribute="trailing" constant="30" id="9A8-QD-owJ"/>
+                            <constraint firstItem="b5Y-5K-bsQ" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leading" constant="30" id="2VJ-YS-rrh"/>
+                            <constraint firstAttribute="trailing" secondItem="b5Y-5K-bsQ" secondAttribute="trailing" constant="30" id="4d1-UJ-XI3"/>
                             <constraint firstItem="QT3-cB-F0G" firstAttribute="top" secondItem="rnF-ag-twM" secondAttribute="bottom" constant="10" id="Evv-9g-zXD"/>
-                            <constraint firstItem="QT3-cB-F0G" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leadingMargin" constant="30" id="HFD-uh-idy"/>
+                            <constraint firstAttribute="trailing" secondItem="QT3-cB-F0G" secondAttribute="trailing" constant="30" id="Fdq-PA-g84"/>
                             <constraint firstItem="eIj-4s-QQI" firstAttribute="centerX" secondItem="YRV-58-Lpe" secondAttribute="centerX" id="SWj-mw-B5y"/>
-                            <constraint firstItem="eIj-4s-QQI" firstAttribute="top" secondItem="VeF-Vq-0Cd" secondAttribute="bottom" constant="30" id="TMN-6t-xOW"/>
                             <constraint firstItem="jm8-09-XCY" firstAttribute="top" secondItem="eIj-4s-QQI" secondAttribute="bottom" constant="15" id="Uqy-56-2hv"/>
                             <constraint firstItem="ZME-GL-oXh" firstAttribute="top" secondItem="QT3-cB-F0G" secondAttribute="baseline" constant="15" id="Xaa-Df-dsl"/>
-                            <constraint firstItem="VeF-Vq-0Cd" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leading" constant="30" id="edZ-r7-trl"/>
+                            <constraint firstItem="QT3-cB-F0G" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leading" constant="30" id="Z55-Cy-asE"/>
                             <constraint firstItem="ZME-GL-oXh" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leading" constant="30" id="fBB-eF-8U7"/>
-                            <constraint firstItem="VeF-Vq-0Cd" firstAttribute="top" secondItem="ZME-GL-oXh" secondAttribute="bottom" constant="15" id="h4U-tf-55c"/>
+                            <constraint firstItem="b5Y-5K-bsQ" firstAttribute="top" secondItem="ZME-GL-oXh" secondAttribute="bottom" constant="15" id="kGj-8L-eAk"/>
                             <constraint firstAttribute="trailing" secondItem="ZME-GL-oXh" secondAttribute="trailing" constant="30" id="ndW-NS-4Az"/>
-                            <constraint firstAttribute="trailing" secondItem="VeF-Vq-0Cd" secondAttribute="trailing" constant="30" id="wlT-1i-liN"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -600,6 +598,7 @@ veron@vt.sg
     </scenes>
     <resources>
         <image name="Benny" width="500" height="320"/>
+        <image name="defaultphoto_2x" width="640" height="640"/>
         <image name="like" width="170" height="170"/>
         <image name="pawglass-1" width="1273" height="504"/>
         <image name="user" width="512" height="512"/>
