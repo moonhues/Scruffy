@@ -406,27 +406,29 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="pet description " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BK-gT-S9c">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="150" text="pet description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3xo-pZ-wd0">
                                         <rect key="frame" x="0.0" y="310" width="374" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="X0Z-gT-xiK"/>
-                                        </constraints>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3xo-pZ-wd0" secondAttribute="trailing" id="2hB-l6-hID"/>
                                     <constraint firstAttribute="trailing" secondItem="qPH-Lf-smM" secondAttribute="trailing" id="O5E-p7-8dB"/>
-                                    <constraint firstItem="7BK-gT-S9c" firstAttribute="trailing" secondItem="Glq-mH-fEi" secondAttribute="trailingMargin" id="f08-GH-ghw"/>
-                                    <constraint firstItem="7BK-gT-S9c" firstAttribute="leading" secondItem="Glq-mH-fEi" secondAttribute="leadingMargin" id="p1D-VQ-hXR"/>
+                                    <constraint firstItem="3xo-pZ-wd0" firstAttribute="top" secondItem="qPH-Lf-smM" secondAttribute="bottom" constant="15" id="SlM-SD-sUZ"/>
+                                    <constraint firstItem="3xo-pZ-wd0" firstAttribute="leading" secondItem="Glq-mH-fEi" secondAttribute="leading" id="gez-oj-gtM"/>
                                     <constraint firstItem="qPH-Lf-smM" firstAttribute="leading" secondItem="Glq-mH-fEi" secondAttribute="leading" id="rb7-dL-baJ"/>
                                     <constraint firstItem="qPH-Lf-smM" firstAttribute="top" secondItem="ZeV-xc-IQB" secondAttribute="bottom" constant="15" id="w6n-2y-RMz"/>
-                                    <constraint firstItem="7BK-gT-S9c" firstAttribute="top" secondItem="qPH-Lf-smM" secondAttribute="bottom" constant="15" id="yFD-JB-Uih"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvS-0Z-3wK">
                                 <rect key="frame" x="191" y="632" width="46" height="30"/>
                                 <state key="normal" title="publish"/>
+                                <connections>
+                                    <action selector="publishButton:" destination="fYa-P0-30c" eventType="touchUpInside" id="egB-Ec-Tqx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -438,6 +440,10 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                             <constraint firstItem="Glq-mH-fEi" firstAttribute="top" secondItem="rnF-ag-twM" secondAttribute="bottom" constant="15" id="za0-NH-DoK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="qPH-Lf-smM" id="zmv-YC-VfS"/>
+                        <outlet property="photoImageView" destination="ZeV-xc-IQB" id="hwR-bH-HtR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rB7-gK-XnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -554,6 +560,7 @@ veron@vt.sg
 65 8368 8288 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
