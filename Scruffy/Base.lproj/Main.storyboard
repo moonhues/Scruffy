@@ -441,6 +441,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextField" destination="3xo-pZ-wd0" id="goO-Hc-pM4"/>
                         <outlet property="nameTextField" destination="qPH-Lf-smM" id="zmv-YC-VfS"/>
                         <outlet property="photoImageView" destination="ZeV-xc-IQB" id="hwR-bH-HtR"/>
                     </connections>
