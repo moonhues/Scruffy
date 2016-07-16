@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -396,45 +395,47 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-cB-F0G">
-                                <rect key="frame" x="30" y="74" width="354" height="246"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Glq-mH-fEi">
+                                <rect key="frame" x="20" y="79" width="374" height="460"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZeV-xc-IQB">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pet name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPH-Lf-smM">
+                                        <rect key="frame" x="0.0" y="265" width="374" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="pet description " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BK-gT-S9c">
+                                        <rect key="frame" x="0.0" y="310" width="374" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="X0Z-gT-xiK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="QT3-cB-F0G" secondAttribute="height" multiplier="157:109" id="BfW-Sm-pHi"/>
-                                    <constraint firstAttribute="width" secondItem="QT3-cB-F0G" secondAttribute="height" multiplier="36:25" id="hf9-9E-9Lt"/>
+                                    <constraint firstAttribute="trailing" secondItem="qPH-Lf-smM" secondAttribute="trailing" id="O5E-p7-8dB"/>
+                                    <constraint firstItem="7BK-gT-S9c" firstAttribute="trailing" secondItem="Glq-mH-fEi" secondAttribute="trailingMargin" id="f08-GH-ghw"/>
+                                    <constraint firstItem="7BK-gT-S9c" firstAttribute="leading" secondItem="Glq-mH-fEi" secondAttribute="leadingMargin" id="p1D-VQ-hXR"/>
+                                    <constraint firstItem="qPH-Lf-smM" firstAttribute="leading" secondItem="Glq-mH-fEi" secondAttribute="leading" id="rb7-dL-baJ"/>
+                                    <constraint firstItem="qPH-Lf-smM" firstAttribute="top" secondItem="ZeV-xc-IQB" secondAttribute="bottom" constant="15" id="w6n-2y-RMz"/>
+                                    <constraint firstItem="7BK-gT-S9c" firstAttribute="top" secondItem="qPH-Lf-smM" secondAttribute="bottom" constant="15" id="yFD-JB-Uih"/>
                                 </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZME-GL-oXh">
-                                <rect key="frame" x="30" y="335" width="354" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIj-4s-QQI">
-                                <rect key="frame" x="179" y="643" width="56" height="34"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                                <state key="normal" title="Publish"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvS-0Z-3wK">
+                                <rect key="frame" x="191" y="632" width="46" height="30"/>
+                                <state key="normal" title="publish"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5Y-5K-bsQ">
-                                <rect key="frame" x="30" y="380" width="354" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="rJF-Ry-l92"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="b5Y-5K-bsQ" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leading" constant="30" id="2VJ-YS-rrh"/>
-                            <constraint firstAttribute="trailing" secondItem="b5Y-5K-bsQ" secondAttribute="trailing" constant="30" id="4d1-UJ-XI3"/>
-                            <constraint firstItem="QT3-cB-F0G" firstAttribute="top" secondItem="rnF-ag-twM" secondAttribute="bottom" constant="10" id="Evv-9g-zXD"/>
-                            <constraint firstAttribute="trailing" secondItem="QT3-cB-F0G" secondAttribute="trailing" constant="30" id="Fdq-PA-g84"/>
-                            <constraint firstItem="eIj-4s-QQI" firstAttribute="centerX" secondItem="YRV-58-Lpe" secondAttribute="centerX" id="SWj-mw-B5y"/>
-                            <constraint firstItem="jm8-09-XCY" firstAttribute="top" secondItem="eIj-4s-QQI" secondAttribute="bottom" constant="15" id="Uqy-56-2hv"/>
-                            <constraint firstItem="ZME-GL-oXh" firstAttribute="top" secondItem="QT3-cB-F0G" secondAttribute="baseline" constant="15" id="Xaa-Df-dsl"/>
-                            <constraint firstItem="QT3-cB-F0G" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leading" constant="30" id="Z55-Cy-asE"/>
-                            <constraint firstItem="ZME-GL-oXh" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leading" constant="30" id="fBB-eF-8U7"/>
-                            <constraint firstItem="b5Y-5K-bsQ" firstAttribute="top" secondItem="ZME-GL-oXh" secondAttribute="bottom" constant="15" id="kGj-8L-eAk"/>
-                            <constraint firstAttribute="trailing" secondItem="ZME-GL-oXh" secondAttribute="trailing" constant="30" id="ndW-NS-4Az"/>
+                            <constraint firstItem="jm8-09-XCY" firstAttribute="top" secondItem="kvS-0Z-3wK" secondAttribute="bottom" constant="30" id="CbM-Av-d0S"/>
+                            <constraint firstItem="Glq-mH-fEi" firstAttribute="trailing" secondItem="YRV-58-Lpe" secondAttribute="trailingMargin" id="QaD-zW-Ob8"/>
+                            <constraint firstItem="Glq-mH-fEi" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leadingMargin" id="UlY-sa-6An"/>
+                            <constraint firstItem="kvS-0Z-3wK" firstAttribute="centerX" secondItem="YRV-58-Lpe" secondAttribute="centerX" id="e0T-Td-6So"/>
+                            <constraint firstItem="Glq-mH-fEi" firstAttribute="top" secondItem="rnF-ag-twM" secondAttribute="bottom" constant="15" id="za0-NH-DoK"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -516,7 +517,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <viewControllerLayoutGuide type="top" id="R12-gM-HGL"/>
                         <viewControllerLayoutGuide type="bottom" id="wxB-90-b8x"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="K1V-D2-0ak">
+                    <view key="view" contentMode="scaleToFill" id="K1V-D2-0ak">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -598,7 +599,6 @@ veron@vt.sg
     </scenes>
     <resources>
         <image name="Benny" width="500" height="320"/>
-        <image name="defaultphoto_2x" width="640" height="640"/>
         <image name="like" width="170" height="170"/>
         <image name="pawglass-1" width="1273" height="504"/>
         <image name="user" width="512" height="512"/>

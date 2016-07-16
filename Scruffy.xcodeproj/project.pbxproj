@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E383088830931537A81479F /* Pods_Scruffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF053657D8792BFE9AB174AA /* Pods_Scruffy.framework */; };
+		B148CD5A1D39C58000DF1266 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148CD591D39C58000DF1266 /* CreatePostViewController.swift */; };
 		B14DEF561D2E9E80003CE6EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DEF551D2E9E80003CE6EE /* AppDelegate.swift */; };
 		B14DEF581D2E9E80003CE6EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DEF571D2E9E80003CE6EE /* ViewController.swift */; };
 		B14DEF5B1D2E9E80003CE6EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF591D2E9E80003CE6EE /* Main.storyboard */; };
@@ -21,12 +22,12 @@
 		B1825ACA1D38870500C015A4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825AC91D38870500C015A4 /* UserProfileViewController.swift */; };
 		B1825ACC1D3887F200C015A4 /* PostIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */; };
 		B1825ACE1D38882B00C015A4 /* EditPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825ACD1D38882B00C015A4 /* EditPostViewController.swift */; };
-		B1825AD01D38883A00C015A4 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825ACF1D38883A00C015A4 /* CreatePostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B4143BE2BB98DEACB00B663 /* Pods-Scruffy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scruffy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scruffy/Pods-Scruffy.debug.xcconfig"; sourceTree = "<group>"; };
 		842B13ACA9ABB20C39CA6E7F /* Pods-Scruffy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scruffy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scruffy/Pods-Scruffy.release.xcconfig"; sourceTree = "<group>"; };
+		B148CD591D39C58000DF1266 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		B14DEF521D2E9E80003CE6EE /* Scruffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scruffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14DEF551D2E9E80003CE6EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14DEF571D2E9E80003CE6EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../Scruffy/Scruffy/ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		B1825AC91D38870500C015A4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = ../../../../Scruffy/Scruffy/UserProfileViewController.swift; sourceTree = "<group>"; };
 		B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostIndexViewController.swift; path = ../../../../Scruffy/Scruffy/PostIndexViewController.swift; sourceTree = "<group>"; };
 		B1825ACD1D38882B00C015A4 /* EditPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditPostViewController.swift; path = ../../../../Scruffy/Scruffy/EditPostViewController.swift; sourceTree = "<group>"; };
-		B1825ACF1D38883A00C015A4 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreatePostViewController.swift; path = ../../../../Scruffy/Scruffy/CreatePostViewController.swift; sourceTree = "<group>"; };
 		FF053657D8792BFE9AB174AA /* Pods_Scruffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scruffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,7 +145,7 @@
 				B1825AC91D38870500C015A4 /* UserProfileViewController.swift */,
 				B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */,
 				B1825ACD1D38882B00C015A4 /* EditPostViewController.swift */,
-				B1825ACF1D38883A00C015A4 /* CreatePostViewController.swift */,
+				B148CD591D39C58000DF1266 /* CreatePostViewController.swift */,
 			);
 			name = Controllers;
 			path = "../../Make School Projects/Scruffy/Scruffy/Controllers";
@@ -288,9 +288,9 @@
 				B1825ACC1D3887F200C015A4 /* PostIndexViewController.swift in Sources */,
 				B14DEF581D2E9E80003CE6EE /* ViewController.swift in Sources */,
 				B1825AC81D3886C200C015A4 /* UserInfoViewController.swift in Sources */,
+				B148CD5A1D39C58000DF1266 /* CreatePostViewController.swift in Sources */,
 				B1825AC61D38859400C015A4 /* PostDetailsViewController.swift in Sources */,
 				B15ADDF51D38C8A1008902D4 /* PostTableViewCell.swift in Sources */,
-				B1825AD01D38883A00C015A4 /* CreatePostViewController.swift in Sources */,
 				B14DEF561D2E9E80003CE6EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
