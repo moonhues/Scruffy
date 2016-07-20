@@ -640,7 +640,7 @@ veron@vt.sg
                                         <rect key="frame" x="176" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="next"/>
                                         <connections>
-                                            <segue destination="fYa-P0-30c" kind="show" identifier="getPetDesc" id="5pF-hF-GO5"/>
+                                            <segue destination="fYa-P0-30c" kind="show" identifier="getpetdesc" id="5pF-hF-GO5"/>
                                         </connections>
                                     </button>
                                 </subviews>
