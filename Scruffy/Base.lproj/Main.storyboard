@@ -274,11 +274,11 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                         <rect key="frame" x="0.0" y="92" width="414" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="paP-lU-pkc" id="Gct-In-9MI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="319.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rV9-qD-V88">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="319.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -358,7 +358,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-kP-HHX">
-                                <rect key="frame" x="171" y="422" width="73" height="36"/>
+                                <rect key="frame" x="170.5" y="422" width="73" height="36"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -418,7 +418,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                         <rect key="frame" x="176" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="next"/>
                                         <connections>
-                                            <segue destination="TWg-PQ-XpV" kind="show" identifier="show pet " id="8Uo-UF-0yZ"/>
+                                            <segue destination="TWg-PQ-XpV" kind="show" identifier="publishpet" id="xcU-9D-Xgl"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -454,7 +454,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-A4-VNt">
-                                <rect key="frame" x="165" y="94" width="85" height="21"/>
+                                <rect key="frame" x="165" y="94" width="84.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -612,13 +612,6 @@ veron@vt.sg
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlr-pK-4IX">
-                                <rect key="frame" x="192" y="408" width="30" height="30"/>
-                                <state key="normal" title="next"/>
-                                <connections>
-                                    <segue destination="fYa-P0-30c" kind="show" identifier="getPetDesc" id="5pF-hF-GO5"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-eY-VcD">
                                 <rect key="frame" x="104" y="612" width="206" height="30"/>
                                 <subviews>
@@ -630,9 +623,12 @@ veron@vt.sg
                                         <rect key="frame" x="81" y="0.0" width="45" height="30"/>
                                         <state key="normal" title="cancel"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-WS-dWj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlr-pK-4IX">
                                         <rect key="frame" x="176" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="next"/>
+                                        <connections>
+                                            <segue destination="fYa-P0-30c" kind="show" identifier="getPetDesc" id="5pF-hF-GO5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -641,11 +637,9 @@ veron@vt.sg
                         <constraints>
                             <constraint firstItem="5aB-L7-QMD" firstAttribute="leading" secondItem="Dzz-vC-scs" secondAttribute="leadingMargin" constant="20" id="77h-uz-Tzz"/>
                             <constraint firstItem="5aB-L7-QMD" firstAttribute="centerY" secondItem="Dzz-vC-scs" secondAttribute="centerY" id="ABt-5R-lTV"/>
-                            <constraint firstItem="Vlr-pK-4IX" firstAttribute="centerX" secondItem="Dzz-vC-scs" secondAttribute="centerX" id="HiD-Sl-jJ9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5aB-L7-QMD" secondAttribute="trailing" constant="20" id="U03-4v-4HU"/>
                             <constraint firstItem="ehi-eY-VcD" firstAttribute="centerX" secondItem="Dzz-vC-scs" secondAttribute="centerX" id="YEM-Wm-UzU"/>
                             <constraint firstItem="5aB-L7-QMD" firstAttribute="centerX" secondItem="Dzz-vC-scs" secondAttribute="centerX" id="YKl-2I-Rdo"/>
-                            <constraint firstItem="Vlr-pK-4IX" firstAttribute="top" secondItem="5aB-L7-QMD" secondAttribute="bottom" constant="25" id="b7o-Iq-Han"/>
                             <constraint firstItem="8DH-4r-U7I" firstAttribute="top" secondItem="ehi-eY-VcD" secondAttribute="bottom" constant="50" id="cMm-Q3-Crg"/>
                         </constraints>
                     </view>
@@ -667,14 +661,35 @@ veron@vt.sg
                         <viewControllerLayoutGuide type="bottom" id="Uu8-b9-09o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vn8-dr-YlE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-CJ-gLL">
-                                <rect key="frame" x="12" y="56" width="382" height="486"/>
+                                <rect key="frame" x="8" y="56" width="296" height="318"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ufd-Ln-MtL">
+                                <rect key="frame" x="98" y="444" width="125" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAn-UX-IGX">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                        <state key="normal" title="cancel"/>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="nZ8-8O-1wh" eventType="touchUpInside" id="ux1-7X-ZiC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ega-Yo-0bf">
+                                        <rect key="frame" x="95" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="next"/>
+                                        <connections>
+                                            <segue destination="fEi-pe-18e" kind="show" identifier="getpetname" id="gPO-Mw-MEl">
+                                                <nil key="action"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="9Wx-8H-KfI">
-                                <rect key="frame" x="113" y="562" width="188" height="30"/>
+                                <rect key="frame" x="66" y="394" width="188" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-53-Dtd">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
@@ -692,28 +707,6 @@ veron@vt.sg
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvO-Sw-09r">
-                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                <state key="normal" title="cancel"/>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ufd-Ln-MtL">
-                                <rect key="frame" x="145" y="612" width="125" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4c-lP-XDB">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                        <state key="normal" title="cancel"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ega-Yo-0bf">
-                                        <rect key="frame" x="95" y="0.0" width="30" height="30"/>
-                                        <state key="normal" title="next"/>
-                                        <connections>
-                                            <segue destination="fEi-pe-18e" kind="show" identifier="getpetname" id="gPO-Mw-MEl">
-                                                <nil key="action"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -727,7 +720,7 @@ veron@vt.sg
                             <constraint firstItem="2eg-CJ-gLL" firstAttribute="leadingMargin" secondItem="vn8-dr-YlE" secondAttribute="leadingMargin" id="qUC-BW-IMi"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imageView" destination="2eg-CJ-gLL" id="qE0-VJ-hH2"/>
                     </connections>
