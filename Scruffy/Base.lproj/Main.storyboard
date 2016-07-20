@@ -155,19 +155,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="CoY-Kb-fEn">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="5Ab-jd-q8R">
-                            <rect key="frame" x="129.5" y="6.5" width="155" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="dim-ff-cH1"/>
-                            </constraints>
-                            <segments>
-                                <segment title="Feeds"/>
-                                <segment title="likes"/>
-                                <segment title="Posts"/>
-                            </segments>
-                            <color key="tintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="X5e-8N-nWh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Y2l-Kn-RxD" userLabel="userButton">
                                 <rect key="frame" x="374" y="12" width="20" height="20"/>
@@ -263,22 +250,22 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <viewControllerLayoutGuide type="bottom" id="Yx4-GX-8iF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bpW-c5-z9n">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ESR-fm-AeA">
-                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="320" id="We3-lg-aNg" customClass="PostTableViewCell" customModule="Scruffy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="92" width="414" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="We3-lg-aNg" id="wNL-6c-POH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="319.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Benny" translatesAutoresizingMaskIntoConstraints="NO" id="r3t-sq-qzr">
-                                                    <rect key="frame" x="8" y="8" width="304" height="303.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Benny" translatesAutoresizingMaskIntoConstraints="NO" id="r3t-sq-qzr">
+                                                    <rect key="frame" x="8" y="8" width="304" height="304"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -306,6 +293,9 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                             <constraint firstItem="ESR-fm-AeA" firstAttribute="top" secondItem="9Mw-3e-V4d" secondAttribute="bottom" id="u95-Qp-7aA"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="sSr-IY-pof"/>
+                    </toolbarItems>
                     <connections>
                         <outlet property="tableView" destination="ESR-fm-AeA" id="uoB-Kd-eUz"/>
                     </connections>
@@ -357,7 +347,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-kP-HHX">
-                                <rect key="frame" x="170.5" y="422" width="73" height="36"/>
+                                <rect key="frame" x="171" y="422" width="73" height="36"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -460,7 +450,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-A4-VNt">
-                                <rect key="frame" x="165" y="94" width="84.5" height="21"/>
+                                <rect key="frame" x="165" y="94" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -824,6 +814,6 @@ veron@vt.sg
         <image name="user" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KFr-sL-VfH"/>
+        <segue reference="kgJ-ep-Cb3"/>
     </inferredMetricsTieBreakers>
 </document>
