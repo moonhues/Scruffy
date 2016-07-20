@@ -10,6 +10,8 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
     
+    @IBAction func unwindToUserInfo(segue: UIStoryboardSegue) {}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

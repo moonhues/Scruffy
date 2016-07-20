@@ -354,7 +354,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                     <color key="titleColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nZ8-8O-1wh" kind="show" id="gfz-pF-yad"/>
+                                    <segue destination="nZ8-8O-1wh" kind="show" identifier="captureImage" id="gfz-pF-yad"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-kP-HHX">
@@ -661,20 +661,21 @@ veron@vt.sg
                         <viewControllerLayoutGuide type="bottom" id="Uu8-b9-09o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vn8-dr-YlE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-CJ-gLL">
-                                <rect key="frame" x="8" y="56" width="296" height="318"/>
+                                <rect key="frame" x="12" y="56" width="382" height="486"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ufd-Ln-MtL">
-                                <rect key="frame" x="98" y="444" width="125" height="30"/>
+                                <rect key="frame" x="145" y="612" width="125" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAn-UX-IGX">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                         <state key="normal" title="cancel"/>
                                         <connections>
                                             <action selector="cancelButton:" destination="nZ8-8O-1wh" eventType="touchUpInside" id="ux1-7X-ZiC"/>
+                                            <segue destination="uMH-re-s0T" kind="unwind" identifier="unwindToUserInfo" unwindAction="unwindToUserInfo:" id="fIx-tH-PpH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ega-Yo-0bf">
@@ -689,7 +690,7 @@ veron@vt.sg
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="9Wx-8H-KfI">
-                                <rect key="frame" x="66" y="394" width="188" height="30"/>
+                                <rect key="frame" x="113" y="562" width="188" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-53-Dtd">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
@@ -720,12 +721,13 @@ veron@vt.sg
                             <constraint firstItem="2eg-CJ-gLL" firstAttribute="leadingMargin" secondItem="vn8-dr-YlE" secondAttribute="leadingMargin" id="qUC-BW-IMi"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="2eg-CJ-gLL" id="qE0-VJ-hH2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wg-LE-8aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uMH-re-s0T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1413" y="2114"/>
         </scene>
