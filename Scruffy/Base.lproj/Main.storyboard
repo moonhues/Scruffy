@@ -207,7 +207,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UDh-PM-0GS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TSk-Rs-6sL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DF1-EH-U7x">
@@ -263,52 +263,51 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <viewControllerLayoutGuide type="bottom" id="Yx4-GX-8iF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bpW-c5-z9n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O1G-Ez-nHb">
-                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ESR-fm-AeA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="320" id="paP-lU-pkc" customClass="PostTableViewCell" customModule="Scruffy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="414" height="320"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="320" id="We3-lg-aNg" customClass="PostTableViewCell" customModule="Scruffy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="paP-lU-pkc" id="Gct-In-9MI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="319.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="We3-lg-aNg" id="wNL-6c-POH">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="319.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rV9-qD-V88">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="319.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Benny" translatesAutoresizingMaskIntoConstraints="NO" id="r3t-sq-qzr">
+                                                    <rect key="frame" x="8" y="8" width="304" height="303.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rV9-qD-V88" firstAttribute="leading" secondItem="Gct-In-9MI" secondAttribute="leading" id="6lI-0G-DjF"/>
-                                                <constraint firstItem="rV9-qD-V88" firstAttribute="top" secondItem="Gct-In-9MI" secondAttribute="top" id="BDq-pA-cek"/>
-                                                <constraint firstAttribute="trailing" secondItem="rV9-qD-V88" secondAttribute="trailing" id="f0L-8J-kYc"/>
-                                                <constraint firstAttribute="bottom" secondItem="rV9-qD-V88" secondAttribute="bottom" id="ywL-Xs-hvI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="r3t-sq-qzr" secondAttribute="trailing" id="5Fr-d7-zAx"/>
+                                                <constraint firstItem="r3t-sq-qzr" firstAttribute="top" secondItem="wNL-6c-POH" secondAttribute="topMargin" id="C84-aA-3JR"/>
+                                                <constraint firstItem="r3t-sq-qzr" firstAttribute="leading" secondItem="wNL-6c-POH" secondAttribute="leadingMargin" id="VN4-2t-Ouq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="r3t-sq-qzr" secondAttribute="bottom" id="abY-wf-jSv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="postImageView" destination="rV9-qD-V88" id="ssX-G3-gbi"/>
-                                            <segue destination="JH2-eK-3LI" kind="show" identifier="displayEditPost" id="Ahk-0t-RXS"/>
+                                            <outlet property="postImageView" destination="r3t-sq-qzr" id="BfT-ns-HT8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="A70-To-TRa" id="CZz-nq-EYc"/>
+                                    <outlet property="dataSource" destination="A70-To-TRa" id="y9Z-Th-D7n"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="O1G-Ez-nHb" firstAttribute="top" secondItem="9Mw-3e-V4d" secondAttribute="bottom" id="1HJ-oC-YCn"/>
-                            <constraint firstAttribute="trailing" secondItem="O1G-Ez-nHb" secondAttribute="trailing" id="9Wq-CI-aX8"/>
-                            <constraint firstItem="O1G-Ez-nHb" firstAttribute="leading" secondItem="bpW-c5-z9n" secondAttribute="leading" id="CPh-2j-Ubl"/>
-                            <constraint firstItem="Yx4-GX-8iF" firstAttribute="top" secondItem="O1G-Ez-nHb" secondAttribute="bottom" id="RJR-W1-7AI"/>
+                            <constraint firstItem="ESR-fm-AeA" firstAttribute="leading" secondItem="bpW-c5-z9n" secondAttribute="leading" id="0Hm-Bz-XO9"/>
+                            <constraint firstAttribute="trailing" secondItem="ESR-fm-AeA" secondAttribute="trailing" id="G6F-FY-HQi"/>
+                            <constraint firstItem="Yx4-GX-8iF" firstAttribute="top" secondItem="ESR-fm-AeA" secondAttribute="bottom" id="mCM-A5-6WF"/>
+                            <constraint firstItem="ESR-fm-AeA" firstAttribute="top" secondItem="9Mw-3e-V4d" secondAttribute="bottom" id="u95-Qp-7aA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="O1G-Ez-nHb" id="b27-6h-1ps"/>
+                        <outlet property="tableView" destination="ESR-fm-AeA" id="uoB-Kd-eUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wa-dz-I6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -788,6 +787,7 @@ veron@vt.sg
                                         <state key="normal" title="publish "/>
                                         <connections>
                                             <action selector="publishButton:" destination="TWg-PQ-XpV" eventType="touchUpInside" id="b09-Re-OB9"/>
+                                            <segue destination="A70-To-TRa" kind="show" identifier="fromPublishedPost" id="KFr-sL-VfH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -814,7 +814,7 @@ veron@vt.sg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9B-FE-ks7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4b7-Jm-hRT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3070" y="2114"/>
+            <point key="canvasLocation" x="2878" y="2030"/>
         </scene>
     </scenes>
     <resources>
@@ -823,4 +823,7 @@ veron@vt.sg
         <image name="pawglass-1" width="1273" height="504"/>
         <image name="user" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KFr-sL-VfH"/>
+    </inferredMetricsTieBreakers>
 </document>
