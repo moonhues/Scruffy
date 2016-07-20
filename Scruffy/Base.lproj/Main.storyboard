@@ -391,11 +391,11 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <viewControllerLayoutGuide type="bottom" id="jm8-09-XCY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YRV-58-Lpe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="27V-4j-0pU">
-                                <rect key="frame" x="20" y="84" width="374" height="300"/>
+                                <rect key="frame" x="16" y="84" width="288" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="QIM-8z-cnc"/>
@@ -404,15 +404,21 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="54s-OX-c2G">
-                                <rect key="frame" x="104" y="612" width="206" height="30"/>
+                                <rect key="frame" x="57" y="444" width="206" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2M-1I-MEl">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
                                         <state key="normal" title="prev"/>
+                                        <connections>
+                                            <segue destination="qkc-jZ-sev" kind="unwind" identifier="unwindToPetName" unwindAction="unwindToPetName:" id="c2p-fV-ob4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59t-Rq-rbP">
                                         <rect key="frame" x="81" y="0.0" width="45" height="30"/>
                                         <state key="normal" title="cancel"/>
+                                        <connections>
+                                            <segue destination="qkc-jZ-sev" kind="unwind" identifier="unwindToUserInfo" unwindAction="unwindToUserInfo:" id="xmX-0A-Cn4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68p-tY-xqQ">
                                         <rect key="frame" x="176" y="0.0" width="30" height="30"/>
@@ -438,6 +444,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rB7-gK-XnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qkc-jZ-sev" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2523" y="2114"/>
         </scene>
@@ -604,24 +611,30 @@ veron@vt.sg
                         <viewControllerLayoutGuide type="bottom" id="8DH-4r-U7I"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="600" id="Dzz-vC-scs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="119" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter pet name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aB-L7-QMD">
-                                <rect key="frame" x="40" y="353" width="334" height="30"/>
+                                <rect key="frame" x="36" y="269" width="248" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-eY-VcD">
-                                <rect key="frame" x="104" y="612" width="206" height="30"/>
+                                <rect key="frame" x="57" y="444" width="206" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVu-kF-I1s">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
                                         <state key="normal" title="prev"/>
+                                        <connections>
+                                            <segue destination="agj-0h-0y8" kind="unwind" identifier="unwindToImageCapture" unwindAction="unwindToImageCapture:" id="GiN-By-LTa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLG-BQ-B0N">
                                         <rect key="frame" x="81" y="0.0" width="45" height="30"/>
                                         <state key="normal" title="cancel"/>
+                                        <connections>
+                                            <segue destination="agj-0h-0y8" kind="unwind" identifier="unwindtoUserInfo" unwindAction="unwindToUserInfo:" id="Hcc-VI-qzC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlr-pK-4IX">
                                         <rect key="frame" x="176" y="0.0" width="30" height="30"/>
@@ -643,12 +656,13 @@ veron@vt.sg
                             <constraint firstItem="8DH-4r-U7I" firstAttribute="top" secondItem="ehi-eY-VcD" secondAttribute="bottom" constant="50" id="cMm-Q3-Crg"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="petNameTextField" destination="5aB-L7-QMD" id="cUl-Iu-6uL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBb-cF-mzl" sceneMemberID="firstResponder"/>
+                <exit id="agj-0h-0y8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2016" y="2108"/>
         </scene>
@@ -740,32 +754,41 @@ veron@vt.sg
                         <viewControllerLayoutGuide type="bottom" id="5MI-7Y-psX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dpY-dN-AMF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBN-zY-GyY">
-                                <rect key="frame" x="167" y="571" width="80" height="21"/>
+                                <rect key="frame" x="120" y="403" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dvi-EN-G3L">
-                                <rect key="frame" x="20" y="64" width="374" height="478"/>
+                                <rect key="frame" x="16" y="64" width="288" height="310"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-25-Fvl">
-                                <rect key="frame" x="92" y="612" width="230" height="30"/>
+                                <rect key="frame" x="45" y="444" width="230" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh7-Ra-c9G">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
                                         <state key="normal" title="prev"/>
+                                        <connections>
+                                            <segue destination="4b7-Jm-hRT" kind="unwind" identifier="unwindToPetDesc" unwindAction="unwindToPetDesc:" id="nBb-MH-dNN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smy-aJ-xZy">
                                         <rect key="frame" x="81" y="0.0" width="45" height="30"/>
                                         <state key="normal" title="cancel"/>
+                                        <connections>
+                                            <segue destination="4b7-Jm-hRT" kind="unwind" identifier="unwindToUserInfo" unwindAction="unwindToUserInfo:" id="IGP-2h-24N"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-m2-IX2">
                                         <rect key="frame" x="176" y="0.0" width="54" height="30"/>
                                         <state key="normal" title="publish "/>
+                                        <connections>
+                                            <action selector="publishButton:" destination="TWg-PQ-XpV" eventType="touchUpInside" id="b09-Re-OB9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -782,13 +805,14 @@ veron@vt.sg
                             <constraint firstItem="KBa-25-Fvl" firstAttribute="centerX" secondItem="dpY-dN-AMF" secondAttribute="centerX" id="wcg-Y9-pLt"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imageView" destination="dvi-EN-G3L" id="qXK-Ay-gPi"/>
                         <outlet property="petNameTextLabel" destination="UBN-zY-GyY" id="Gv0-5e-gjp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9B-FE-ks7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4b7-Jm-hRT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3070" y="2114"/>
         </scene>

@@ -27,11 +27,11 @@ class UserInfoViewController: UIViewController {
     
     // MARK: - Navigation
     
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let DestViewController = segue.destinationViewController as! imageCaptureViewController
-        
-        DestViewController.userInfoViewController = self
-    }
+       // DestViewController.userInfoViewController = self
+    } */
     
     
 }
