@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -112,45 +113,32 @@
                                     <constraint firstAttribute="width" constant="60" id="i50-7p-H39"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCq-wt-eiw">
-                                <rect key="frame" x="334" y="599" width="30" height="30"/>
-                                <state key="normal" title="next"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96g-em-rPE" userLabel="previous">
-                                <rect key="frame" x="50" y="600" width="31" height="30"/>
-                                <state key="normal" title="prev"/>
-                            </button>
-                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="450" image="Benny" translatesAutoresizingMaskIntoConstraints="NO" id="8FK-Vb-5aK">
-                                <rect key="frame" x="20" y="99" width="374" height="443"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cooper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oye-2B-UcA">
-                                <rect key="frame" x="179" y="79" width="55" height="0.0"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oye-2B-UcA">
+                                <rect key="frame" x="175" y="79" width="64" height="25"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
                                 <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="450" image="Benny" translatesAutoresizingMaskIntoConstraints="NO" id="8FK-Vb-5aK">
+                                <rect key="frame" x="20" y="124" width="374" height="374"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8FK-Vb-5aK" secondAttribute="height" multiplier="1:1" id="mNS-kL-2um"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="8FK-Vb-5aK" firstAttribute="trailing" secondItem="UAh-Fq-sCn" secondAttribute="trailingMargin" id="Frd-aN-dg2"/>
                             <constraint firstItem="oye-2B-UcA" firstAttribute="top" secondItem="HrC-Rz-Ngz" secondAttribute="bottom" constant="15" id="Fvt-Bw-bok"/>
-                            <constraint firstItem="pNi-QU-nVZ" firstAttribute="top" secondItem="8FK-Vb-5aK" secondAttribute="bottom" constant="150" id="HZG-iI-g49"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gCq-wt-eiw" secondAttribute="trailing" constant="30" id="Tce-bY-uvB"/>
+                            <constraint firstItem="pNi-QU-nVZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8FK-Vb-5aK" secondAttribute="bottom" constant="150" id="HZG-iI-g49"/>
                             <constraint firstItem="pNi-QU-nVZ" firstAttribute="top" secondItem="AbF-Q0-YWa" secondAttribute="bottom" constant="35" id="UdD-83-zzx"/>
+                            <constraint firstItem="8FK-Vb-5aK" firstAttribute="top" secondItem="HrC-Rz-Ngz" secondAttribute="bottom" constant="60" id="Xlq-5G-iYM"/>
                             <constraint firstItem="oye-2B-UcA" firstAttribute="centerX" secondItem="UAh-Fq-sCn" secondAttribute="centerX" id="aQz-Q6-O9p"/>
                             <constraint firstItem="AbF-Q0-YWa" firstAttribute="centerX" secondItem="UAh-Fq-sCn" secondAttribute="centerX" id="ah6-hx-WlO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8FK-Vb-5aK" secondAttribute="trailing" id="eQw-Nn-W2s"/>
                             <constraint firstItem="8FK-Vb-5aK" firstAttribute="leading" secondItem="UAh-Fq-sCn" secondAttribute="leadingMargin" id="fjZ-pc-6ai"/>
-                            <constraint firstItem="96g-em-rPE" firstAttribute="top" secondItem="8FK-Vb-5aK" secondAttribute="bottom" constant="58" id="laN-kZ-w2M"/>
-                            <constraint firstItem="8FK-Vb-5aK" firstAttribute="top" secondItem="oye-2B-UcA" secondAttribute="bottom" constant="20" id="lkl-kv-WSE"/>
-                            <constraint firstItem="gCq-wt-eiw" firstAttribute="top" secondItem="8FK-Vb-5aK" secondAttribute="bottom" constant="57" id="pKn-hm-BME"/>
-                            <constraint firstItem="96g-em-rPE" firstAttribute="leading" secondItem="UAh-Fq-sCn" secondAttribute="leadingMargin" constant="30" id="sTt-sv-DwZ"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="2oj-Xg-mIy" appends="YES" id="D2O-qU-szk"/>
-                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="CoY-Kb-fEn">
@@ -177,11 +165,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR4-Uq-mCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="2oj-Xg-mIy">
-                    <connections>
-                        <segue destination="Cly-Sj-Xw6" kind="show" id="Row-RH-kqN"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2104" y="265"/>
         </scene>
