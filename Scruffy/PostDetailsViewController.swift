@@ -8,8 +8,17 @@
 
 import UIKit
 
-class PetsInfoViewController: UIViewController {
+class PostDetailsViewController: UIViewController {
+  
+    @IBOutlet weak var petImageThumbnail: UIImageView!
+    @IBOutlet weak var petDescTextLabel: UITextView!
 
+    @IBOutlet weak var petNameTextLabel: UILabel!
+ 
+    @IBOutlet weak var contactHeaderTextLabel: UILabel!
+    
+    @IBOutlet weak var contactDetailsTextLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

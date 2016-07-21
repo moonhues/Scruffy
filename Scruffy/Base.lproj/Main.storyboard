@@ -244,7 +244,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                         <rect key="frame" x="0.0" y="92" width="414" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="We3-lg-aNg" id="wNL-6c-POH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="319.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Benny" translatesAutoresizingMaskIntoConstraints="NO" id="r3t-sq-qzr">
@@ -489,7 +489,7 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
         <!--Post Details-->
         <scene sceneID="fcD-kn-pGY">
             <objects>
-                <viewController title="Post Details" id="Cly-Sj-Xw6" customClass="FeedsViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Post Details" id="Cly-Sj-Xw6" customClass="PostDetailsViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R12-gM-HGL"/>
                         <viewControllerLayoutGuide type="bottom" id="wxB-90-b8x"/>
@@ -499,15 +499,15 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Cooper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHf-sn-mEN">
-                                <rect key="frame" x="40" y="40" width="139" height="24"/>
+                                <rect key="frame" x="20" y="170" width="139" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="120" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8i9-fg-0f5">
-                                <rect key="frame" x="40" y="84" width="334" height="200"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="120" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8i9-fg-0f5">
+                                <rect key="frame" x="20" y="209" width="374" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="0ud-mW-GU7"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="0ud-mW-GU7"/>
                                 </constraints>
                                 <string key="text">Cooper is a Portuguese Water Dog. He is affectionate, playful, loyal (!!!) and would most certainly be a wonderful addition to any family. 
 
@@ -515,16 +515,16 @@ If you are not ready to bring Cooper home yet, we are also looking for a fostere
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2m-S1-pBY">
-                                <rect key="frame" x="40" y="314" width="81" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2m-S1-pBY">
+                                <rect key="frame" x="20" y="359" width="81" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="65" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNi-YC-lDI">
-                                <rect key="frame" x="40" y="358" width="334" height="100"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="65" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNi-YC-lDI">
+                                <rect key="frame" x="20" y="398" width="374" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="100" id="t2s-tZ-nrU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="50" id="t2s-tZ-nrU"/>
                                 </constraints>
                                 <string key="text">Veronica Tan 
 veron@vt.sg
@@ -533,28 +533,46 @@ veron@vt.sg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ofZ-cB-4r6">
+                                <rect key="frame" x="294" y="40" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OSC-oH-YG7"/>
+                                    <constraint firstAttribute="width" secondItem="ofZ-cB-4r6" secondAttribute="height" multiplier="1:1" id="jUM-Pj-QLQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="SNi-YC-lDI" secondAttribute="trailing" constant="20" id="3mw-oG-xzW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SNi-YC-lDI" secondAttribute="trailing" id="3mw-oG-xzW"/>
                             <constraint firstItem="X2m-S1-pBY" firstAttribute="top" secondItem="8i9-fg-0f5" secondAttribute="bottom" constant="30" id="74F-7w-5fk"/>
-                            <constraint firstItem="mHf-sn-mEN" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="20" id="EjC-ck-E3M"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8i9-fg-0f5" secondAttribute="trailing" constant="20" id="Fxv-eC-Av9"/>
+                            <constraint firstItem="mHf-sn-mEN" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" id="EjC-ck-E3M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8i9-fg-0f5" secondAttribute="trailing" id="Fxv-eC-Av9"/>
+                            <constraint firstItem="ofZ-cB-4r6" firstAttribute="top" secondItem="R12-gM-HGL" secondAttribute="bottom" constant="20" id="LlJ-CF-XhD"/>
                             <constraint firstItem="SNi-YC-lDI" firstAttribute="top" secondItem="X2m-S1-pBY" secondAttribute="bottom" constant="15" id="PuQ-cL-PlB"/>
-                            <constraint firstItem="X2m-S1-pBY" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="20" id="QvJ-GM-PFh"/>
-                            <constraint firstItem="8i9-fg-0f5" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="20" id="XGr-W1-76S"/>
-                            <constraint firstItem="mHf-sn-mEN" firstAttribute="top" secondItem="R12-gM-HGL" secondAttribute="bottom" constant="20" id="gcp-Bj-LAb"/>
-                            <constraint firstItem="SNi-YC-lDI" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="20" id="l3E-R5-DzZ"/>
+                            <constraint firstItem="X2m-S1-pBY" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" id="QvJ-GM-PFh"/>
+                            <constraint firstItem="8i9-fg-0f5" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" id="XGr-W1-76S"/>
+                            <constraint firstItem="mHf-sn-mEN" firstAttribute="top" secondItem="R12-gM-HGL" secondAttribute="bottom" constant="150" id="gcp-Bj-LAb"/>
+                            <constraint firstItem="SNi-YC-lDI" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" id="l3E-R5-DzZ"/>
                             <constraint firstItem="8i9-fg-0f5" firstAttribute="top" secondItem="mHf-sn-mEN" secondAttribute="bottom" constant="15" id="rQw-KN-acT"/>
-                            <constraint firstItem="wxB-90-b8x" firstAttribute="top" secondItem="SNi-YC-lDI" secondAttribute="bottom" constant="20" id="z0k-21-QEm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ofZ-cB-4r6" secondAttribute="trailing" id="wHn-zE-2h5"/>
+                            <constraint firstItem="wxB-90-b8x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SNi-YC-lDI" secondAttribute="bottom" constant="20" id="z0k-21-QEm"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="contactDetailsTextLabel" destination="SNi-YC-lDI" id="a6a-cR-lnl"/>
+                        <outlet property="contactHeaderTextLabel" destination="X2m-S1-pBY" id="Pmz-US-7nC"/>
+                        <outlet property="petDescTextLabel" destination="8i9-fg-0f5" id="KqH-o6-qAP"/>
+                        <outlet property="petImageThumbnail" destination="ofZ-cB-4r6" id="zyK-26-4sL"/>
+                        <outlet property="petNameLabel" destination="mHf-sn-mEN" id="ewt-7j-I2R"/>
+                        <outlet property="petNameTextLabel" destination="mHf-sn-mEN" id="1t2-h0-LWj"/>
+                        <outlet property="unwindToFeedsView" destination="oSa-PQ-Fno" id="htH-Ck-eZs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mab-Cp-QrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="oSa-PQ-Fno"/>
             </objects>
-            <point key="canvasLocation" x="2678" y="290"/>
+            <point key="canvasLocation" x="2584" y="265"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HIl-p3-Emh">
