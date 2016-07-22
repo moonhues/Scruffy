@@ -7,29 +7,47 @@
 //
 
 import UIKit
+import ParseUI
 
 class PostDetailsViewController: UIViewController {
   
-    @IBOutlet weak var petImageThumbnail: UIImageView!
+    @IBOutlet weak var petImageThumbnail: PFImageView!
     @IBOutlet weak var petDescTextLabel: UITextView!
 
     @IBOutlet weak var petNameTextLabel: UILabel!
  
     @IBOutlet weak var contactHeaderTextLabel: UILabel!
     
-    @IBOutlet weak var contactDetailsTextLabel: UILabel!
+    var swipeDownHandler: UISwipeGestureRecognizer?
+    
+    @IBOutlet weak var contactNumberTextLabel: UITextView!
+    @IBOutlet weak var emailTextLabel: UITextView!
+    @IBOutlet weak var contactNameTextLabel: UITextView!
+    
+    weak var pet: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        swipeDownHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
+        swipeDownHandler?.direction = .Down
+        
+        self.view.addGestureRecognizer(swipeDownHandler!)
+        
+//        petImageThumbnail.addGestureRecognizer(swipeDownHandler!)
+        
+        //load data
+        
+        petImageThumbnail.file = pet?.imageFile
+        petImageThumbnail.loadInBackground()
+        contactNameTextLabel.text = pet?.user?.username
+        petDescTextLabel.text = pet?.postDescription
+        //contactNumberTextLabel.text = pet?.user?.contactnumber
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
@@ -40,5 +58,22 @@ class PostDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func swipeHandler(gesture: UISwipeGestureRecognizer) {
+        
+        
+        if gesture == swipeDownHandler {
+            
+            print("swiped down")
+            
+            //goes up
+            
+            //let pet = arrayOfPets[currentPosition]
+            //PostDetailsViewController.pet = pet
+//            performSegueWithIdentifier("unwindToFeeds", sender: nil)
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
 }

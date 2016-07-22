@@ -9,18 +9,23 @@
 import UIKit
 import ConvenienceKit
 import Parse
-
+import ParseUI
 
 class FeedsViewController: UIViewController {
     
     // MARK: Properties
     
-    
-    @IBOutlet weak var petImageView: UIImageView!
+//    @IBOutlet weak var petImageView: UIImageView!
+    @IBOutlet weak var petImageView: PFImageView!
     @IBOutlet weak var petNameLabel: UILabel!
+    
+    //@IBAction func unwindToFeeds(segue: UIStoryboardSegue) {}
     
     var swipeLeftHandler: UISwipeGestureRecognizer?
     var swipeRightHandler: UISwipeGestureRecognizer?
+    var swipeUpHandler: UISwipeGestureRecognizer?
+    
+    var pet = Post()
     
     //var arrayOfPets: [NSDictionary] = []
     
@@ -61,15 +66,26 @@ class FeedsViewController: UIViewController {
         */
  
         let allPostsQuery = Post.query()
+        allPostsQuery?.includeKey("user")
         allPostsQuery?.findObjectsInBackgroundWithBlock
             {(result: [PFObject]?, error: NSError?) -> Void in
             // 8
             self.arrayOfPets = result as? [Post] ?? []
             // 9
             print(self.arrayOfPets[self.currentPosition].postTitle)
-                self.petNameLabel.text = self.arrayOfPets[self.currentPosition].postTitle
-                self.arrayOfPets[self.currentPosition].downloadImage()
-                self.petImageView.image = self.arrayOfPets[self.currentPosition].image.value
+                print(self.arrayOfPets[self.currentPosition].user?.username)
+                
+                NSOperationQueue.mainQueue().addOperationWithBlock({ 
+                    
+                    self.petNameLabel.text = self.arrayOfPets[self.currentPosition].postTitle
+                    
+                    self.petImageView.file = self.arrayOfPets[self.currentPosition].imageFile
+                    self.petImageView.loadInBackground()
+                })
+                
+//                self.petNameLabel.text = self.arrayOfPets[self.currentPosition].postTitle
+//                self.arrayOfPets[self.currentPosition].downloadImage()
+//                self.petImageView.image = self.arrayOfPets[self.currentPosition].image.value
                 print(self.petNameLabel.text)
         }
         
@@ -86,6 +102,10 @@ class FeedsViewController: UIViewController {
         swipeRightHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeRightHandler?.direction = .Right
         petImageView.addGestureRecognizer(swipeRightHandler!)
+        
+        swipeUpHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
+        swipeUpHandler?.direction = .Up
+        self.petImageView.addGestureRecognizer(swipeUpHandler!)
     }
     
 
@@ -111,20 +131,45 @@ class FeedsViewController: UIViewController {
             //goes backward
             if currentPosition > 0 {
                 currentPosition = currentPosition - 1
-                
                 //let pet = arrayOfPets[currentPosition]
                 reloadView()
             }
         }
-    }
+        
+        
+        if gesture == swipeUpHandler {
+            
+            print("swiped up")
+            
+            //goes up
+            
+            //let pet = arrayOfPets[currentPosition]
+          //PostDetailsViewController.pet = pet
+            performSegueWithIdentifier("postDetailsView", sender: nil)
+            }
+        }
+    
     
     func reloadView() {
         
         print("currentposition: \(currentPosition)")
         
-       arrayOfPets[currentPosition].downloadImage()
+//       arrayOfPets[currentPosition].downloadImage()
         petNameLabel.text = arrayOfPets[currentPosition].postTitle
-        petImageView.image = arrayOfPets[currentPosition].image.value
+        
+        petImageView.file = arrayOfPets[currentPosition].imageFile
+        petImageView.loadInBackground()
+        
+//        petImageView.image = arrayOfPets[currentPosition].image.value
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "postDetailsView" {
+            
+            let destVC = segue.destinationViewController as! PostDetailsViewController
+            destVC.pet = arrayOfPets[currentPosition]
+        }
     }
     
     
