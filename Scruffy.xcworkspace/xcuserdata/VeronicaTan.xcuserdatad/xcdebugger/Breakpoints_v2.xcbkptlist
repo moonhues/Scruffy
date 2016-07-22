@@ -113,38 +113,6 @@
             endingLineNumber = "81"
             landmarkName = "downloadImage()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scruffy.Post.downloadImage () -&gt; ()"
-                  moduleName = "Scruffy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/VeronicaTan/Downloads/Make%20School%20Projects/Scruffy/Scruffy/Models/Post.swift"
-                  timestampString = "490794807.740559"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "680">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scruffy.Post.(downloadImage () -&gt; ()).(closure #1)"
-                  moduleName = "Scruffy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/VeronicaTan/Downloads/Make%20School%20Projects/Scruffy/Scruffy/Models/Post.swift"
-                  timestampString = "490794807.740748"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,11 +154,11 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Make%20School%20Projects/Scruffy/Scruffy/Models/Post.swift"
-                  timestampString = "490794807.74225"
+                  timestampString = "490855276.370399"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
                   offsetFromSymbolStart = "36">
                </Location>
                <Location
@@ -201,11 +169,11 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Make%20School%20Projects/Scruffy/Scruffy/Models/Post.swift"
-                  timestampString = "490794807.742369"
+                  timestampString = "490855276.370517"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
                   offsetFromSymbolStart = "75">
                </Location>
             </Locations>
@@ -240,6 +208,22 @@
             startingLineNumber = "157"
             endingLineNumber = "157"
             landmarkName = "reloadView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/PostDetailsViewController.swift"
+            timestampString = "490855264.81262"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

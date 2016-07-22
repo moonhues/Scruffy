@@ -97,15 +97,15 @@ class FeedsViewController: UIViewController {
         //Swipe Gesture
         swipeLeftHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeLeftHandler?.direction = .Left
-        petImageView.addGestureRecognizer(swipeLeftHandler!)
+        self.view.addGestureRecognizer(swipeLeftHandler!)
         
         swipeRightHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeRightHandler?.direction = .Right
-        petImageView.addGestureRecognizer(swipeRightHandler!)
+        self.view.addGestureRecognizer(swipeRightHandler!)
         
         swipeUpHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeUpHandler?.direction = .Up
-        self.petImageView.addGestureRecognizer(swipeUpHandler!)
+        self.view.addGestureRecognizer(swipeUpHandler!)
     }
     
 

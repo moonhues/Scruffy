@@ -44,7 +44,8 @@ class PostDetailsViewController: UIViewController {
         petImageThumbnail.loadInBackground()
         contactNameTextLabel.text = pet?.user?.username
         petDescTextLabel.text = pet?.postDescription
-        //contactNumberTextLabel.text = pet?.user?.contactnumber
+        contactNumberTextLabel.text = pet?.user?.contactnumber
+        emailTextLabel.text = pet?.user?.email
         
     }
 

@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initializeWithConfiguration(configuration)
         
         do {
-            try PFUser.logInWithUsername("test", password: "test")
+            try PFUser.logInWithUsername("veronica", password: "veronica")
         } catch {
             print("Unable to log in")
         }
