@@ -139,8 +139,7 @@ extension PostIndexViewController: UITableViewDataSource {
         
         // 2
         cell.postImageView.image = posts[indexPath.row].image.value
-        //cell.petNameTextLabel = posts [indexPath.row].postTitle.text
-
+        cell.petNameTextLabel.text = posts[indexPath.row].postTitle
         
         return cell
         
