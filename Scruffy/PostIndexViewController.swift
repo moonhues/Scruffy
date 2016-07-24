@@ -14,6 +14,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var posts = [Post]()
+    
     var timelineComponent: TimelineComponent <Post, PostIndexViewController>!
     
     let defaultRange = 0...4
@@ -25,6 +27,61 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         timelineComponent = TimelineComponent(target: self)
     }
     
+    /*
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }*/
+
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // 1
+        //let followingQuery = PFQuery(className: "Follow")
+        //followingQuery.whereKey("fromUser", equalTo:PFUser.currentUser()!)
+        
+        // 2
+        //let postsFromFollowedUsers = Post.query()
+        //postsFromFollowedUsers!.whereKey("user", matchesKey: "toUser", inQuery: followingQuery)
+        
+        // 3
+        let postsFromThisUser = Post.query()
+        postsFromThisUser!.whereKey("user", equalTo: PFUser.currentUser()!)
+        
+        // 4
+        //let query = PFQuery.orQueryWithSubqueries([postsFromFollowedUsers!, postsFromThisUser!])
+        // 5
+        postsFromThisUser!.includeKey("user")
+        // 6
+        //query.orderByDescending("createdAt")
+        
+        // 7
+        postsFromThisUser!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
+            self.posts = result as? [Post] ?? []
+            
+            // 1
+            for post in self.posts {
+                do {
+                    // 2
+                    let data = try post.imageFile?.getData()
+                    // 3
+                    post.image.value = UIImage(data: data!, scale:1.0)
+                } catch {
+                    print("could not get image")
+                }
+            }
+            
+            self.tableView.reloadData()
+        }
+    }
     
     func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
         ParseHelper.timelineRequestForCurrentUser(range) {
@@ -71,23 +128,29 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
 
 extension PostIndexViewController: UITableViewDataSource {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.timelineComponent.content.count
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        // 1
+        return posts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // 1
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostTableViewCell
         
-        let post = timelineComponent.content[indexPath.section]
-        post.downloadImage()
-        cell.post = post
-        cell.timeline = self
+        // 2
+        cell.postImageView.image = posts[indexPath.row].image.value
+        //cell.petNameTextLabel = posts [indexPath.row].postTitle.text
+
         
         return cell
+        
+        /*let post = posts[indexPath.row]
+        // 1
+        post.downloadImage()
+        // 2
+        cell.post = post
+        
+        return cell*/
     }
 }
 
@@ -96,6 +159,7 @@ extension PostIndexViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         timelineComponent.targetWillDisplayEntry(indexPath.section)
     }
+    
     
     /*
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
