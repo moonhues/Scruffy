@@ -38,8 +38,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
                 ErrorHandling.defaultErrorHandler(error)
             }
             
-            let posts = result as? [Post] ?? []
-            completionBlock(posts)
+            self.posts = result as? [Post] ?? []
+            completionBlock(self.posts)
         }
     }
     
@@ -119,6 +119,27 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == "editPostImage" {
+                print("Table view cell tapped")
+                
+                // 1
+                let indexPath = tableView.indexPathForSelectedRow!
+                
+                print(indexPath.row)
+                // 2
+                let newPost = posts[indexPath.row]
+                // 3
+                let displayNoteViewController = segue.destinationViewController as! imageCaptureViewController
+                // 4
+                displayNoteViewController.newPost = newPost
+                
+            }
+        }
+    }
+
+    
 }
 
 
@@ -145,6 +166,7 @@ extension PostIndexViewController: UITableViewDataSource {
         cell.timeline = self
         cell.postImageView.image = post.image.value
         cell.petNameTextLabel.text = post.postTitle
+        //posts[indexPath.row] = post
         //cell.postImageView.image = posts[indexPath.row].image.value
         //cell.petNameTextLabel.text = posts[indexPath.row].postTitle
         //cell.post = posts[indexPath.row]
