@@ -191,6 +191,7 @@
         <!--Post Index-->
         <scene sceneID="zPA-Eq-Ydl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wa-dz-I6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Post Index" id="A70-To-TRa" customClass="PostIndexViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Mw-3e-V4d"/>
@@ -211,21 +212,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="329"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rG3-eM-eiE">
-                                                    <rect key="frame" x="83" y="8" width="250" height="250"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rG3-eM-eiE">
+                                                    <rect key="frame" x="82" y="8" width="250" height="250"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="250" id="ISK-Fr-HjN"/>
                                                         <constraint firstAttribute="width" secondItem="rG3-eM-eiE" secondAttribute="height" multiplier="1:1" id="Prx-qA-s1B"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWB-EG-Jz1">
-                                                    <rect key="frame" x="186" y="267" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWB-EG-Jz1">
+                                                    <rect key="frame" x="186" y="278" width="42" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-EZ-Wbm">
-                                                    <rect key="frame" x="287" y="263" width="46" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-EZ-Wbm">
+                                                    <rect key="frame" x="296" y="278" width="36" height="30"/>
                                                     <state key="normal" title="more"/>
                                                     <connections>
                                                         <action selector="moreButtonTapped:" destination="9FF-ZB-ran" eventType="touchUpInside" id="H5I-xt-wRe"/>
@@ -268,7 +269,6 @@
                         <outlet property="tableView" destination="QHL-U0-QSU" id="wN1-l7-eV3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5wa-dz-I6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1569" y="1082"/>
         </scene>
@@ -829,6 +829,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="P9g-wr-BJ3"/>
-        <segue reference="myk-bA-gvU"/>
+        <segue reference="kgJ-ep-Cb3"/>
     </inferredMetricsTieBreakers>
 </document>

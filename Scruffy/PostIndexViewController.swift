@@ -14,37 +14,36 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var posts = [Post]()/*{
+    var timelineComponent: TimelineComponent <Post, PostIndexViewController>!
+    
+    /*var posts = [Post]() {
         didSet{
-            tableView.reloadData()
+            print("something got deleted reloading table")
+           self.tableView.reloadData()
         }
     }*/
-    
-    var timelineComponent: TimelineComponent <Post, PostIndexViewController>!
     
     let defaultRange = 0...4
     let additionalRangeSize = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         timelineComponent = TimelineComponent(target: self)
     }
     
-    /*
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: false)
+    func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
+        ParseHelper.timelineRequestForCurrentUser(range) {
+            (result: [PFObject]?, error: NSError?) -> Void in
+            if let error = error {
+                ErrorHandling.defaultErrorHandler(error)
+            }
+            
+            let posts = result as? [Post] ?? []
+            completionBlock(posts)
+        }
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    }*/
-
-    
+    /*
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -85,20 +84,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
             
             self.tableView.reloadData()
         }
-    }
+    } */
     
-    
-    func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
-        ParseHelper.timelineRequestForCurrentUser(range) {
-            (result: [PFObject]?, error: NSError?) -> Void in
-            if let error = error {
-                ErrorHandling.defaultErrorHandler(error)
-            }
-            
-            let posts = result as? [Post] ?? []
-            completionBlock(posts)
-        }
-    }
     
     // MARK: UIActionSheets
     
@@ -106,6 +93,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         if (post.user!.objectId! == PFUser.currentUser()!.objectId!) {
             print("calling showActionSheetForPost")
             showDeleteActionSheetForPost(post)
+        } else {
+            print("user test is false")
         }
     }
     
@@ -132,11 +121,16 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     
 }
 
+
 extension PostIndexViewController: UITableViewDataSource {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return self.timelineComponent.content.count
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1
-        return posts.count
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -144,10 +138,17 @@ extension PostIndexViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostTableViewCell
         
         // 2
-        cell.postImageView.image = posts[indexPath.row].image.value
-        cell.petNameTextLabel.text = posts[indexPath.row].postTitle
-        cell.post = posts[indexPath.row]
+        
+        let post = timelineComponent.content[indexPath.section]
+        post.downloadImage()
+        cell.post = post
         cell.timeline = self
+        cell.postImageView.image = post.image.value
+        cell.petNameTextLabel.text = post.postTitle
+        //cell.postImageView.image = posts[indexPath.row].image.value
+        //cell.petNameTextLabel.text = posts[indexPath.row].postTitle
+        //cell.post = posts[indexPath.row]
+        //cell.timeline = self
         
         return cell
         
@@ -161,24 +162,15 @@ extension PostIndexViewController: UITableViewDataSource {
     }
 }
 
+
 extension PostIndexViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         timelineComponent.targetWillDisplayEntry(indexPath.section)
     }
     
-    
-    /*
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        //let headerCell = tableView.dequeueReusableCellWithIdentifier("PostHeader") as! PostSectionHeaderView
-        
-        let post = self.timelineComponent.content[section]
-       // headerCell.post = post
-        
-        return headerCell
-    }*/
-    
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
 }
+
