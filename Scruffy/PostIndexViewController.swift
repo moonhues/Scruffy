@@ -16,12 +16,12 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     
     var timelineComponent: TimelineComponent <Post, PostIndexViewController>!
     
-    /*var posts = [Post]() {
+    var posts = [Post]() {
         didSet{
             print("something got deleted reloading table")
-           self.tableView.reloadData()
+           tableView.reloadData()
         }
-    }*/
+    }
     
     let defaultRange = 0...4
     let additionalRangeSize = 5
