@@ -14,7 +14,11 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var posts = [Post]()
+    var posts = [Post]()/*{
+        didSet{
+            tableView.reloadData()
+        }
+    }*/
     
     var timelineComponent: TimelineComponent <Post, PostIndexViewController>!
     
@@ -83,6 +87,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         }
     }
     
+    
     func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
         ParseHelper.timelineRequestForCurrentUser(range) {
             (result: [PFObject]?, error: NSError?) -> Void in
@@ -98,7 +103,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     // MARK: UIActionSheets
     
     func showActionSheetForPost(post: Post) {
-        if (post.user == PFUser.currentUser()) {
+        if (post.user!.objectId! == PFUser.currentUser()!.objectId!) {
+            print("calling showActionSheetForPost")
             showDeleteActionSheetForPost(post)
         }
     }
@@ -140,6 +146,8 @@ extension PostIndexViewController: UITableViewDataSource {
         // 2
         cell.postImageView.image = posts[indexPath.row].image.value
         cell.petNameTextLabel.text = posts[indexPath.row].postTitle
+        cell.post = posts[indexPath.row]
+        cell.timeline = self
         
         return cell
         

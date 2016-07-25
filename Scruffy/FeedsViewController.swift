@@ -72,8 +72,8 @@ class FeedsViewController: UIViewController {
             // 8
             self.arrayOfPets = result as? [Post] ?? []
             // 9
-            print(self.arrayOfPets[self.currentPosition].postTitle)
-                print(self.arrayOfPets[self.currentPosition].user?.username)
+            ////print(self.arrayOfPets[self.currentPosition].postTitle)
+                //print(self.arrayOfPets[self.currentPosition].user?.username)
                 
                 NSOperationQueue.mainQueue().addOperationWithBlock({ 
                     
