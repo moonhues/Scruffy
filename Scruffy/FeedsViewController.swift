@@ -10,14 +10,16 @@ import UIKit
 import ConvenienceKit
 import Parse
 import ParseUI
+import Bond
 
 class FeedsViewController: UIViewController {
     
     // MARK: Properties
     
-//    @IBOutlet weak var petImageView: UIImageView!
+    //    @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var petImageView: PFImageView!
     @IBOutlet weak var petNameLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
     
     //@IBAction func unwindToFeeds(segue: UIStoryboardSegue) {}
     
@@ -25,12 +27,8 @@ class FeedsViewController: UIViewController {
     var swipeRightHandler: UISwipeGestureRecognizer?
     var swipeUpHandler: UISwipeGestureRecognizer?
     
-    //var pet = Post()
-    
-    //var arrayOfPets: [NSDictionary] = []
-    
     var arrayOfPets: [Post] = []
-    
+    var arrayOfLikes: [PFObject] = []
     var currentPosition: Int = 0
     
     override func viewDidLoad() {
@@ -38,60 +36,8 @@ class FeedsViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         // view.addSubview(<#T##view: UIView##UIView#>)
-    
         
-        /*
-        let newPet = NSMutableDictionary()
-        newPet["name"] = "Afya"
-        newPet["image"] = "Afya"
-        arrayOfPets.append(newPet)
-        
-        let newPet2 = NSMutableDictionary()
-        newPet2["name"] = "Benny"
-        newPet2["image"] = "Benny"
-        arrayOfPets.append(newPet2)
-        
-        let newPet3 = NSMutableDictionary()
-        newPet3["name"] = "Anita"
-        newPet3["image"] = "Anita"
-        arrayOfPets.append(newPet3)
-        
-        let newPet4 = NSMutableDictionary()
-        newPet4["name"] = "Chanel"
-        newPet4["image"] = "Chanel"
-        arrayOfPets.append(newPet4)
-        
-        petNameLabel.text = newPet["name"] as? String
-        petImageView.image = UIImage(named: newPet["image"] as! String)
-        */
- 
-        let allPostsQuery = Post.query()
-        allPostsQuery?.includeKey("user")
-        allPostsQuery?.findObjectsInBackgroundWithBlock
-            {(result: [PFObject]?, error: NSError?) -> Void in
-            // 8
-            self.arrayOfPets = result as? [Post] ?? []
-            // 9
-            ////print(self.arrayOfPets[self.currentPosition].postTitle)
-                //print(self.arrayOfPets[self.currentPosition].user?.username)
-                
-                NSOperationQueue.mainQueue().addOperationWithBlock({ 
-                    
-                    self.petNameLabel.text = self.arrayOfPets[self.currentPosition].postTitle
-                    
-                    self.petImageView.file = self.arrayOfPets[self.currentPosition].imageFile
-                    self.petImageView.loadInBackground()
-                })
-                    self.arrayOfPets[self.currentPosition].fetchLikes()
-                
-//                self.petNameLabel.text = self.arrayOfPets[self.currentPosition].postTitle
-//                self.arrayOfPets[self.currentPosition].downloadImage()
-//                self.petImageView.image = self.arrayOfPets[self.currentPosition].image.value
-                print(self.petNameLabel.text)
-        }
-        
-        //petImageView.image = arrayOfPets[currentPosition].
-       
+        reloadDataFromParse()
         
         //Swipe Gesture
         swipeLeftHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
@@ -105,9 +51,47 @@ class FeedsViewController: UIViewController {
         swipeUpHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeUpHandler?.direction = .Up
         self.view.addGestureRecognizer(swipeUpHandler!)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
     }
     
-
+    func reloadDataFromParse() {
+        
+        let allPostsQuery = Post.query()
+        allPostsQuery?.includeKey("user")
+        allPostsQuery?.findObjectsInBackgroundWithBlock
+            {(result: [PFObject]?, error: NSError?) -> Void in
+                self.arrayOfPets = result as? [Post] ?? []
+                
+                //get all Post ids liked by user
+                let likeQuery = PFQuery(className: "Like")
+                likeQuery.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+                
+                likeQuery.findObjectsInBackgroundWithBlock
+                    {(result: [PFObject]?, error: NSError?) -> Void in
+                        self.arrayOfLikes = result!
+                        
+                        NSOperationQueue.mainQueue().addOperationWithBlock({
+                            
+                            self.reloadView()
+                        })
+                }
+        }
+    }
+    
+    
+    // Generates a comma separated list of usernames from an array (e.g. "User1, User2")
+    func stringFromUserList(userList: [PFUser]) -> String {
+        let usernameList = userList.map { user in user.username! }
+        let commaSeparatedUserList = usernameList.joinWithSeparator(", ")
+        
+        return commaSeparatedUserList
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
     
     func swipeHandler(gesture: UISwipeGestureRecognizer) {
         
@@ -118,7 +102,6 @@ class FeedsViewController: UIViewController {
             //goes forward
             if currentPosition < arrayOfPets.count - 1 {
                 currentPosition = currentPosition + 1
-                //let pet = arrayOfPets[currentPosition]
                 reloadView()
             }
         }
@@ -130,7 +113,6 @@ class FeedsViewController: UIViewController {
             //goes backward
             if currentPosition > 0 {
                 currentPosition = currentPosition - 1
-                //let pet = arrayOfPets[currentPosition]
                 reloadView()
             }
         }
@@ -139,27 +121,55 @@ class FeedsViewController: UIViewController {
         if gesture == swipeUpHandler {
             
             print("swiped up")
-            
-            //goes up
-            
-            //let pet = arrayOfPets[currentPosition]
-          //PostDetailsViewController.pet = pet
             performSegueWithIdentifier("postDetailsView", sender: nil)
-            }
         }
+    }
     
     
     func reloadView() {
         
         print("currentposition: \(currentPosition)")
         
-//       arrayOfPets[currentPosition].downloadImage()
+        //       arrayOfPets[currentPosition].downloadImage()
         petNameLabel.text = arrayOfPets[currentPosition].postTitle
         
         petImageView.file = arrayOfPets[currentPosition].imageFile
         petImageView.loadInBackground()
         
-//        petImageView.image = arrayOfPets[currentPosition].image.value
+        //        petImageView.image = arrayOfPets[currentPosition].image.value
+        
+        //check for liked status
+        
+        let currentPost = arrayOfPets[currentPosition]
+        
+        if (isPostLiked(currentPost)) {
+            
+            //set it to liked image
+            likeButton.selected = true
+        }
+        else {
+            
+            //set it to normal image
+            likeButton.selected = false
+        }
+    }
+    
+    func isPostLiked(post: Post) -> Bool {
+        
+        let currentPostObjectId = post.objectId
+        
+        for likeObject in arrayOfLikes {
+            
+            let likedPost = likeObject["toPost"] as! PFObject
+            let likedPostId = likedPost.objectId
+            
+            if likedPostId == currentPostObjectId {
+                
+                return true
+            }
+        }
+        
+        return false
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -171,14 +181,30 @@ class FeedsViewController: UIViewController {
         }
     }
     
-    // Technically this should live in the VC, decide whether or not we should keep it here for simplicity
+    //MARK: Actions
+    
     @IBAction func likeButtonTapped(sender: AnyObject) {
-           arrayOfPets[currentPosition].toggleLikePost(PFUser.currentUser()!)
+        
+        let currentPost = arrayOfPets[currentPosition]
+        let user = PFUser.currentUser()!
+        
+        if (isPostLiked(currentPost)) {
+        
+            //dislike it now
+            ParseHelper.unlikePost(user, post: currentPost)
+            likeButton.selected = false
+        }
+        else {
+            
+            //like it now
+            ParseHelper.likePost(user, post: currentPost)
+            likeButton.selected = true
+        }
+        
+        
     }
-
+    
 }
-
-
 
 
 

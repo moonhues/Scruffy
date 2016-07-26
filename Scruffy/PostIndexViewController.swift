@@ -29,6 +29,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     override func viewDidLoad() {
         super.viewDidLoad()
         timelineComponent = TimelineComponent(target: self)
+        timelineComponent.loadInitialIfRequired()
+        
     }
     
     func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
