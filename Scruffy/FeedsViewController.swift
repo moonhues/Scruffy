@@ -25,7 +25,7 @@ class FeedsViewController: UIViewController {
     var swipeRightHandler: UISwipeGestureRecognizer?
     var swipeUpHandler: UISwipeGestureRecognizer?
     
-    var pet = Post()
+    //var pet = Post()
     
     //var arrayOfPets: [NSDictionary] = []
     
@@ -82,6 +82,7 @@ class FeedsViewController: UIViewController {
                     self.petImageView.file = self.arrayOfPets[self.currentPosition].imageFile
                     self.petImageView.loadInBackground()
                 })
+                    self.arrayOfPets[self.currentPosition].fetchLikes()
                 
 //                self.petNameLabel.text = self.arrayOfPets[self.currentPosition].postTitle
 //                self.arrayOfPets[self.currentPosition].downloadImage()
@@ -91,8 +92,6 @@ class FeedsViewController: UIViewController {
         
         //petImageView.image = arrayOfPets[currentPosition].
        
-        
-        //post.fetchLikes()
         
         //Swipe Gesture
         swipeLeftHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
@@ -172,7 +171,11 @@ class FeedsViewController: UIViewController {
         }
     }
     
-    
+    // Technically this should live in the VC, decide whether or not we should keep it here for simplicity
+    @IBAction func likeButtonTapped(sender: AnyObject) {
+           arrayOfPets[currentPosition].toggleLikePost(PFUser.currentUser()!)
+    }
+
 }
 
 

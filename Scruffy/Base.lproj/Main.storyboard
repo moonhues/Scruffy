@@ -106,13 +106,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="AbF-Q0-YWa">
-                                <rect key="frame" x="177" y="597" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="21Z-SI-4Q0"/>
-                                    <constraint firstAttribute="width" constant="60" id="i50-7p-H39"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oye-2B-UcA">
                                 <rect key="frame" x="175" y="79" width="64" height="25"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
@@ -126,18 +119,30 @@
                                     <constraint firstAttribute="width" secondItem="8FK-Vb-5aK" secondAttribute="height" multiplier="1:1" id="mNS-kL-2um"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-ZL-WGb">
+                                <rect key="frame" x="177" y="534" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2P7-Qq-T0z"/>
+                                    <constraint firstAttribute="height" constant="60" id="awf-ZE-SHt"/>
+                                </constraints>
+                                <state key="normal" image="like"/>
+                                <state key="selected" image="likepaw"/>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="dRX-hD-3pM" eventType="touchUpInside" id="1UC-Zh-adN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="oye-2B-UcA" firstAttribute="top" secondItem="HrC-Rz-Ngz" secondAttribute="bottom" constant="15" id="Fvt-Bw-bok"/>
                             <constraint firstItem="pNi-QU-nVZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8FK-Vb-5aK" secondAttribute="bottom" constant="150" id="HZG-iI-g49"/>
-                            <constraint firstItem="pNi-QU-nVZ" firstAttribute="top" secondItem="AbF-Q0-YWa" secondAttribute="bottom" constant="35" id="UdD-83-zzx"/>
+                            <constraint firstItem="RYq-ZL-WGb" firstAttribute="centerX" secondItem="UAh-Fq-sCn" secondAttribute="centerX" id="Nyc-jW-cWJ"/>
                             <constraint firstItem="8FK-Vb-5aK" firstAttribute="top" secondItem="HrC-Rz-Ngz" secondAttribute="bottom" constant="60" id="Xlq-5G-iYM"/>
                             <constraint firstItem="oye-2B-UcA" firstAttribute="centerX" secondItem="UAh-Fq-sCn" secondAttribute="centerX" id="aQz-Q6-O9p"/>
-                            <constraint firstItem="AbF-Q0-YWa" firstAttribute="centerX" secondItem="UAh-Fq-sCn" secondAttribute="centerX" id="ah6-hx-WlO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8FK-Vb-5aK" secondAttribute="trailing" id="eQw-Nn-W2s"/>
                             <constraint firstItem="8FK-Vb-5aK" firstAttribute="leading" secondItem="UAh-Fq-sCn" secondAttribute="leadingMargin" id="fjZ-pc-6ai"/>
+                            <constraint firstItem="RYq-ZL-WGb" firstAttribute="top" secondItem="8FK-Vb-5aK" secondAttribute="bottom" constant="80" id="qQi-o7-fma"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -208,7 +213,7 @@
                                         <rect key="frame" x="0.0" y="22" width="414" height="330"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="9FF-ZB-ran" id="Lrn-Bb-Bya">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="329.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rG3-eM-eiE">
@@ -826,6 +831,7 @@
     </scenes>
     <resources>
         <image name="like" width="170" height="170"/>
+        <image name="likepaw" width="170" height="170"/>
         <image name="pawglass-1" width="1273" height="504"/>
         <image name="user" width="512" height="512"/>
     </resources>
