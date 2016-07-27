@@ -9,13 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ddd")
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-    
+        
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
-
+    
 }
 
 

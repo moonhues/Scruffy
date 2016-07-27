@@ -10,15 +10,16 @@ import UIKit
 import ParseUI
 
 class PostDetailsViewController: UIViewController {
-  
+    
     @IBOutlet weak var petImageThumbnail: PFImageView!
     @IBOutlet weak var petDescTextLabel: UITextView!
-
+    
     @IBOutlet weak var petNameTextLabel: UILabel!
- 
+    
     @IBOutlet weak var contactHeaderTextLabel: UILabel!
     
-    var swipeDownHandler: UISwipeGestureRecognizer?
+    //var swipeDownHandler: UISwipeGestureRecognizer?
+    var tapHandler: UITapGestureRecognizer?
     
     @IBOutlet weak var contactNumberTextLabel: UITextView!
     @IBOutlet weak var emailTextLabel: UITextView!
@@ -28,50 +29,44 @@ class PostDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
+        /*
         swipeDownHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeDownHandler?.direction = .Down
+        self.view.addGestureRecognizer(swipeDownHandler!)*/
         
-        self.view.addGestureRecognizer(swipeDownHandler!)
+        tapHandler = UITapGestureRecognizer(target: self, action: #selector(swipeHandler))
+        tapHandler!.numberOfTapsRequired = 1
+        tapHandler!.numberOfTouchesRequired = 1
+        self.view.addGestureRecognizer(tapHandler!)
         
-//        petImageThumbnail.addGestureRecognizer(swipeDownHandler!)
         
         //load data
         
         petImageThumbnail.file = pet?.imageFile
         petImageThumbnail.loadInBackground()
         contactNameTextLabel.text = pet?.user?.username
+        petNameTextLabel.text = pet?.postTitle
         petDescTextLabel.text = pet?.postDescription
         contactNumberTextLabel.text = pet?.user?.contactnumber
         emailTextLabel.text = pet?.user?.email
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     
     func swipeHandler(gesture: UISwipeGestureRecognizer) {
         
-        
+        /*
         if gesture == swipeDownHandler {
             
             print("swiped down")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }*/
+        if gesture == tapHandler {
             
-            //goes up
-            
-            //let pet = arrayOfPets[currentPosition]
-            //PostDetailsViewController.pet = pet
-//            performSegueWithIdentifier("unwindToFeeds", sender: nil)
-            
+            print("tapped done")
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }

@@ -24,13 +24,5 @@ class UserInfoViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    // MARK: - Navigation
-    
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let DestViewController = segue.destinationViewController as! imageCaptureViewController
-       // DestViewController.userInfoViewController = self
-    } */
-    
     
 }

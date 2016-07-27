@@ -25,7 +25,8 @@ class FeedsViewController: UIViewController {
     
     var swipeLeftHandler: UISwipeGestureRecognizer?
     var swipeRightHandler: UISwipeGestureRecognizer?
-    var swipeUpHandler: UISwipeGestureRecognizer?
+    //var swipeUpHandler: UISwipeGestureRecognizer?
+    var tapHandler: UITapGestureRecognizer?
     
     var arrayOfPets: [Post] = []
     var arrayOfLikes: [PFObject] = []
@@ -48,9 +49,10 @@ class FeedsViewController: UIViewController {
         swipeRightHandler?.direction = .Right
         self.view.addGestureRecognizer(swipeRightHandler!)
         
-        swipeUpHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
-        swipeUpHandler?.direction = .Up
-        self.view.addGestureRecognizer(swipeUpHandler!)
+        tapHandler = UITapGestureRecognizer(target: self, action: #selector(swipeHandler))
+        tapHandler!.numberOfTapsRequired = 1
+        tapHandler!.numberOfTouchesRequired = 1
+        self.view.addGestureRecognizer(tapHandler!)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
     }
@@ -118,9 +120,9 @@ class FeedsViewController: UIViewController {
         }
         
         
-        if gesture == swipeUpHandler {
+        if gesture == tapHandler {
             
-            print("swiped up")
+            print("tapped to details view")
             performSegueWithIdentifier("postDetailsView", sender: nil)
         }
     }
@@ -189,7 +191,7 @@ class FeedsViewController: UIViewController {
         let user = PFUser.currentUser()!
         
         if (isPostLiked(currentPost)) {
-        
+            
             //dislike it now
             ParseHelper.unlikePost(user, post: currentPost)
             likeButton.selected = false

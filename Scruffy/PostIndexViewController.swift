@@ -11,19 +11,19 @@ import ConvenienceKit
 import Parse
 
 class PostIndexViewController: UIViewController, TimelineComponentTarget {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var timelineComponent: TimelineComponent <Post, PostIndexViewController>!
     
     @IBAction func unwindToPostIndex(segue: UIStoryboardSegue) {
-    
+        
     }
     
     var posts = [Post]() {
         didSet{
             print("something got deleted reloading table")
-           tableView.reloadData()
+            tableView.reloadData()
         }
     }
     
@@ -58,11 +58,11 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     }
     
     /*
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    } */
+     override func viewWillDisappear(animated: Bool) {
+     super.viewWillDisappear(animated)
+     
+     navigationController?.setNavigationBarHidden(false, animated: false)
+     } */
     
     // MARK: UIActionSheets
     
@@ -115,7 +115,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
             }
         }
     }
-
+    
     
 }
 
@@ -152,12 +152,12 @@ extension PostIndexViewController: UITableViewDataSource {
         return cell
         
         /*let post = posts[indexPath.row]
-        // 1
-        post.downloadImage()
-        // 2
-        cell.post = post
-        
-        return cell*/
+         // 1
+         post.downloadImage()
+         // 2
+         cell.post = post
+         
+         return cell*/
     }
 }
 
