@@ -49,7 +49,6 @@ class PostDetailsViewController: UIViewController {
         
     }
 
-
     /*
     // MARK: - Navigation
 

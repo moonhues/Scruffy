@@ -16,6 +16,10 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     
     var timelineComponent: TimelineComponent <Post, PostIndexViewController>!
     
+    @IBAction func unwindToPostIndex(segue: UIStoryboardSegue) {
+    
+    }
+    
     var posts = [Post]() {
         didSet{
             print("something got deleted reloading table")
@@ -46,6 +50,19 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         }
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    /*
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    } */
     
     // MARK: UIActionSheets
     
