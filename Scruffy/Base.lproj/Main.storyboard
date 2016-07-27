@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1406" y="284"/>
+            <point key="canvasLocation" x="1209" y="284"/>
         </scene>
         <!--Feeds-->
         <scene sceneID="w2z-Pp-38j">
@@ -112,14 +112,14 @@
                                 <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="450" translatesAutoresizingMaskIntoConstraints="NO" id="8FK-Vb-5aK" customClass="PFImageView">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="450" translatesAutoresizingMaskIntoConstraints="NO" id="8FK-Vb-5aK" customClass="PFImageView">
                                 <rect key="frame" x="20" y="124" width="374" height="374"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8FK-Vb-5aK" secondAttribute="height" multiplier="1:1" id="mNS-kL-2um"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-ZL-WGb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-ZL-WGb">
                                 <rect key="frame" x="177" y="534" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="2P7-Qq-T0z"/>
@@ -174,25 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR4-Uq-mCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="up" id="MeC-JT-dEe"/>
             </objects>
-            <point key="canvasLocation" x="2112" y="265"/>
-        </scene>
-        <!--Edit Post-->
-        <scene sceneID="dTB-Sd-uId">
-            <objects>
-                <viewController title="Edit Post" id="JH2-eK-3LI" customClass="EditPostViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G7H-G3-UWl"/>
-                        <viewControllerLayoutGuide type="bottom" id="UDh-PM-0GS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TSk-Rs-6sL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bs6-SI-v3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="799" y="1104"/>
+            <point key="canvasLocation" x="1729" y="284"/>
         </scene>
         <!--Post Index-->
         <scene sceneID="zPA-Eq-Ydl">
@@ -207,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="330" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QHL-U0-QSU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="330" id="9FF-ZB-ran" userLabel="PostCell" customClass="PostTableViewCell" customModule="Scruffy" customModuleProvider="target">
@@ -267,7 +249,7 @@
                             <constraint firstAttribute="trailing" secondItem="QHL-U0-QSU" secondAttribute="trailing" id="Vdr-vc-C41"/>
                             <constraint firstItem="QHL-U0-QSU" firstAttribute="leading" secondItem="bpW-c5-z9n" secondAttribute="leading" id="fX6-bz-XYR"/>
                             <constraint firstItem="Yx4-GX-8iF" firstAttribute="top" secondItem="QHL-U0-QSU" secondAttribute="bottom" id="jhI-xW-ULC"/>
-                            <constraint firstItem="QHL-U0-QSU" firstAttribute="top" secondItem="9Mw-3e-V4d" secondAttribute="bottom" constant="-64" id="mJZ-9p-cXu"/>
+                            <constraint firstItem="QHL-U0-QSU" firstAttribute="top" secondItem="9Mw-3e-V4d" secondAttribute="bottom" id="mJZ-9p-cXu"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -279,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wa-dz-I6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="1082"/>
+            <point key="canvasLocation" x="1741" y="1114"/>
         </scene>
         <!--User Info -->
         <scene sceneID="tGt-F4-2UP">
@@ -355,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKn-g7-WD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2290" y="1076"/>
+            <point key="canvasLocation" x="1201" y="1104"/>
         </scene>
         <!--Get Pet Description-->
         <scene sceneID="f3W-wI-8BH">
@@ -422,7 +404,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rB7-gK-XnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qkc-jZ-sev" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2523" y="2114"/>
+            <point key="canvasLocation" x="2388" y="1942"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="oVY-Sy-GDY">
@@ -442,27 +424,37 @@
                                 <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y2u-dQ-S2l">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y2u-dQ-S2l">
                                 <rect key="frame" x="40" y="145" width="334" height="120"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhN-47-kFZ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                        <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-hh-nIW">
                                         <rect key="frame" x="0.0" y="45" width="334" height="30"/>
+                                        <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contact number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qug-yf-Mvw">
                                         <rect key="frame" x="0.0" y="90" width="334" height="30"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkw-jC-6dN">
+                                <rect key="frame" x="179.5" y="315" width="55" height="34"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <state key="normal" title="update"/>
+                                <connections>
+                                    <action selector="updateUserProfileButton:" destination="KF8-4s-eeA" eventType="touchUpInside" id="Md0-xh-sPK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -470,7 +462,9 @@
                             <constraint firstItem="O7z-A4-VNt" firstAttribute="top" secondItem="aDY-V2-wog" secondAttribute="bottom" constant="30" id="8T5-Oy-HbT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y2u-dQ-S2l" secondAttribute="trailing" constant="20" id="LT9-oq-ilT"/>
                             <constraint firstItem="Y2u-dQ-S2l" firstAttribute="leading" secondItem="sjZ-2h-Lr5" secondAttribute="leadingMargin" constant="20" id="Q9Y-LF-iL4"/>
+                            <constraint firstItem="nkw-jC-6dN" firstAttribute="top" secondItem="Y2u-dQ-S2l" secondAttribute="bottom" constant="50" id="YmG-su-9pv"/>
                             <constraint firstItem="O7z-A4-VNt" firstAttribute="centerX" secondItem="sjZ-2h-Lr5" secondAttribute="centerX" id="g0V-Tp-HD3"/>
+                            <constraint firstItem="nkw-jC-6dN" firstAttribute="centerX" secondItem="sjZ-2h-Lr5" secondAttribute="centerX" id="zKi-Np-XCZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -481,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oo3-3A-Zjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="1221"/>
+            <point key="canvasLocation" x="670" y="1114"/>
         </scene>
         <!--Post Details-->
         <scene sceneID="fcD-kn-pGY">
@@ -583,7 +577,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mab-Cp-QrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2584" y="265"/>
+            <point key="canvasLocation" x="2214" y="284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HIl-p3-Emh">
@@ -601,7 +595,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLS-7t-KjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594" y="284"/>
+            <point key="canvasLocation" x="591" y="216"/>
         </scene>
         <!--get pet name-->
         <scene sceneID="wFi-Xk-SGo">
@@ -665,7 +659,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBb-cF-mzl" sceneMemberID="firstResponder"/>
                 <exit id="agj-0h-0y8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="2108"/>
+            <point key="canvasLocation" x="2005" y="1942"/>
         </scene>
         <!--Capture image-->
         <scene sceneID="Izg-FC-Wpr">
@@ -679,7 +673,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-CJ-gLL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-CJ-gLL">
                                 <rect key="frame" x="8" y="32" width="296" height="296"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2eg-CJ-gLL" secondAttribute="height" multiplier="1:1" id="Rk7-k7-Ng9"/>
@@ -748,7 +742,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wg-LE-8aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uMH-re-s0T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1175" y="1340"/>
+            <point key="canvasLocation" x="1586" y="1951"/>
         </scene>
         <!--show pet -->
         <scene sceneID="D55-1c-UZH">
@@ -793,7 +787,7 @@
                                         <state key="normal" title="publish "/>
                                         <connections>
                                             <action selector="publishButton:" destination="TWg-PQ-XpV" eventType="touchUpInside" id="b09-Re-OB9"/>
-                                            <segue destination="A70-To-TRa" kind="show" identifier="publishToIndex" id="myk-bA-gvU"/>
+                                            <segue destination="A70-To-TRa" kind="show" identifier="publishPet" id="Pgj-CL-geD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -821,7 +815,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9B-FE-ks7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4b7-Jm-hRT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="2036"/>
+            <point key="canvasLocation" x="2793" y="1942"/>
         </scene>
     </scenes>
     <resources>
@@ -832,7 +826,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6fN-Re-rJD"/>
-        <segue reference="myk-bA-gvU"/>
+        <segue reference="kgJ-ep-Cb3"/>
         <segue reference="P9g-wr-BJ3"/>
     </inferredMetricsTieBreakers>
 </document>

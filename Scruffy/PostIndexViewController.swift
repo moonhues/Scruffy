@@ -29,6 +29,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     override func viewDidLoad() {
         super.viewDidLoad()
         timelineComponent = TimelineComponent(target: self)
+        timelineComponent.refresh(posts)
         timelineComponent.loadInitialIfRequired()
         
     }
@@ -44,49 +45,6 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
             completionBlock(self.posts)
         }
     }
-    
-    /*
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // 1
-        //let followingQuery = PFQuery(className: "Follow")
-        //followingQuery.whereKey("fromUser", equalTo:PFUser.currentUser()!)
-        
-        // 2
-        //let postsFromFollowedUsers = Post.query()
-        //postsFromFollowedUsers!.whereKey("user", matchesKey: "toUser", inQuery: followingQuery)
-        
-        // 3
-        let postsFromThisUser = Post.query()
-        postsFromThisUser!.whereKey("user", equalTo: PFUser.currentUser()!)
-        
-        // 4
-        //let query = PFQuery.orQueryWithSubqueries([postsFromFollowedUsers!, postsFromThisUser!])
-        // 5
-        postsFromThisUser!.includeKey("user")
-        // 6
-        //query.orderByDescending("createdAt")
-        
-        // 7
-        postsFromThisUser!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
-            self.posts = result as? [Post] ?? []
-            
-            // 1
-            for post in self.posts {
-                do {
-                    // 2
-                    let data = try post.imageFile?.getData()
-                    // 3
-                    post.image.value = UIImage(data: data!, scale:1.0)
-                } catch {
-                    print("could not get image")
-                }
-            }
-            
-            self.tableView.reloadData()
-        }
-    } */
     
     
     // MARK: UIActionSheets
