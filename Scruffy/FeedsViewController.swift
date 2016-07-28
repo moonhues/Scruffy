@@ -81,12 +81,14 @@ class FeedsViewController: UIViewController {
         let likeQuery = PFQuery(className: "Like")
         likeQuery.includeKey("toPost")
         likeQuery.whereKey("fromUser", equalTo: PFUser.currentUser()!)
-        let postsLikedByUserQuery = Post.query()
-        postsLikedByUserQuery!.whereKey("objectid", matchesKey: "toPost", inQuery: likeQuery)
         
-        postsLikedByUserQuery?.findObjectsInBackgroundWithBlock
+        likeQuery.findObjectsInBackgroundWithBlock
             {(result: [PFObject]?, error: NSError?) -> Void in
-                self.arrayOfPets = result as? [Post] ?? []
+                //result array is array of Like objects
+                //taken likes array and mapped each element to a post object array
+                
+                let postArray = result!.map {$0["toPost"] as! Post}
+                self.arrayOfPets = postArray
                 
                 likeQuery.findObjectsInBackgroundWithBlock
                     {(result: [PFObject]?, error: NSError?) -> Void in
