@@ -13,5 +13,6 @@ target 'Scruffy' do
   pod 'ParseFacebookUtilsV4'
   pod 'ParseUI'
   pod 'IHKeyboardAvoiding'
+  pod 'BTNavigationDropdownMenu'
 
 end

@@ -11,6 +11,7 @@ import ConvenienceKit
 import Parse
 import ParseUI
 import Bond
+import BTNavigationDropdownMenu
 
 class FeedsViewController: UIViewController {
     
@@ -55,7 +56,50 @@ class FeedsViewController: UIViewController {
         self.view.addGestureRecognizer(tapHandler!)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
+        
+        //let items = ["Most Popular", "Latest", "Trending", "Nearest", "Top Picks"]
+        let items = ["Feeds", "Likes"]
+        let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Feeds", items: items)
+        self.navigationItem.titleView = menuView
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            print("Did select item at index: \(indexPath)")
+            if indexPath == 1 {
+                self!.currentPosition = 0
+                self!.reloadLikesFromParse()
+                print("Likes")
+            } else {
+                self!.currentPosition = 0
+                self!.reloadDataFromParse()
+                print("Feeds")
+            }
+        }
+        
     }
+    
+    func reloadLikesFromParse() {
+        
+        let likeQuery = PFQuery(className: "Like")
+        likeQuery.includeKey("toPost")
+        likeQuery.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+        let postsLikedByUserQuery = Post.query()
+        postsLikedByUserQuery!.whereKey("objectid", matchesKey: "toPost", inQuery: likeQuery)
+        
+        postsLikedByUserQuery?.findObjectsInBackgroundWithBlock
+            {(result: [PFObject]?, error: NSError?) -> Void in
+                self.arrayOfPets = result as? [Post] ?? []
+                
+                likeQuery.findObjectsInBackgroundWithBlock
+                    {(result: [PFObject]?, error: NSError?) -> Void in
+                        self.arrayOfLikes = result!
+                        
+                        NSOperationQueue.mainQueue().addOperationWithBlock({
+                            
+                            self.reloadView()
+                        })
+                }
+        }
+    }
+
     
     func reloadDataFromParse() {
         
@@ -134,7 +178,6 @@ class FeedsViewController: UIViewController {
         
         //       arrayOfPets[currentPosition].downloadImage()
         petNameLabel.text = arrayOfPets[currentPosition].postTitle
-        
         petImageView.file = arrayOfPets[currentPosition].imageFile
         petImageView.loadInBackground()
         
