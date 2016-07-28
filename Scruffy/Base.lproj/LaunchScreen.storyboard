@@ -14,14 +14,29 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Puppycropped" translatesAutoresizingMaskIntoConstraints="NO" id="9JD-FF-NwW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9JD-FF-NwW" secondAttribute="bottom" id="Cuq-TT-WP1"/>
+                            <constraint firstItem="9JD-FF-NwW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="DQg-Mj-as0"/>
+                            <constraint firstItem="9JD-FF-NwW" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="Vml-oO-Omi"/>
+                            <constraint firstAttribute="trailing" secondItem="9JD-FF-NwW" secondAttribute="trailing" id="xI7-Vv-tDI"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="60.5" y="249.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Puppycropped" width="3416" height="3742"/>
+    </resources>
 </document>

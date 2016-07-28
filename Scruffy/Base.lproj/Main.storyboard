@@ -65,8 +65,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="forgot password"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pawglass-1" translatesAutoresizingMaskIntoConstraints="NO" id="GWP-cS-Jci">
-                                <rect key="frame" x="106" y="166" width="171" height="76"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pawglass-1" translatesAutoresizingMaskIntoConstraints="NO" id="GWP-cS-Jci">
+                                <rect key="frame" x="120" y="144" width="175" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="9MF-2V-8nU"/>
                                     <constraint firstAttribute="height" constant="76" id="cty-gx-giX"/>
@@ -106,8 +106,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oye-2B-UcA">
-                                <rect key="frame" x="175" y="79" width="64" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oye-2B-UcA">
+                                <rect key="frame" x="207" y="79" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
                                 <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -119,8 +119,8 @@
                                     <constraint firstAttribute="width" secondItem="8FK-Vb-5aK" secondAttribute="height" multiplier="1:1" id="mNS-kL-2um"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-ZL-WGb">
-                                <rect key="frame" x="177" y="534" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-ZL-WGb">
+                                <rect key="frame" x="177" y="578" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="2P7-Qq-T0z"/>
                                     <constraint firstAttribute="height" constant="60" id="awf-ZE-SHt"/>
@@ -148,7 +148,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="CoY-Kb-fEn">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="X5e-8N-nWh">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="X5e-8N-nWh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Y2l-Kn-RxD" userLabel="userButton">
                                 <rect key="frame" x="374" y="12" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,8 +188,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="330" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="QHL-U0-QSU">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="330" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="QHL-U0-QSU">
+                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -406,8 +406,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-A4-VNt">
-                                <rect key="frame" x="165" y="94" width="85" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-A4-VNt">
+                                <rect key="frame" x="169" y="94" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -478,23 +478,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHf-sn-mEN">
-                                <rect key="frame" x="20" y="200" width="96" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="200" width="77" height="20"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="120" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8i9-fg-0f5">
-                                <rect key="frame" x="20" y="239" width="374" height="200"/>
+                                <rect key="frame" x="20" y="235" width="374" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="0ud-mW-GU7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2m-S1-pBY">
-                                <rect key="frame" x="20" y="459" width="81" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <rect key="frame" x="20" y="405" width="64" height="20"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
                                 <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -517,39 +517,51 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gbi-Ut-sra">
-                                <rect key="frame" x="20" y="498" width="374" height="75"/>
+                                <rect key="frame" x="20" y="440" width="374" height="75"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="25" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="aa" translatesAutoresizingMaskIntoConstraints="NO" id="SNi-YC-lDI" userLabel="Contact Name Text Label">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="25" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="aa" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNi-YC-lDI" userLabel="Contact Name Text Label">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                        <color key="backgroundColor" red="1" green="0.59419673480000001" blue="0.068687347199999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="gpE-0Q-QeU"/>
                                         </constraints>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="25" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="cc" translatesAutoresizingMaskIntoConstraints="NO" id="Sbb-gC-THK" userLabel="Email Text Label">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="25" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="cc" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbb-gC-THK" userLabel="Email Text Label">
                                         <rect key="frame" x="0.0" y="25" width="374" height="25"/>
+                                        <color key="backgroundColor" red="1" green="0.59419673480000001" blue="0.068687347199999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="uGC-nT-zr0"/>
                                         </constraints>
-                                        <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="25" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="bb" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-Ko-zJz" userLabel="Contact Number Text Label">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="147" placeholderIntrinsicHeight="25" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="bb" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-Ko-zJz" userLabel="Contact Number Text Label">
                                         <rect key="frame" x="0.0" y="50" width="374" height="25"/>
+                                        <color key="backgroundColor" red="1" green="0.59419673480000001" blue="0.068687347199999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="qKv-Rw-s2C"/>
                                         </constraints>
-                                        <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
                                     </textView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uV-gs-8QM">
+                                <rect key="frame" x="304" y="40" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Fx2-Xc-6DW"/>
+                                    <constraint firstAttribute="height" constant="120" id="lJW-D9-Fbv"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="AdoptMe"/>
+                                <connections>
+                                    <action selector="adoptMeButton:" destination="Cly-Sj-Xw6" eventType="touchUpInside" id="bPI-o3-krY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -560,6 +572,7 @@
                             <constraint firstItem="ofZ-cB-4r6" firstAttribute="centerY" secondItem="NZI-5S-snc" secondAttribute="centerY" id="Fof-cy-lzS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8i9-fg-0f5" secondAttribute="trailing" id="Fxv-eC-Av9"/>
                             <constraint firstItem="NZI-5S-snc" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" id="FyJ-b1-AmQ"/>
+                            <constraint firstItem="0uV-gs-8QM" firstAttribute="centerY" secondItem="ofZ-cB-4r6" secondAttribute="centerY" id="KEz-xg-wdn"/>
                             <constraint firstItem="X2m-S1-pBY" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" id="QvJ-GM-PFh"/>
                             <constraint firstItem="gbi-Ut-sra" firstAttribute="top" secondItem="X2m-S1-pBY" secondAttribute="bottom" constant="15" id="W9z-iH-LLD"/>
                             <constraint firstItem="8i9-fg-0f5" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" id="XGr-W1-76S"/>
@@ -568,6 +581,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gbi-Ut-sra" secondAttribute="trailing" id="kge-EE-01n"/>
                             <constraint firstItem="mHf-sn-mEN" firstAttribute="top" secondItem="NZI-5S-snc" secondAttribute="bottom" constant="20" id="mEL-4L-IMj"/>
                             <constraint firstItem="ofZ-cB-4r6" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="5" id="mgV-9L-sed"/>
+                            <constraint firstAttribute="trailing" secondItem="0uV-gs-8QM" secondAttribute="trailing" constant="-10" id="p5Y-2p-T6p"/>
                             <constraint firstItem="8i9-fg-0f5" firstAttribute="top" secondItem="mHf-sn-mEN" secondAttribute="bottom" constant="15" id="rQw-KN-acT"/>
                             <constraint firstItem="ofZ-cB-4r6" firstAttribute="leading" secondItem="K1V-D2-0ak" secondAttribute="leadingMargin" constant="30" id="tKp-EY-wWl"/>
                             <constraint firstItem="ofZ-cB-4r6" firstAttribute="centerY" secondItem="NZI-5S-snc" secondAttribute="centerY" id="v2u-qm-ha3"/>
@@ -682,14 +696,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-CJ-gLL">
-                                <rect key="frame" x="8" y="32" width="296" height="296"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-CJ-gLL">
+                                <rect key="frame" x="8" y="76" width="296" height="296"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2eg-CJ-gLL" secondAttribute="height" multiplier="1:1" id="Rk7-k7-Ng9"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ufd-Ln-MtL">
-                                <rect key="frame" x="98" y="508" width="125" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ufd-Ln-MtL">
+                                <rect key="frame" x="98" y="464" width="125" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAn-UX-IGX">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
@@ -710,8 +724,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="9Wx-8H-KfI">
-                                <rect key="frame" x="41" y="458" width="238" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="9Wx-8H-KfI">
+                                <rect key="frame" x="41" y="414" width="238" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-53-Dtd">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
@@ -828,6 +842,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AdoptMe" width="600" height="600"/>
         <image name="like" width="170" height="170"/>
         <image name="likepaw" width="170" height="170"/>
         <image name="pawglass-1" width="1273" height="504"/>

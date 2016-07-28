@@ -27,6 +27,11 @@ class PostDetailsViewController: UIViewController {
     
     weak var pet: Post?
     
+    @IBAction func adoptMeButton(sender: UIButton) {
+
+        contactAction()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,5 +75,24 @@ class PostDetailsViewController: UIViewController {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
+    
+    
+    func contactAction() {
+        
+        let callString = "tel://" + (pet?.user?.contactnumber)!
+        
+        let alertController = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let callAction = UIAlertAction(title: "Call", style: .Default) { (action) in
+            let url:NSURL = NSURL(string: callString)!
+            UIApplication.sharedApplication().openURL(url)
+        }
+        alertController.addAction(callAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     
 }
