@@ -79,6 +79,7 @@ class FeedsViewController: UIViewController {
     func reloadLikesFromParse() {
         
         let likeQuery = PFQuery(className: "Like")
+        likeQuery.includeKey("fromUser")
         likeQuery.includeKey("toPost")
         likeQuery.whereKey("fromUser", equalTo: PFUser.currentUser()!)
         
@@ -87,8 +88,20 @@ class FeedsViewController: UIViewController {
                 //result array is array of Like objects
                 //taken likes array and mapped each element to a post object array
                 
-                let postArray = result!.map {$0["toPost"] as! Post}
-                self.arrayOfPets = postArray
+                var arrayOfPosts = [Post]()
+                for elem in result! {
+                    let post = elem["toPost"] as! Post
+                    post.user! = elem["fromUser"] as! PFUser
+                    arrayOfPosts.append(post)
+                }
+                
+                
+//                let postArray = result!.map {
+//                    ($0["toPost"] as! Post).user = ($0["fromUser"] as! PFUser)
+////                    x.user =
+////                    return x
+//                }
+                self.arrayOfPets = arrayOfPosts
                 
                 likeQuery.findObjectsInBackgroundWithBlock
                     {(result: [PFObject]?, error: NSError?) -> Void in
