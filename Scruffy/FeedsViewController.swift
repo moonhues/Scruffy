@@ -60,6 +60,11 @@ class FeedsViewController: UIViewController {
         //let items = ["Most Popular", "Latest", "Trending", "Nearest", "Top Picks"]
         let items = ["Feeds", "Likes"]
         let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Feeds", items: items)
+        
+        menuView.cellBackgroundColor = UIColor.grayColor()
+        menuView.cellTextLabelColor = UIColor.whiteColor()
+        menuView.cellSeparatorColor = UIColor.lightGrayColor()
+        
         self.navigationItem.titleView = menuView
         menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
