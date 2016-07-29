@@ -269,6 +269,29 @@ class FeedsViewController: UIViewController {
         
     }
     
+    @IBAction func shareButtonTapped(sender: UIButton) {
+        
+        //convert PFFile to Imagefile
+
+        let shareImage = petImageView.image
+        let petName = arrayOfPets[currentPosition].postTitle
+        let textToShare = petName! + " is looking for a home! Discover more adoptable dogs at ScruffyApp."
+        if let myWebsite = NSURL(string: "http://scruffyapp.pagedemo.co/") {
+            let objectsToShare: [AnyObject] = [textToShare, shareImage!, myWebsite]
+            //let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //New Excluded Activities Code
+            
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            
+            
+            activityVC.popoverPresentationController?.sourceView = sender
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    
 }
 
 
