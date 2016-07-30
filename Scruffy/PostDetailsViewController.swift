@@ -18,7 +18,7 @@ class PostDetailsViewController: UIViewController {
     
     @IBOutlet weak var contactHeaderTextLabel: UILabel!
     
-    //var swipeDownHandler: UISwipeGestureRecognizer?
+    var swipeDownHandler: UISwipeGestureRecognizer?
     var tapHandler: UITapGestureRecognizer?
     
     @IBOutlet weak var contactNumberTextLabel: UITextView!
@@ -37,10 +37,14 @@ class PostDetailsViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        /*
+        petImageThumbnail.layer.masksToBounds = true
+        petImageThumbnail.layer.borderWidth = 10
+        petImageThumbnail.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        
         swipeDownHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeDownHandler?.direction = .Down
-        self.view.addGestureRecognizer(swipeDownHandler!)*/
+        self.view.addGestureRecognizer(swipeDownHandler!)
         
         tapHandler = UITapGestureRecognizer(target: self, action: #selector(swipeHandler))
         tapHandler!.numberOfTapsRequired = 1
@@ -63,12 +67,13 @@ class PostDetailsViewController: UIViewController {
     
     func swipeHandler(gesture: UISwipeGestureRecognizer) {
         
-        /*
+        
         if gesture == swipeDownHandler {
             
             print("swiped down")
             self.dismissViewControllerAnimated(true, completion: nil)
-        }*/
+        }
+ 
         if gesture == tapHandler {
             
             print("tapped done")

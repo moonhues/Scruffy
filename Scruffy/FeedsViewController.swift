@@ -19,6 +19,7 @@ class FeedsViewController: UIViewController {
     
     //    @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var petImageView: PFImageView!
+   // @IBOutlet weak var petNameLabel: UILabel!
     @IBOutlet weak var petNameLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
@@ -26,7 +27,7 @@ class FeedsViewController: UIViewController {
     
     var swipeLeftHandler: UISwipeGestureRecognizer?
     var swipeRightHandler: UISwipeGestureRecognizer?
-    //var swipeUpHandler: UISwipeGestureRecognizer?
+    var swipeUpHandler: UISwipeGestureRecognizer?
     var tapHandler: UITapGestureRecognizer?
     
     var arrayOfPets: [Post] = []
@@ -35,6 +36,10 @@ class FeedsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        petImageView.layer.masksToBounds = true
+        petImageView.layer.borderWidth = 10
+        petImageView.layer.borderColor = UIColor.whiteColor().CGColor
         
         // Do any additional setup after loading the view.
         // view.addSubview(<#T##view: UIView##UIView#>)
@@ -49,6 +54,10 @@ class FeedsViewController: UIViewController {
         swipeRightHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeRightHandler?.direction = .Right
         self.view.addGestureRecognizer(swipeRightHandler!)
+        
+        swipeUpHandler = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
+        swipeUpHandler?.direction = .Up
+        self.view.addGestureRecognizer(swipeUpHandler!)
         
         tapHandler = UITapGestureRecognizer(target: self, action: #selector(swipeHandler))
         tapHandler!.numberOfTapsRequired = 1
@@ -183,6 +192,13 @@ class FeedsViewController: UIViewController {
             }
         }
         
+        if gesture == swipeUpHandler {
+            
+            print("swiped up")
+            
+            //goes backward
+                performSegueWithIdentifier("postDetailsView", sender: nil)
+        }
         
         if gesture == tapHandler {
             
@@ -290,8 +306,8 @@ class FeedsViewController: UIViewController {
             self.presentViewController(activityVC, animated: true, completion: nil)
         }
     }
-    
-    
+
+
 }
 
 

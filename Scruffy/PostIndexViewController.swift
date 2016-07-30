@@ -36,6 +36,9 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         timelineComponent.refresh(posts)
         timelineComponent.loadInitialIfRequired()
         
+        //
+        tableView.layoutMargins = UIEdgeInsetsZero
+        tableView.separatorInset = UIEdgeInsetsZero
     }
     
     func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
@@ -132,8 +135,12 @@ extension PostIndexViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         // 1
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostTableViewCell
+        //
+            cell.layoutMargins = UIEdgeInsetsZero
         
         // 2
         
