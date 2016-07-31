@@ -106,15 +106,15 @@
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="450" translatesAutoresizingMaskIntoConstraints="NO" id="8FK-Vb-5aK" customClass="PFImageView">
-                                <rect key="frame" x="20" y="64" width="374" height="374"/>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="450" translatesAutoresizingMaskIntoConstraints="NO" id="8FK-Vb-5aK" customClass="PFImageView">
+                                <rect key="frame" x="20" y="0.0" width="374" height="374"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8FK-Vb-5aK" secondAttribute="height" multiplier="1:1" id="mNS-kL-2um"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-ZL-WGb">
-                                <rect key="frame" x="177" y="542" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-ZL-WGb">
+                                <rect key="frame" x="177" y="478" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="2P7-Qq-T0z"/>
                                     <constraint firstAttribute="height" constant="60" id="awf-ZE-SHt"/>
@@ -125,8 +125,8 @@
                                     <action selector="likeButtonTapped:" destination="dRX-hD-3pM" eventType="touchUpInside" id="1UC-Zh-adN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2n-2F-qkH">
-                                <rect key="frame" x="20" y="438" width="374" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2n-2F-qkH">
+                                <rect key="frame" x="20" y="374" width="374" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="PF7-bq-SDg"/>
@@ -135,9 +135,14 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuF-vu-zZ6">
-                                <rect key="frame" x="267" y="542" width="68" height="60"/>
-                                <state key="normal" title="share me!"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuF-vu-zZ6">
+                                <rect key="frame" x="350" y="374" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DOX-RP-HOh"/>
+                                    <constraint firstAttribute="width" constant="44" id="WuE-nl-VE7"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="8" minY="10" maxX="8" maxY="10"/>
+                                <state key="normal" title="share me!" image="share-file (1)"/>
                                 <connections>
                                     <action selector="shareButtonTapped:" destination="dRX-hD-3pM" eventType="touchUpInside" id="W40-W3-F6K"/>
                                 </connections>
@@ -148,16 +153,15 @@
                         <constraints>
                             <constraint firstItem="RYq-ZL-WGb" firstAttribute="top" secondItem="H2n-2F-qkH" secondAttribute="bottom" constant="60" id="3gf-LB-Llv"/>
                             <constraint firstItem="H2n-2F-qkH" firstAttribute="width" secondItem="8FK-Vb-5aK" secondAttribute="width" id="A6O-JF-yEh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QuF-vu-zZ6" secondAttribute="trailing" id="F4R-YC-qfi"/>
+                            <constraint firstItem="QuF-vu-zZ6" firstAttribute="top" secondItem="8FK-Vb-5aK" secondAttribute="bottom" id="FOa-88-tt9"/>
                             <constraint firstItem="pNi-QU-nVZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8FK-Vb-5aK" secondAttribute="bottom" constant="150" id="HZG-iI-g49"/>
-                            <constraint firstItem="QuF-vu-zZ6" firstAttribute="top" secondItem="H2n-2F-qkH" secondAttribute="bottom" constant="60" id="Tsk-gU-2XS"/>
-                            <constraint firstItem="QuF-vu-zZ6" firstAttribute="centerY" secondItem="RYq-ZL-WGb" secondAttribute="centerY" id="UYM-yq-DbF"/>
                             <constraint firstItem="8FK-Vb-5aK" firstAttribute="top" secondItem="HrC-Rz-Ngz" secondAttribute="bottom" id="Xlq-5G-iYM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8FK-Vb-5aK" secondAttribute="trailing" id="eQw-Nn-W2s"/>
                             <constraint firstItem="H2n-2F-qkH" firstAttribute="top" secondItem="8FK-Vb-5aK" secondAttribute="bottom" id="fZ4-Kb-uoq"/>
                             <constraint firstItem="8FK-Vb-5aK" firstAttribute="leading" secondItem="UAh-Fq-sCn" secondAttribute="leadingMargin" id="fjZ-pc-6ai"/>
                             <constraint firstItem="RYq-ZL-WGb" firstAttribute="centerX" secondItem="UAh-Fq-sCn" secondAttribute="centerX" id="iup-k5-Xsf"/>
                             <constraint firstItem="H2n-2F-qkH" firstAttribute="leading" secondItem="8FK-Vb-5aK" secondAttribute="leading" id="sf6-vv-3cV"/>
-                            <constraint firstItem="QuF-vu-zZ6" firstAttribute="leading" secondItem="RYq-ZL-WGb" secondAttribute="trailing" constant="30" id="wZJ-Hm-ZZB"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -211,7 +215,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="330" id="9FF-ZB-ran" userLabel="PostCell" customClass="PostTableViewCell" customModule="Scruffy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="65" width="320" height="330"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" tableViewCell="9FF-ZB-ran" id="Lrn-Bb-Bya">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="9FF-ZB-ran" id="Lrn-Bb-Bya">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="329.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -221,14 +225,14 @@
                                                     <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-EZ-Wbm">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-EZ-Wbm">
                                                     <rect key="frame" x="264" y="293" width="36" height="30"/>
                                                     <state key="normal" title="more"/>
                                                     <connections>
                                                         <action selector="moreButtonTapped:" destination="9FF-ZB-ran" eventType="touchUpInside" id="H5I-xt-wRe"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rG3-eM-eiE">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rG3-eM-eiE">
                                                     <rect key="frame" x="20" y="8" width="280" height="280"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
@@ -809,7 +813,7 @@
                                             <segue destination="4b7-Jm-hRT" kind="unwind" unwindAction="unwindToPostIndex:" id="KjB-of-22Q"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-m2-IX2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-m2-IX2">
                                         <rect key="frame" x="176" y="0.0" width="35" height="30"/>
                                         <state key="normal" title="post!"/>
                                         <connections>
@@ -850,6 +854,7 @@
         <image name="likepaw" width="170" height="170"/>
         <image name="noimage-2" width="600" height="600"/>
         <image name="pawglass-1" width="1273" height="504"/>
+        <image name="share-file (1)" width="512" height="512"/>
         <image name="user" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
