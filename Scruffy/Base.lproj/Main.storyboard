@@ -195,7 +195,7 @@
                         <outlet property="likeButton" destination="RYq-ZL-WGb" id="d4q-Qi-ww7"/>
                         <outlet property="petImageView" destination="8FK-Vb-5aK" id="nUc-Bl-CFU"/>
                         <outlet property="petNameLabel" destination="H2n-2F-qkH" id="vgG-hM-tl8"/>
-                        <segue destination="rVb-gf-R9R" kind="presentation" identifier="postDetails" id="dba-QI-jjH"/>
+                        <segue destination="rVb-gf-R9R" kind="presentation" identifier="postDetailsView" id="dba-QI-jjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR4-Uq-mCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -618,17 +618,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="contactHeaderTextLabel" destination="X2m-S1-pBY" id="Pmz-US-7nC"/>
-                        <outlet property="contactNameTextLabel" destination="SNi-YC-lDI" id="Ecy-IK-nui"/>
-                        <outlet property="contactNumberTextLabel" destination="zHg-Ko-zJz" id="8eO-dG-3Fr"/>
-                        <outlet property="emailTextLabel" destination="Sbb-gC-THK" id="6Ga-uv-NBR"/>
-                        <outlet property="petDescTextLabel" destination="8i9-fg-0f5" id="KqH-o6-qAP"/>
-                        <outlet property="petImageThumbnail" destination="ofZ-cB-4r6" id="zyK-26-4sL"/>
-                        <outlet property="petNameTextLabel" destination="mHf-sn-mEN" id="1t2-h0-LWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mab-Cp-QrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2118" y="291"/>
+            <point key="canvasLocation" x="2225" y="803"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HIl-p3-Emh">
@@ -717,10 +711,10 @@
             </objects>
             <point key="canvasLocation" x="2005" y="1942"/>
         </scene>
-        <!--Static Form View Controller-->
+        <!--Post Details -->
         <scene sceneID="9Lf-Dz-IfJ">
             <objects>
-                <viewController id="rVb-gf-R9R" customClass="StaticFormViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Post Details " id="rVb-gf-R9R" customClass="PostDetailsViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zc9-G9-pPV"/>
                         <viewControllerLayoutGuide type="bottom" id="yjF-Uq-7qA"/>
@@ -742,7 +736,7 @@
                                                     <constraint firstAttribute="height" constant="200" id="M6h-Y3-XG8"/>
                                                 </constraints>
                                             </tableView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Benny" translatesAutoresizingMaskIntoConstraints="NO" id="jdC-gR-E8S">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdC-gR-E8S" customClass="PFImageView">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="y1F-tv-UPg"/>
@@ -795,7 +789,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                         <constraints>
                             <constraint firstItem="816-08-axg" firstAttribute="top" secondItem="zc9-G9-pPV" secondAttribute="bottom" id="8Wg-ad-KJP"/>
@@ -808,12 +802,15 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
-                        <outlet property="tableView" destination="HQo-RN-GRp" id="spa-BO-Rqd"/>
+                        <outlet property="petDescTextLabel" destination="f9O-Dq-Vb2" id="W2O-C4-m1b"/>
+                        <outlet property="petImageThumbnail" destination="jdC-gR-E8S" id="iy0-RE-ymW"/>
+                        <outlet property="petNameTextLabel" destination="3ZI-sQ-OFv" id="1f3-Ln-KQu"/>
+                        <outlet property="tableView" destination="HQo-RN-GRp" id="kdV-ss-xXy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDC-xM-L94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466" y="416"/>
+            <point key="canvasLocation" x="2265" y="125"/>
         </scene>
         <!--Capture image-->
         <scene sceneID="Izg-FC-Wpr">
@@ -973,7 +970,6 @@
     </scenes>
     <resources>
         <image name="AdoptMe" width="600" height="600"/>
-        <image name="Benny" width="500" height="320"/>
         <image name="dustbin" width="512" height="512"/>
         <image name="like" width="170" height="170"/>
         <image name="likepaw" width="170" height="170"/>

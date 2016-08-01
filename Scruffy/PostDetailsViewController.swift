@@ -8,29 +8,32 @@
 
 import UIKit
 import ParseUI
+import Static
 
 class PostDetailsViewController: UIViewController {
     
     @IBOutlet weak var petImageThumbnail: PFImageView!
     @IBOutlet weak var petDescTextLabel: UITextView!
-    
+
     @IBOutlet weak var petNameTextLabel: UILabel!
-    
-    @IBOutlet weak var contactHeaderTextLabel: UILabel!
     
     var swipeDownHandler: UISwipeGestureRecognizer?
     var tapHandler: UITapGestureRecognizer?
     
-    @IBOutlet weak var contactNumberTextLabel: UITextView!
-    @IBOutlet weak var emailTextLabel: UITextView!
-    @IBOutlet weak var contactNameTextLabel: UITextView!
+    //@IBOutlet weak var contactNumberTextLabel: UITextView!
+    //@IBOutlet weak var emailTextLabel: UITextView!
+    //@IBOutlet weak var contactNameTextLabel: UITextView!
+    
+    @IBOutlet weak var tableView: UITableView!
+   
+    let dataSource = DataSource()
     
     weak var pet: Post?
     
-    @IBAction func adoptMeButton(sender: UIButton) {
+    /*@IBAction func adoptMeButton(sender: UIButton) {
 
         contactAction()
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +59,29 @@ class PostDetailsViewController: UIViewController {
         
         petImageThumbnail.file = pet?.imageFile
         petImageThumbnail.loadInBackground()
-        contactNameTextLabel.text = pet?.user?.username
         petNameTextLabel.text = pet?.postTitle
         petDescTextLabel.text = pet?.postDescription
-        contactNumberTextLabel.text = pet?.user?.contactnumber
-        emailTextLabel.text = pet?.user?.email
         
+        let contactName = pet?.user?.username
+        let contactNumber = pet?.user?.contactnumber
+        let emailAddress = pet?.user?.email
+        //contactNameTextLabel.text = pet?.user?.username
+        //contactNumberTextLabel.text = pet?.user?.contactnumber
+        // emailTextLabel.text = pet?.user?.email
+        
+        dataSource.tableView = tableView
+        dataSource.sections = [
+            Section(
+                header: Section.Extremity.Title("Contact Details"),
+                rows: [
+                    Row(text: "Name: " + contactName!),
+                    Row(text: "Contact Number: " + contactNumber!),
+                    Row(text: "Email: " + emailAddress!),
+                ]
+            )
+        ]
+
+    
     }
     
     
