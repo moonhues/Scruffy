@@ -25,6 +25,7 @@ PODS:
   - ParseUI (1.2.0):
     - Bolts/Tasks (~> 1.3)
     - Parse (~> 1.9)
+  - Static (1.0.0)
 
 DEPENDENCIES:
   - Bond (= 4.0.0)
@@ -35,6 +36,16 @@ DEPENDENCIES:
   - Parse
   - ParseFacebookUtilsV4
   - ParseUI
+  - Static (from `https://github.com/venmo/Static`)
+
+EXTERNAL SOURCES:
+  Static:
+    :git: https://github.com/venmo/Static
+
+CHECKOUT OPTIONS:
+  Static:
+    :commit: 77d79297b079e9b7b1b9cea7e73875360abcba45
+    :git: https://github.com/venmo/Static
 
 SPEC CHECKSUMS:
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
@@ -48,7 +59,8 @@ SPEC CHECKSUMS:
   Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
+  Static: 8b4021cf969d40da1ad03562e5a2a7470dc94c65
 
-PODFILE CHECKSUM: 0f9a25e577fa2f70ec7cf0892dc4e0b9e0159a78
+PODFILE CHECKSUM: 55b241fd894de94c926f5564304cf1cb5d084913
 
 COCOAPODS: 1.0.1

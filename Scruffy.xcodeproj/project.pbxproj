@@ -20,6 +20,7 @@
 		B14DEF5B1D2E9E80003CE6EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF591D2E9E80003CE6EE /* Main.storyboard */; };
 		B14DEF5D1D2E9E80003CE6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */; };
 		B14DEF601D2E9E80003CE6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF5E1D2E9E80003CE6EE /* LaunchScreen.storyboard */; };
+		B14E79A31D4EEC7200A0BC6A /* StaticFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E79A21D4EEC7200A0BC6A /* StaticFormViewController.swift */; };
 		B15ADDF51D38C8A1008902D4 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15ADDF41D38C8A1008902D4 /* PostTableViewCell.swift */; };
 		B15ADDF71D38CEDB008902D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15ADDF61D38CEDB008902D4 /* Post.swift */; };
 		B1806A371D368A6B008FAE92 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1806A361D368A6B008FAE92 /* FeedsViewController.swift */; };
@@ -46,6 +47,7 @@
 		B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B14DEF5F1D2E9E80003CE6EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B14DEF611D2E9E80003CE6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B14E79A21D4EEC7200A0BC6A /* StaticFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFormViewController.swift; sourceTree = "<group>"; };
 		B15ADDF41D38C8A1008902D4 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		B15ADDF61D38CEDB008902D4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B1806A361D368A6B008FAE92 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedsViewController.swift; path = ../../../../Scruffy/Scruffy/FeedsViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				B12EAEA91D3D20590086D1E0 /* petNameViewController.swift */,
 				B12EAEAD1D3E1DC70086D1E0 /* petDescViewController.swift */,
 				B12EAEAB1D3D20CD0086D1E0 /* petNameDisplayController.swift */,
+				B14E79A21D4EEC7200A0BC6A /* StaticFormViewController.swift */,
 			);
 			name = Controllers;
 			path = "../../Make School Projects/Scruffy/Scruffy/Controllers";
@@ -310,6 +313,7 @@
 				B15ADDF51D38C8A1008902D4 /* PostTableViewCell.swift in Sources */,
 				B12EAEAA1D3D20590086D1E0 /* petNameViewController.swift in Sources */,
 				B12EAEAC1D3D20CD0086D1E0 /* petNameDisplayController.swift in Sources */,
+				B14E79A31D4EEC7200A0BC6A /* StaticFormViewController.swift in Sources */,
 				B12EAEA61D3D1EAC0086D1E0 /* ParseHelper.swift in Sources */,
 				B14DEF561D2E9E80003CE6EE /* AppDelegate.swift in Sources */,
 			);

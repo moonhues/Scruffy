@@ -216,12 +216,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Make%20School%20Projects/Scruffy/Scruffy/Models/Post.swift"
-                  timestampString = "491396281.674223"
+                  timestampString = "491723693.532195"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
                   endingLineNumber = "107"
-                  offsetFromSymbolStart = "126">
+                  offsetFromSymbolStart = "152">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -231,12 +231,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Make%20School%20Projects/Scruffy/Scruffy/Models/Post.swift"
-                  timestampString = "491396281.674408"
+                  timestampString = "491723693.532377"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
                   endingLineNumber = "107"
-                  offsetFromSymbolStart = "19">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -436,12 +436,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/PostIndexViewController.swift"
-                  timestampString = "491396281.688987"
+                  timestampString = "491723693.536603"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "41">
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "31">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -451,11 +451,11 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/PostIndexViewController.swift"
-                  timestampString = "491396281.689201"
+                  timestampString = "491723693.536727"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
                   offsetFromSymbolStart = "83">
                </Location>
             </Locations>
@@ -596,12 +596,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/FeedsViewController.swift"
-                  timestampString = "491396281.704364"
+                  timestampString = "491723693.540993"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "4341">
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "5078">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -611,12 +611,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/FeedsViewController.swift"
-                  timestampString = "491396281.704567"
+                  timestampString = "491723693.541102"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "22">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -820,12 +820,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/PostDetailsViewController.swift"
-                  timestampString = "491396281.724284"
+                  timestampString = "491723693.547807"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "40">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "34">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -835,12 +835,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/PostDetailsViewController.swift"
-                  timestampString = "491396281.724411"
+                  timestampString = "491723693.547964"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "2281">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1994">
                </Location>
             </Locations>
          </BreakpointContent>

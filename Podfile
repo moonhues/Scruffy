@@ -18,5 +18,7 @@ target 'Scruffy' do
   source 'https://github.com/CocoaPods/Specs.git'
   platform :ios, '8.0'
   pod 'Eureka', '~> 1.7'
+  
+  pod 'Static', git: 'https://github.com/venmo/Static'
 
 end

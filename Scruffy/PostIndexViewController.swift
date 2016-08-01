@@ -157,9 +157,11 @@ extension PostIndexViewController: UITableViewDataSource {
         //cell.post = posts[indexPath.row]
         //cell.timeline = self
         
+        /*
         cell.postImageView.layer.masksToBounds = true
         cell.postImageView.layer.borderWidth = 10
         cell.postImageView.layer.borderColor = UIColor.whiteColor().CGColor
+        */ 
         
         return cell
         
