@@ -31,6 +31,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     let additionalRangeSize = 5
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         timelineComponent = TimelineComponent(target: self)
         timelineComponent.refresh(posts)
@@ -149,12 +150,16 @@ extension PostIndexViewController: UITableViewDataSource {
         cell.post = post
         cell.timeline = self
         cell.postImageView.image = post.image.value
-        cell.petNameTextLabel.text = post.postTitle
+        cell.petNameTextLabel.text = post.postTitle?.uppercaseString
         //posts[indexPath.row] = post
         //cell.postImageView.image = posts[indexPath.row].image.value
         //cell.petNameTextLabel.text = posts[indexPath.row].postTitle
         //cell.post = posts[indexPath.row]
         //cell.timeline = self
+        
+        cell.postImageView.layer.masksToBounds = true
+        cell.postImageView.layer.borderWidth = 10
+        cell.postImageView.layer.borderColor = UIColor.whiteColor().CGColor
         
         return cell
         

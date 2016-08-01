@@ -197,6 +197,7 @@ class FeedsViewController: UIViewController {
             print("swiped up")
             
             //goes backward
+                
                 performSegueWithIdentifier("postDetailsView", sender: nil)
         }
         
