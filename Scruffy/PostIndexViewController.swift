@@ -16,9 +16,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     
     var timelineComponent: TimelineComponent <Post, PostIndexViewController>!
     
-    @IBAction func unwindToPostIndex(segue: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindToPostIndex(segue: UIStoryboardSegue) {}
     
     var posts = [Post]() {
         didSet{
@@ -41,6 +39,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
     }
+    
     
     func loadInRange(range: Range<Int>, completionBlock: ([Post]?) -> Void) {
         ParseHelper.timelineRequestForCurrentUser(range) {
@@ -108,13 +107,13 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
                 // 1
                 let indexPath = tableView.indexPathForSelectedRow!
                 
-                print(indexPath.row)
+                print(indexPath.section)
                 // 2
-                let newPost = posts[indexPath.row]
+                let newPost = posts[indexPath.section]
                 // 3
-                let displayNoteViewController = segue.destinationViewController as! imageCaptureViewController
+                let destVC = segue.destinationViewController as! imageCaptureViewController
                 // 4
-                displayNoteViewController.newPost = newPost
+                destVC.newPost = newPost
                 
             }
         }

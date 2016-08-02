@@ -30,10 +30,10 @@ class PostDetailsViewController: UIViewController {
     
     weak var pet: Post?
     
-    /*@IBAction func adoptMeButton(sender: UIButton) {
+    @IBAction func adoptMeButton(sender: UIButton) {
 
         contactAction()
-    }*/
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +62,11 @@ class PostDetailsViewController: UIViewController {
         petNameTextLabel.text = pet?.postTitle
         petDescTextLabel.text = pet?.postDescription
         
+        //resize textview
+
+        petDescTextLabel.sizeToFit()         //
+        
+        
         let contactName = pet?.user?.username
         let contactNumber = pet?.user?.contactnumber
         let emailAddress = pet?.user?.email
@@ -69,16 +74,38 @@ class PostDetailsViewController: UIViewController {
         //contactNumberTextLabel.text = pet?.user?.contactnumber
         // emailTextLabel.text = pet?.user?.email
         
+        let petGender = pet?.petGender
+        let hdbApproved = pet?.hdbApproved!
+        
+        let petBreed = pet?.petBreed
+      //  let petAge = pet?.petAge
+        let petType = pet?.petType
+        let petOwnerType = pet?.petOwnerType
+        
+        let tempNumber:NSNumber = (pet?.petAge)!
+        let petAgeS:String = String(format:"%.1f", tempNumber.floatValue)
+        
         dataSource.tableView = tableView
         dataSource.sections = [
             Section(
-                header: Section.Extremity.Title("Contact Details"),
+                header: Section.Extremity.Title("Details"),
+                rows: [
+                    Row(text: "Gender: " + petGender! + " " + petType!, cellClass: Value1Cell.self),
+                    Row(text: "Estimated Age: " + petAgeS + " YRS"),
+                    Row(text: "Breed: " + petBreed!),
+                    Row(text: "Owner Type: " + petOwnerType!),
+                    Row(text: "HDB Approved: " + hdbApproved!),
+                ]
+            ),
+            Section(
+                header: Section.Extremity.Title("Contact Information "),
                 rows: [
                     Row(text: "Name: " + contactName!),
                     Row(text: "Contact Number: " + contactNumber!),
                     Row(text: "Email: " + emailAddress!),
                 ]
             )
+
         ]
 
     
