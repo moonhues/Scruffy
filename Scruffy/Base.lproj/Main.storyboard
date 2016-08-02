@@ -224,7 +224,7 @@
                                         <rect key="frame" x="0.0" y="65" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" tableViewCell="9FF-ZB-ran" id="Lrn-Bb-Bya">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rG3-eM-eiE">
@@ -296,6 +296,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="n9z-QK-b1C">
+                        <barButtonItem key="backBarButtonItem" title=" " id="vrg-V9-q7W"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="g7J-47-GPO">
                             <connections>
                                 <segue destination="nZ8-8O-1wh" kind="show" identifier="createImage" id="jsU-VK-pbO"/>
@@ -312,6 +313,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wa-dz-I6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1744" y="1136"/>
+        </scene>
+        <!--managePostController -->
+        <scene sceneID="my3-xt-Fp3">
+            <objects>
+                <viewController title="managePostController " id="Iup-BH-u83" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jnU-Hr-PTQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="P0Z-uf-zRR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IEt-p4-AlO">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCA-Sl-5xX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2170" y="1323"/>
         </scene>
         <!--User Info -->
         <scene sceneID="tGt-F4-2UP">
@@ -355,6 +374,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0V-SZ-mO5">
                                 <rect key="frame" x="164" y="590" width="79" height="30"/>
                                 <state key="normal" title="Static Form"/>
+                                <connections>
+                                    <segue destination="Iup-BH-u83" kind="show" id="AjQ-Cw-Mhz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -373,64 +395,66 @@
             </objects>
             <point key="canvasLocation" x="1201" y="1104"/>
         </scene>
-        <!--Get Pet Description-->
+        <!--Pet Description-->
         <scene sceneID="f3W-wI-8BH">
             <objects>
-                <viewController title="Get Pet Description" id="fYa-P0-30c" customClass="petDescViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pet Description" id="fYa-P0-30c" customClass="petDescViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rnF-ag-twM"/>
                         <viewControllerLayoutGuide type="bottom" id="jm8-09-XCY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YRV-58-Lpe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="27V-4j-0pU">
-                                <rect key="frame" x="16" y="84" width="288" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="QIM-8z-cnc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="54s-OX-c2G">
-                                <rect key="frame" x="57" y="444" width="206" height="30"/>
+                                <rect key="frame" x="162" y="542" width="50" height="51"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2M-1I-MEl">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
-                                        <state key="normal" title="prev"/>
-                                        <connections>
-                                            <segue destination="qkc-jZ-sev" kind="unwind" identifier="unwindToPetName" unwindAction="unwindToPetName:" id="c2p-fV-ob4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59t-Rq-rbP">
-                                        <rect key="frame" x="81" y="0.0" width="45" height="30"/>
-                                        <state key="normal" title="cancel"/>
-                                        <connections>
-                                            <segue destination="qkc-jZ-sev" kind="unwind" unwindAction="unwindToPostIndex:" id="wL7-kd-b90"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68p-tY-xqQ">
-                                        <rect key="frame" x="176" y="0.0" width="30" height="30"/>
-                                        <state key="normal" title="next"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68p-tY-xqQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="51"/>
+                                        <state key="normal" image="OK"/>
                                         <connections>
                                             <segue destination="TWg-PQ-XpV" kind="show" identifier="publishpet" id="xcU-9D-Xgl"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about your pet!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoJ-c7-cwL">
+                                <rect key="frame" x="16" y="114" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="288" placeholderIntrinsicHeight="infinite" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="27V-4j-0pU">
+                                <rect key="frame" x="16" y="148.5" width="343" height="57"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="please enter some description"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="WoJ-c7-cwL" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leadingMargin" id="1Bo-ux-svT"/>
                             <constraint firstItem="54s-OX-c2G" firstAttribute="centerX" secondItem="YRV-58-Lpe" secondAttribute="centerX" id="2If-0Q-t41"/>
                             <constraint firstAttribute="trailingMargin" secondItem="27V-4j-0pU" secondAttribute="trailing" id="Azp-zI-HV8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="27V-4j-0pU" secondAttribute="trailing" id="YEj-kZ-vss"/>
+                            <constraint firstItem="27V-4j-0pU" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leadingMargin" id="bTt-Aw-X8c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WoJ-c7-cwL" secondAttribute="trailing" id="bVZ-KJ-uEd"/>
                             <constraint firstItem="27V-4j-0pU" firstAttribute="leading" secondItem="YRV-58-Lpe" secondAttribute="leadingMargin" id="dI4-Z2-ekY"/>
-                            <constraint firstItem="27V-4j-0pU" firstAttribute="top" secondItem="rnF-ag-twM" secondAttribute="bottom" constant="20" id="ti1-h7-5rs"/>
-                            <constraint firstItem="jm8-09-XCY" firstAttribute="top" secondItem="54s-OX-c2G" secondAttribute="bottom" constant="50" id="vBZ-Pu-jye"/>
+                            <constraint firstItem="WoJ-c7-cwL" firstAttribute="top" secondItem="rnF-ag-twM" secondAttribute="bottom" constant="50" id="dKk-Lh-IGw"/>
+                            <constraint firstItem="jm8-09-XCY" firstAttribute="top" secondItem="54s-OX-c2G" secondAttribute="bottom" constant="30" id="vBZ-Pu-jye"/>
+                            <constraint firstItem="27V-4j-0pU" firstAttribute="top" secondItem="WoJ-c7-cwL" secondAttribute="bottom" constant="15" id="yyl-5R-qfv"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationItem key="navigationItem" title="Pet Description" id="1VB-AQ-IoZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="PmO-e4-5m5">
+                            <connections>
+                                <segue destination="qkc-jZ-sev" kind="unwind" unwindAction="unwindToPostIndex:" id="Yf2-93-9ia"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="petDescTextView" destination="27V-4j-0pU" id="97y-OW-t0y"/>
                     </connections>
@@ -438,7 +462,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rB7-gK-XnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qkc-jZ-sev" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="1942"/>
+            <point key="canvasLocation" x="2439.5" y="1870.5"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="oVY-Sy-GDY">
@@ -534,61 +558,64 @@
             </objects>
             <point key="canvasLocation" x="591" y="216"/>
         </scene>
-        <!--get pet name-->
+        <!--Pet Name-->
         <scene sceneID="wFi-Xk-SGo">
             <objects>
-                <viewController title="get pet name" id="fEi-pe-18e" customClass="petNameViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pet Name" id="fEi-pe-18e" customClass="petNameViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TCG-o5-KDL"/>
                         <viewControllerLayoutGuide type="bottom" id="8DH-4r-U7I"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="600" id="Dzz-vC-scs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="119" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter pet name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aB-L7-QMD">
-                                <rect key="frame" x="36" y="269" width="248" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="119" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter pet name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aB-L7-QMD">
+                                <rect key="frame" x="36" y="148.5" width="303" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-eY-VcD">
-                                <rect key="frame" x="57" y="444" width="206" height="30"/>
+                                <rect key="frame" x="163" y="542" width="50" height="51"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVu-kF-I1s">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
-                                        <state key="normal" title="prev"/>
-                                        <connections>
-                                            <segue destination="agj-0h-0y8" kind="unwind" identifier="unwindToImageCapture" unwindAction="unwindToImageCapture:" id="GiN-By-LTa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLG-BQ-B0N">
-                                        <rect key="frame" x="81" y="0.0" width="45" height="30"/>
-                                        <state key="normal" title="cancel"/>
-                                        <connections>
-                                            <segue destination="agj-0h-0y8" kind="unwind" unwindAction="unwindToPostIndex:" id="a11-wg-mq9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlr-pK-4IX">
-                                        <rect key="frame" x="176" y="0.0" width="30" height="30"/>
-                                        <state key="normal" title="next"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlr-pK-4IX">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="51"/>
+                                        <state key="normal" image="OK"/>
                                         <connections>
                                             <segue destination="fYa-P0-30c" kind="show" identifier="getpetdesc" id="5pF-hF-GO5"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What is your pet's name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eho-36-Lcs">
+                                <rect key="frame" x="36" y="114" width="323" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eho-36-Lcs" secondAttribute="trailing" id="2jb-uj-jOQ"/>
                             <constraint firstItem="5aB-L7-QMD" firstAttribute="leading" secondItem="Dzz-vC-scs" secondAttribute="leadingMargin" constant="20" id="77h-uz-Tzz"/>
-                            <constraint firstItem="5aB-L7-QMD" firstAttribute="centerY" secondItem="Dzz-vC-scs" secondAttribute="centerY" id="ABt-5R-lTV"/>
+                            <constraint firstItem="Eho-36-Lcs" firstAttribute="leading" secondItem="5aB-L7-QMD" secondAttribute="leading" id="N6U-ld-N86"/>
+                            <constraint firstItem="Eho-36-Lcs" firstAttribute="top" secondItem="TCG-o5-KDL" secondAttribute="bottom" constant="50" id="T6r-Ki-86m"/>
+                            <constraint firstItem="Eho-36-Lcs" firstAttribute="leading" secondItem="Dzz-vC-scs" secondAttribute="leadingMargin" id="TZu-Sw-tAp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5aB-L7-QMD" secondAttribute="trailing" constant="20" id="U03-4v-4HU"/>
                             <constraint firstItem="ehi-eY-VcD" firstAttribute="centerX" secondItem="Dzz-vC-scs" secondAttribute="centerX" id="YEM-Wm-UzU"/>
                             <constraint firstItem="5aB-L7-QMD" firstAttribute="centerX" secondItem="Dzz-vC-scs" secondAttribute="centerX" id="YKl-2I-Rdo"/>
-                            <constraint firstItem="8DH-4r-U7I" firstAttribute="top" secondItem="ehi-eY-VcD" secondAttribute="bottom" constant="50" id="cMm-Q3-Crg"/>
+                            <constraint firstItem="5aB-L7-QMD" firstAttribute="top" secondItem="Eho-36-Lcs" secondAttribute="bottom" constant="15" id="cK8-Vp-yLc"/>
+                            <constraint firstItem="8DH-4r-U7I" firstAttribute="top" secondItem="ehi-eY-VcD" secondAttribute="bottom" constant="30" id="cMm-Q3-Crg"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationItem key="navigationItem" title="Name of Pet" id="KGz-aY-5hL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="asJ-ob-rtK">
+                            <connections>
+                                <segue destination="agj-0h-0y8" kind="unwind" unwindAction="unwindToPostIndex:" id="Eyw-2h-rj2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="petNameTextField" destination="5aB-L7-QMD" id="cUl-Iu-6uL"/>
                     </connections>
@@ -596,7 +623,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBb-cF-mzl" sceneMemberID="firstResponder"/>
                 <exit id="agj-0h-0y8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2005" y="1942"/>
+            <point key="canvasLocation" x="2067" y="1890"/>
         </scene>
         <!--Post Details -->
         <scene sceneID="9Lf-Dz-IfJ">
@@ -720,37 +747,35 @@
             </objects>
             <point key="canvasLocation" x="2282" y="399"/>
         </scene>
-        <!--Capture image-->
+        <!--Pet Image-->
         <scene sceneID="Izg-FC-Wpr">
             <objects>
-                <viewController title="Capture image" id="nZ8-8O-1wh" customClass="imageCaptureViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pet Image" id="nZ8-8O-1wh" customClass="imageCaptureViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qEp-iE-8Mi"/>
                         <viewControllerLayoutGuide type="bottom" id="Uu8-b9-09o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vn8-dr-YlE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage-2" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-CJ-gLL">
-                                <rect key="frame" x="8" y="76" width="296" height="296"/>
+                                <rect key="frame" x="18" y="66" width="331" height="331"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2eg-CJ-gLL" secondAttribute="height" multiplier="1:1" id="Rk7-k7-Ng9"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ufd-Ln-MtL">
-                                <rect key="frame" x="98" y="464" width="125" height="30"/>
+                                <rect key="frame" x="157" y="533" width="60" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAn-UX-IGX">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                        <state key="normal" title="cancel"/>
-                                        <connections>
-                                            <segue destination="uMH-re-s0T" kind="unwind" identifier="unwindToPostIndex" unwindAction="unwindToPostIndex:" id="Ohy-Rm-r15"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ega-Yo-0bf">
-                                        <rect key="frame" x="95" y="0.0" width="30" height="30"/>
-                                        <state key="normal" title="next"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ega-Yo-0bf">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ega-Yo-0bf" secondAttribute="height" multiplier="1:1" id="40L-MX-vkX"/>
+                                            <constraint firstAttribute="width" constant="60" id="9al-18-07R"/>
+                                        </constraints>
+                                        <state key="normal" image="OK"/>
                                         <connections>
                                             <segue destination="fEi-pe-18e" kind="show" identifier="getpetname" id="gPO-Mw-MEl">
                                                 <nil key="action"/>
@@ -759,19 +784,28 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="9Wx-8H-KfI">
-                                <rect key="frame" x="41" y="414" width="238" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="9Wx-8H-KfI">
+                                <rect key="frame" x="87" y="437" width="200" height="40.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-53-Dtd">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
-                                        <state key="normal" title="Snap!"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-53-Dtd">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="pcL-Si-HkG"/>
+                                            <constraint firstAttribute="width" secondItem="vz8-53-Dtd" secondAttribute="height" multiplier="314:211" id="xmk-p0-8ul"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Snap!" image="camera"/>
                                         <connections>
                                             <action selector="snapPhotoButton:" destination="nZ8-8O-1wh" eventType="touchUpInside" id="iVb-2c-wrk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLT-xe-q4x">
-                                        <rect key="frame" x="190" y="0.0" width="48" height="30"/>
-                                        <state key="normal" title="Select!"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLT-xe-q4x">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="40.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="8Fi-A5-vde"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Select!" image="folder"/>
                                         <connections>
                                             <action selector="selectPhotoButton:" destination="nZ8-8O-1wh" eventType="touchUpInside" id="tKX-k5-sT9"/>
                                         </connections>
@@ -781,68 +815,62 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2eg-CJ-gLL" firstAttribute="topMargin" secondItem="qEp-iE-8Mi" secondAttribute="bottom" constant="20" id="DrQ-iP-LhH"/>
-                            <constraint firstItem="Uu8-b9-09o" firstAttribute="top" relation="lessThanOrEqual" secondItem="2eg-CJ-gLL" secondAttribute="bottom" priority="750" constant="150" id="ZJf-aD-jUP"/>
+                            <constraint firstItem="2eg-CJ-gLL" firstAttribute="topMargin" secondItem="qEp-iE-8Mi" secondAttribute="bottom" constant="10" id="DrQ-iP-LhH"/>
+                            <constraint firstItem="ufd-Ln-MtL" firstAttribute="top" secondItem="9Wx-8H-KfI" secondAttribute="bottom" priority="500" constant="8" symbolic="YES" id="P1u-x8-gdt"/>
                             <constraint firstItem="9Wx-8H-KfI" firstAttribute="centerX" secondItem="vn8-dr-YlE" secondAttribute="centerX" id="a5P-QW-RbP"/>
-                            <constraint firstItem="9Wx-8H-KfI" firstAttribute="top" relation="lessThanOrEqual" secondItem="2eg-CJ-gLL" secondAttribute="bottom" constant="154" id="aV5-0I-zaE"/>
+                            <constraint firstItem="9Wx-8H-KfI" firstAttribute="top" secondItem="2eg-CJ-gLL" secondAttribute="bottom" constant="40" id="aV5-0I-zaE"/>
+                            <constraint firstItem="ega-Yo-0bf" firstAttribute="centerX" secondItem="vn8-dr-YlE" secondAttribute="centerX" id="d9I-Oq-vkd"/>
                             <constraint firstItem="ufd-Ln-MtL" firstAttribute="centerX" secondItem="vn8-dr-YlE" secondAttribute="centerX" id="j6M-Wu-xGe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2eg-CJ-gLL" secondAttribute="trailing" id="l1c-Iq-c4n"/>
-                            <constraint firstItem="2eg-CJ-gLL" firstAttribute="leadingMargin" secondItem="vn8-dr-YlE" secondAttribute="leadingMargin" id="qUC-BW-IMi"/>
-                            <constraint firstItem="ega-Yo-0bf" firstAttribute="top" secondItem="9Wx-8H-KfI" secondAttribute="bottom" constant="20" id="vBe-YA-pzT"/>
-                            <constraint firstItem="Uu8-b9-09o" firstAttribute="top" secondItem="ufd-Ln-MtL" secondAttribute="bottom" constant="30" id="yaU-K7-UeQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2eg-CJ-gLL" secondAttribute="trailing" constant="10" id="l1c-Iq-c4n"/>
+                            <constraint firstItem="9Wx-8H-KfI" firstAttribute="centerX" secondItem="vn8-dr-YlE" secondAttribute="centerX" id="oUP-aG-gpI"/>
+                            <constraint firstItem="2eg-CJ-gLL" firstAttribute="leadingMargin" secondItem="vn8-dr-YlE" secondAttribute="leadingMargin" constant="10" id="qUC-BW-IMi"/>
+                            <constraint firstItem="Uu8-b9-09o" firstAttribute="top" secondItem="ega-Yo-0bf" secondAttribute="bottom" constant="30" id="rVU-Nh-7Oh"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationItem key="navigationItem" title="Picture of Pet" id="Mqz-Ea-0Zd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Dzq-yc-mpT">
+                            <connections>
+                                <segue destination="uMH-re-s0T" kind="unwind" unwindAction="unwindToPostIndex:" id="QWu-6p-sS0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="imageView" destination="2eg-CJ-gLL" id="qE0-VJ-hH2"/>
+                        <outlet property="petImageView" destination="2eg-CJ-gLL" id="7mH-a9-p26"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wg-LE-8aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uMH-re-s0T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1693" y="1900"/>
+            <point key="canvasLocation" x="1682" y="1890"/>
         </scene>
-        <!--show pet -->
+        <!--Post Pet!-->
         <scene sceneID="D55-1c-UZH">
             <objects>
-                <viewController title="show pet " id="TWg-PQ-XpV" customClass="petNameDisplayViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Post Pet!" id="TWg-PQ-XpV" customClass="petNameDisplayViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M3u-AP-wL5"/>
                         <viewControllerLayoutGuide type="bottom" id="5MI-7Y-psX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dpY-dN-AMF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBN-zY-GyY">
-                                <rect key="frame" x="120" y="403" width="80" height="21"/>
+                                <rect key="frame" x="147" y="502" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dvi-EN-G3L">
-                                <rect key="frame" x="16" y="64" width="288" height="310"/>
+                                <rect key="frame" x="16" y="64" width="343" height="409"/>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-25-Fvl">
-                                <rect key="frame" x="45" y="444" width="211" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-25-Fvl">
+                                <rect key="frame" x="170" y="563" width="35" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh7-Ra-c9G">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
-                                        <state key="normal" title="prev"/>
-                                        <connections>
-                                            <segue destination="4b7-Jm-hRT" kind="unwind" identifier="unwindToPetDesc" unwindAction="unwindToPetDesc:" id="nBb-MH-dNN"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smy-aJ-xZy">
-                                        <rect key="frame" x="81" y="0.0" width="45" height="30"/>
-                                        <state key="normal" title="cancel"/>
-                                        <connections>
-                                            <segue destination="4b7-Jm-hRT" kind="unwind" unwindAction="unwindToPostIndex:" id="KjB-of-22Q"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-m2-IX2">
-                                        <rect key="frame" x="176" y="0.0" width="35" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
                                         <state key="normal" title="post!"/>
                                         <connections>
                                             <action selector="publishButton:" destination="TWg-PQ-XpV" eventType="touchUpInside" id="b09-Re-OB9"/>
@@ -860,11 +888,18 @@
                             <constraint firstItem="dvi-EN-G3L" firstAttribute="top" secondItem="M3u-AP-wL5" secondAttribute="bottom" id="6eJ-d4-DLm"/>
                             <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="UBN-zY-GyY" secondAttribute="bottom" constant="100" id="JCT-Ay-xQX"/>
                             <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="dvi-EN-G3L" secondAttribute="bottom" constant="150" id="aZ4-nj-t6d"/>
-                            <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="KBa-25-Fvl" secondAttribute="bottom" constant="50" id="p1y-MA-2pA"/>
+                            <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="KBa-25-Fvl" secondAttribute="bottom" constant="30" id="p1y-MA-2pA"/>
                             <constraint firstItem="KBa-25-Fvl" firstAttribute="centerX" secondItem="dpY-dN-AMF" secondAttribute="centerX" id="wcg-Y9-pLt"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationItem key="navigationItem" title="Post your pet!" id="L7f-85-B7z">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="lTn-i2-X9R">
+                            <connections>
+                                <segue destination="4b7-Jm-hRT" kind="unwind" unwindAction="unwindToPostIndex:" id="dIE-eE-Ihl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="dvi-EN-G3L" id="qXK-Ay-gPi"/>
                         <outlet property="petNameTextLabel" destination="UBN-zY-GyY" id="Gv0-5e-gjp"/>
@@ -873,12 +908,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9B-FE-ks7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4b7-Jm-hRT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2677" y="1924"/>
+            <point key="canvasLocation" x="2910" y="1902"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DDY-Lv-wZI">
+            <objects>
+                <viewController id="Tw4-sR-IDj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jy0-va-rgl"/>
+                        <viewControllerLayoutGuide type="bottom" id="JJL-qy-WnS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hzs-5f-qJh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUN-Ry-ae0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2733" y="2594"/>
         </scene>
     </scenes>
     <resources>
         <image name="AdoptMe" width="600" height="600"/>
+        <image name="OK" width="50" height="51"/>
+        <image name="camera" width="267" height="211"/>
         <image name="dustbin" width="512" height="512"/>
+        <image name="folder" width="786" height="668"/>
         <image name="like" width="170" height="170"/>
         <image name="likepaw" width="170" height="170"/>
         <image name="menu-2" width="512" height="512"/>

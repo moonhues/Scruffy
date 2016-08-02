@@ -8,7 +8,6 @@ PODS:
   - Bond (4.0.0)
   - BTNavigationDropdownMenu (0.4)
   - ConvenienceKit (0.4.0)
-  - Eureka (1.7.0)
   - FBSDKCoreKit (4.13.1):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.13.1):
@@ -31,7 +30,6 @@ DEPENDENCIES:
   - Bond (= 4.0.0)
   - BTNavigationDropdownMenu
   - ConvenienceKit
-  - Eureka (~> 1.7)
   - IHKeyboardAvoiding
   - Parse
   - ParseFacebookUtilsV4
@@ -52,7 +50,6 @@ SPEC CHECKSUMS:
   Bond: b729cdb22552def86efd4adfd8b8d93061eb4649
   BTNavigationDropdownMenu: 6876704a7a127aea257a65316c6b942ede51d163
   ConvenienceKit: ba1ad8797897dc0d011676e961a2f3e9b270c841
-  Eureka: 2020d9faeef7b7e9adeb9e3d8af779e5931c1897
   FBSDKCoreKit: 2807fe0da2ddb49a1469da6d6ff597f99912980f
   FBSDKLoginKit: 6d350cb6a22d6956e9d078885de6ee8a0ebc51b4
   IHKeyboardAvoiding: 8f14fed93405dd2c44ce070a26f780d9e477538c
@@ -61,6 +58,6 @@ SPEC CHECKSUMS:
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
   Static: 8b4021cf969d40da1ad03562e5a2a7470dc94c65
 
-PODFILE CHECKSUM: 55b241fd894de94c926f5564304cf1cb5d084913
+PODFILE CHECKSUM: aed03c41692fc251b4bec0b1724a53cd2402a6cc
 
 COCOAPODS: 1.0.1

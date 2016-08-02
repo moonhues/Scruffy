@@ -29,11 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Eureka.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -97,12 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4332352E97A37C729DC7D9B3B8A4BB15</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>48B2A4FFE781CE542E212ECEFF71BEB8</key>
+		<key>6A5B1F81F88753B1391A054A079506A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,7 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE3C2D5138BF584911423F16A38F79DF</key>
+		<key>AC4AC7E0346F06750B8287A769C5B265</key>
 		<dict>
 			<key>primary</key>
 			<true/>
