@@ -59,7 +59,7 @@ class PostDetailsViewController: UIViewController {
         
         petImageThumbnail.file = pet?.imageFile
         petImageThumbnail.loadInBackground()
-        petNameTextLabel.text = pet?.postTitle
+        petNameTextLabel.text = pet?.postTitle?.uppercaseString
         petDescTextLabel.text = pet?.postDescription
         
         //resize textview

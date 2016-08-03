@@ -102,11 +102,13 @@ class FeedsViewController: UIViewController {
                 //result array is array of Like objects
                 //taken likes array and mapped each element to a post object array
                 
-                var arrayOfPosts = [Post]()
+                var arrayOfPosts: [Post] = []
                 for elem in result! {
-                    let post = elem["toPost"] as! Post
-                    post.user! = elem["fromUser"] as! PFUser
-                    arrayOfPosts.append(post)
+                    let post = elem["toPost"] as? Post
+                    if let post = post {
+                        post.user! = elem["fromUser"] as! PFUser
+                        arrayOfPosts.append(post)
+                    }
                 }
                 
                 
@@ -134,6 +136,7 @@ class FeedsViewController: UIViewController {
         
         let allPostsQuery = Post.query()
         allPostsQuery?.includeKey("user")
+        allPostsQuery?.orderByDescending("createdAt")
         allPostsQuery?.findObjectsInBackgroundWithBlock
             {(result: [PFObject]?, error: NSError?) -> Void in
                 self.arrayOfPets = result as? [Post] ?? []
@@ -214,7 +217,7 @@ class FeedsViewController: UIViewController {
         print("currentposition: \(currentPosition)")
         
         //       arrayOfPets[currentPosition].downloadImage()
-        petNameLabel.text = arrayOfPets[currentPosition].postTitle
+        petNameLabel.text = arrayOfPets[currentPosition].postTitle?.uppercaseString
         petImageView.file = arrayOfPets[currentPosition].imageFile
         petImageView.loadInBackground()
         

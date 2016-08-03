@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		5E383088830931537A81479F /* Pods_Scruffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF053657D8792BFE9AB174AA /* Pods_Scruffy.framework */; };
+		B112C42C1D50D2C00093141D /* petDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112C42B1D50D2C00093141D /* petDetailsViewController.swift */; };
 		B12EAEA41D3D1E630086D1E0 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12EAEA31D3D1E630086D1E0 /* ErrorHandling.swift */; };
 		B12EAEA61D3D1EAC0086D1E0 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12EAEA51D3D1EAC0086D1E0 /* ParseHelper.swift */; };
 		B12EAEA81D3D1FCD0086D1E0 /* imageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12EAEA71D3D1FCD0086D1E0 /* imageCaptureViewController.swift */; };
 		B12EAEAA1D3D20590086D1E0 /* petNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12EAEA91D3D20590086D1E0 /* petNameViewController.swift */; };
 		B12EAEAC1D3D20CD0086D1E0 /* petNameDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12EAEAB1D3D20CD0086D1E0 /* petNameDisplayController.swift */; };
 		B12EAEAE1D3E1DC70086D1E0 /* petDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12EAEAD1D3E1DC70086D1E0 /* petDescViewController.swift */; };
-		B148CD5A1D39C58000DF1266 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148CD591D39C58000DF1266 /* CreatePostViewController.swift */; };
 		B14DEF561D2E9E80003CE6EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DEF551D2E9E80003CE6EE /* AppDelegate.swift */; };
 		B14DEF581D2E9E80003CE6EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DEF571D2E9E80003CE6EE /* ViewController.swift */; };
 		B14DEF5B1D2E9E80003CE6EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF591D2E9E80003CE6EE /* Main.storyboard */; };
 		B14DEF5D1D2E9E80003CE6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */; };
 		B14DEF601D2E9E80003CE6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14DEF5E1D2E9E80003CE6EE /* LaunchScreen.storyboard */; };
-		B14E79A31D4EEC7200A0BC6A /* StaticFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E79A21D4EEC7200A0BC6A /* StaticFormViewController.swift */; };
 		B15ADDF51D38C8A1008902D4 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15ADDF41D38C8A1008902D4 /* PostTableViewCell.swift */; };
 		B15ADDF71D38CEDB008902D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15ADDF61D38CEDB008902D4 /* Post.swift */; };
 		B1806A371D368A6B008FAE92 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1806A361D368A6B008FAE92 /* FeedsViewController.swift */; };
@@ -33,13 +32,13 @@
 /* Begin PBXFileReference section */
 		1B4143BE2BB98DEACB00B663 /* Pods-Scruffy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scruffy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scruffy/Pods-Scruffy.debug.xcconfig"; sourceTree = "<group>"; };
 		842B13ACA9ABB20C39CA6E7F /* Pods-Scruffy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scruffy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scruffy/Pods-Scruffy.release.xcconfig"; sourceTree = "<group>"; };
+		B112C42B1D50D2C00093141D /* petDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = petDetailsViewController.swift; sourceTree = "<group>"; };
 		B12EAEA31D3D1E630086D1E0 /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 		B12EAEA51D3D1EAC0086D1E0 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		B12EAEA71D3D1FCD0086D1E0 /* imageCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageCaptureViewController.swift; sourceTree = "<group>"; };
 		B12EAEA91D3D20590086D1E0 /* petNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = petNameViewController.swift; sourceTree = "<group>"; };
 		B12EAEAB1D3D20CD0086D1E0 /* petNameDisplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = petNameDisplayController.swift; sourceTree = "<group>"; };
 		B12EAEAD1D3E1DC70086D1E0 /* petDescViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = petDescViewController.swift; sourceTree = "<group>"; };
-		B148CD591D39C58000DF1266 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		B14DEF521D2E9E80003CE6EE /* Scruffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scruffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14DEF551D2E9E80003CE6EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14DEF571D2E9E80003CE6EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../Scruffy/Scruffy/ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +46,6 @@
 		B14DEF5C1D2E9E80003CE6EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B14DEF5F1D2E9E80003CE6EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B14DEF611D2E9E80003CE6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B14E79A21D4EEC7200A0BC6A /* StaticFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFormViewController.swift; sourceTree = "<group>"; };
 		B15ADDF41D38C8A1008902D4 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		B15ADDF61D38CEDB008902D4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B1806A361D368A6B008FAE92 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedsViewController.swift; path = ../../../../Scruffy/Scruffy/FeedsViewController.swift; sourceTree = "<group>"; };
@@ -156,14 +154,13 @@
 				B1806A361D368A6B008FAE92 /* FeedsViewController.swift */,
 				B1825AC51D38859400C015A4 /* PostDetailsViewController.swift */,
 				B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */,
-				B148CD591D39C58000DF1266 /* CreatePostViewController.swift */,
 				B1825AC71D3886C200C015A4 /* UserInfoViewController.swift */,
 				B1825AC91D38870500C015A4 /* UserProfileViewController.swift */,
 				B12EAEA71D3D1FCD0086D1E0 /* imageCaptureViewController.swift */,
 				B12EAEA91D3D20590086D1E0 /* petNameViewController.swift */,
 				B12EAEAD1D3E1DC70086D1E0 /* petDescViewController.swift */,
+				B112C42B1D50D2C00093141D /* petDetailsViewController.swift */,
 				B12EAEAB1D3D20CD0086D1E0 /* petNameDisplayController.swift */,
-				B14E79A21D4EEC7200A0BC6A /* StaticFormViewController.swift */,
 			);
 			name = Controllers;
 			path = "../../Make School Projects/Scruffy/Scruffy/Controllers";
@@ -302,18 +299,17 @@
 				B1806A371D368A6B008FAE92 /* FeedsViewController.swift in Sources */,
 				B15ADDF71D38CEDB008902D4 /* Post.swift in Sources */,
 				B1825ACA1D38870500C015A4 /* UserProfileViewController.swift in Sources */,
+				B112C42C1D50D2C00093141D /* petDetailsViewController.swift in Sources */,
 				B12EAEA81D3D1FCD0086D1E0 /* imageCaptureViewController.swift in Sources */,
 				B1825ACC1D3887F200C015A4 /* PostIndexViewController.swift in Sources */,
 				B14DEF581D2E9E80003CE6EE /* ViewController.swift in Sources */,
 				B1825AC81D3886C200C015A4 /* UserInfoViewController.swift in Sources */,
-				B148CD5A1D39C58000DF1266 /* CreatePostViewController.swift in Sources */,
 				B12EAEAE1D3E1DC70086D1E0 /* petDescViewController.swift in Sources */,
 				B1825AC61D38859400C015A4 /* PostDetailsViewController.swift in Sources */,
 				B12EAEA41D3D1E630086D1E0 /* ErrorHandling.swift in Sources */,
 				B15ADDF51D38C8A1008902D4 /* PostTableViewCell.swift in Sources */,
 				B12EAEAA1D3D20590086D1E0 /* petNameViewController.swift in Sources */,
 				B12EAEAC1D3D20CD0086D1E0 /* petNameDisplayController.swift in Sources */,
-				B14E79A31D4EEC7200A0BC6A /* StaticFormViewController.swift in Sources */,
 				B12EAEA61D3D1EAC0086D1E0 /* ParseHelper.swift in Sources */,
 				B14DEF561D2E9E80003CE6EE /* AppDelegate.swift in Sources */,
 			);
