@@ -27,6 +27,7 @@
 		B1825AC81D3886C200C015A4 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825AC71D3886C200C015A4 /* UserInfoViewController.swift */; };
 		B1825ACA1D38870500C015A4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825AC91D38870500C015A4 /* UserProfileViewController.swift */; };
 		B1825ACC1D3887F200C015A4 /* PostIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */; };
+		B18353681D5189100006F4B0 /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18353671D5189100006F4B0 /* ParseLoginHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		B1825AC71D3886C200C015A4 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoViewController.swift; path = ../../../../Scruffy/Scruffy/UserInfoViewController.swift; sourceTree = "<group>"; };
 		B1825AC91D38870500C015A4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = ../../../../Scruffy/Scruffy/UserProfileViewController.swift; sourceTree = "<group>"; };
 		B1825ACB1D3887F200C015A4 /* PostIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostIndexViewController.swift; path = ../../../../Scruffy/Scruffy/PostIndexViewController.swift; sourceTree = "<group>"; };
+		B18353671D5189100006F4B0 /* ParseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginHelper.swift; sourceTree = "<group>"; };
 		FF053657D8792BFE9AB174AA /* Pods_Scruffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scruffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 		B1ED846A1D38AFFF0029BB67 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B18353671D5189100006F4B0 /* ParseLoginHelper.swift */,
 				B12EAEA31D3D1E630086D1E0 /* ErrorHandling.swift */,
 				B12EAEA51D3D1EAC0086D1E0 /* ParseHelper.swift */,
 			);
@@ -304,6 +307,7 @@
 				B1825ACC1D3887F200C015A4 /* PostIndexViewController.swift in Sources */,
 				B14DEF581D2E9E80003CE6EE /* ViewController.swift in Sources */,
 				B1825AC81D3886C200C015A4 /* UserInfoViewController.swift in Sources */,
+				B18353681D5189100006F4B0 /* ParseLoginHelper.swift in Sources */,
 				B12EAEAE1D3E1DC70086D1E0 /* petDescViewController.swift in Sources */,
 				B1825AC61D38859400C015A4 /* PostDetailsViewController.swift in Sources */,
 				B12EAEA41D3D1E630086D1E0 /* ErrorHandling.swift in Sources */,

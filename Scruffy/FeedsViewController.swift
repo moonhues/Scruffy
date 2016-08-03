@@ -34,6 +34,7 @@ class FeedsViewController: UIViewController {
     var arrayOfLikes: [PFObject] = []
     var currentPosition: Int = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +67,7 @@ class FeedsViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
         
+        /*
         //let items = ["Most Popular", "Latest", "Trending", "Nearest", "Top Picks"]
         let items = ["Feeds", "Likes"]
         let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Feeds", items: items)
@@ -86,9 +88,23 @@ class FeedsViewController: UIViewController {
                 self!.reloadDataFromParse()
                 print("Feeds")
             }
-        }
+        }*/
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
     
     func reloadLikesFromParse() {
         

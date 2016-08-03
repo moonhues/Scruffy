@@ -97,7 +97,7 @@
         <!--Feeds-->
         <scene sceneID="w2z-Pp-38j">
             <objects>
-                <viewController title="Feeds" id="dRX-hD-3pM" customClass="FeedsViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedsViewController" title="Feeds" id="dRX-hD-3pM" customClass="FeedsViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HrC-Rz-Ngz"/>
                         <viewControllerLayoutGuide type="bottom" id="pNi-QU-nVZ"/>
