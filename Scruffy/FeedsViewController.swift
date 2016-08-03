@@ -244,14 +244,17 @@ class FeedsViewController: UIViewController {
         let currentPostObjectId = post.objectId
         
         for likeObject in arrayOfLikes {
-            
-            let likedPost = likeObject["toPost"] as! PFObject
-            let likedPostId = likedPost.objectId
-            
-            if likedPostId == currentPostObjectId {
-                
-                return true
+            if let post = likeObject["toPost"] {
+                let likedPost = post as! PFObject
+                 let likedPostId = likedPost.objectId
+                if likedPostId == currentPostObjectId {
+                    
+                    return true
+                }
             }
+            //let likedPost = likeObject["toPost"] as! PFObject
+
+
         }
         
         return false
@@ -309,6 +312,31 @@ class FeedsViewController: UIViewController {
             activityVC.popoverPresentationController?.sourceView = sender
             self.presentViewController(activityVC, animated: true, completion: nil)
         }
+    }
+    
+    /*
+    //MARK: Bring up Login screen if user is not logged in 
+    override func viewWillAppear(animated: Bool) {
+        if (PFUser.currentUser() == nil) {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") as! UIViewController
+                self.presentViewController(viewController, animated: true, completion: nil)
+            })
+        }
+    }*/
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+//        navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
 

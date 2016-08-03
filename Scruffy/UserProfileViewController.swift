@@ -46,9 +46,22 @@ class UserProfileViewController: UIViewController {
         userObject.saveInBackgroundWithBlock { (success, error) in
             
             if (success) {
+                let alertController = UIAlertController(title: "User Profile", message: "Update successful!", preferredStyle: .Alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+
                 print ("saved to user!")
                 
             } else {
+                let alertController = UIAlertController(title: "Something went wrong!", message: "User profile not updated!", preferredStyle: .Alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
                 print ("failed to save user")
             }
         }

@@ -200,12 +200,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Make%20School%20Projects/Scruffy/Scruffy/Models/Post.swift"
-                  timestampString = "491881726.779784"
+                  timestampString = "491899780.407631"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "114"
                   endingLineNumber = "114"
-                  offsetFromSymbolStart = "132">
+                  offsetFromSymbolStart = "152">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -215,12 +215,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Make%20School%20Projects/Scruffy/Scruffy/Models/Post.swift"
-                  timestampString = "491881726.779896"
+                  timestampString = "491899780.407745"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "114"
                   endingLineNumber = "114"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -420,12 +420,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/PostIndexViewController.swift"
-                  timestampString = "491881726.782953"
+                  timestampString = "491899780.411869"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
                   endingLineNumber = "47"
-                  offsetFromSymbolStart = "32">
+                  offsetFromSymbolStart = "31">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -435,12 +435,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/PostIndexViewController.swift"
-                  timestampString = "491881726.783049"
+                  timestampString = "491899780.411984"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
                   endingLineNumber = "47"
-                  offsetFromSymbolStart = "84">
+                  offsetFromSymbolStart = "83">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -532,11 +532,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491591250.771054"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491885017.952612"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -548,11 +564,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491591250.771054"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -564,59 +580,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491591250.771054"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scruffy.FeedsViewController.viewDidLoad () -&gt; ()"
-                  moduleName = "Scruffy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/FeedsViewController.swift"
-                  timestampString = "491881726.786624"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "4512">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scruffy.FeedsViewController.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "Scruffy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/FeedsViewController.swift"
-                  timestampString = "491881726.78675"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491881699.481365"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "reloadView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -628,12 +596,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491840705.914718"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "reloadLikesFromParse()"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "reloadDataFromParse()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -644,12 +612,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491840705.914718"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "reloadLikesFromParse()"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "reloadDataFromParse()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -660,12 +628,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491840705.914718"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "reloadLikesFromParse()"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "reloadDataFromParse()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -676,12 +644,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491840705.914718"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "reloadLikesFromParse()"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "reloadDataFromParse()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -708,12 +676,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491881699.481365"
+            timestampString = "491894656.355154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
-            landmarkName = "prepareForSegue(_:sender:)"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "likeButtonTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -724,11 +692,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491591250.771054"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "reloadLikesFromParse()"
             landmarkType = "5">
          </BreakpointContent>
@@ -752,7 +720,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/PostDetailsViewController.swift"
@@ -772,11 +740,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491591250.771054"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -804,12 +772,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/PostDetailsViewController.swift"
-                  timestampString = "491881726.792117"
+                  timestampString = "491899780.422525"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "134"
                   endingLineNumber = "134"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "34">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -819,12 +787,12 @@
                   moduleName = "Scruffy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/PostDetailsViewController.swift"
-                  timestampString = "491881726.792237"
+                  timestampString = "491899780.422622"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "134"
                   endingLineNumber = "134"
-                  offsetFromSymbolStart = "1680">
+                  offsetFromSymbolStart = "1994">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -848,7 +816,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/PostDetailsViewController.swift"
@@ -864,7 +832,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/PostDetailsViewController.swift"
@@ -880,7 +848,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/PostDetailsViewController.swift"
@@ -1156,12 +1124,316 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scruffy/FeedsViewController.swift"
-            timestampString = "491880698.680728"
+            timestampString = "491885017.952612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "reloadDataFromParse()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scruffy.FeedsViewController.(reloadDataFromParse () -&gt; ()).(closure #1)"
+                  moduleName = "Scruffy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/FeedsViewController.swift"
+                  timestampString = "491899780.431239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "1014">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scruffy.FeedsViewController.(reloadDataFromParse () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "Scruffy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/FeedsViewController.swift"
+                  timestampString = "491899780.431353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "402">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491885017.952612"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491885017.952612"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/AppDelegate.swift"
+            timestampString = "491883978.312533"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scruffy.AppDelegate.application (__ObjC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;__ObjC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "Scruffy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/AppDelegate.swift"
+                  timestampString = "491899780.433127"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scruffy.AppDelegate.(application (__ObjC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;__ObjC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool).(closure #1)"
+                  moduleName = "Scruffy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/AppDelegate.swift"
+                  timestampString = "491899780.433253"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/AppDelegate.swift"
+            timestampString = "491883980.361173"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scruffy.AppDelegate.application (__ObjC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;__ObjC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "Scruffy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/AppDelegate.swift"
+                  timestampString = "491899780.434241"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "63">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scruffy.AppDelegate.(application (__ObjC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;__ObjC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool).(closure #1)"
+                  moduleName = "Scruffy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VeronicaTan/Downloads/Scruffy/Scruffy/AppDelegate.swift"
+                  timestampString = "491899780.434376"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "253">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/AppDelegate.swift"
+            timestampString = "491895298.029649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491885048.43851"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "reloadLikesFromParse()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491894656.355154"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "isPostLiked(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491897788.231548"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491897811.005129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/LoginViewController.swift"
+            timestampString = "491899663.142321"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/LoginViewController.swift"
+            timestampString = "491899663.142321"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491898911.138474"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scruffy/FeedsViewController.swift"
+            timestampString = "491899733.81911"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
