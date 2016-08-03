@@ -10,6 +10,8 @@ import UIKit
 import ConvenienceKit
 import Parse
 
+
+
 class PostIndexViewController: UIViewController, TimelineComponentTarget {
     
     @IBOutlet weak var tableView: UITableView!
@@ -56,7 +58,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+          tableView.reloadData()
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     

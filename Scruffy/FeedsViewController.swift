@@ -329,6 +329,10 @@ class FeedsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        reloadDataFromParse()
+        
+        self.navigationItem.hidesBackButton = true
+        
 //        navigationController?.setNavigationBarHidden(true, animated: false)
 //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
     }

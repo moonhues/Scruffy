@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
         print("ddd")
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        /*
          do {
          try PFUser.logInWithUsername("veronica", password: "veronica")
          } catch {
@@ -87,7 +87,7 @@ class LoginViewController: UIViewController {
          print("\(currentUser.username!) logged in successfully")
          } else {
          print("No logged in user :(")
-         }
+         }*/
          
     }
     
