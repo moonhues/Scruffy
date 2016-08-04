@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AQW-fm-irS">
-                                <rect key="frame" x="50" y="270" width="314" height="130"/>
+                                <rect key="frame" x="50" y="270" width="314" height="133"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I17-0q-ZSw">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
@@ -42,8 +42,9 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28Q-0H-bSL">
-                                        <rect key="frame" x="0.0" y="100" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="100" width="314" height="33"/>
                                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <state key="normal" title="login">
                                             <color key="titleColor" red="1" green="0.97555849299999997" blue="0.97081806500000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -57,7 +58,7 @@
                                 <rect key="frame" x="163" y="599" width="88" height="43"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <state key="normal" title="SIGN UP">
-                                    <color key="titleColor" red="0.37182651189999999" green="0.53106792670000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="KKU-ox-qHm" kind="show" identifier="toSignUp" id="ID3-9u-vwD"/>
@@ -212,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="1729" y="284"/>
         </scene>
-        <!--Post Index-->
+        <!--My Posts-->
         <scene sceneID="zPA-Eq-Ydl">
             <objects>
-                <viewController title="Post Index" id="A70-To-TRa" customClass="PostIndexViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Posts" id="A70-To-TRa" customClass="PostIndexViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Mw-3e-V4d"/>
                         <viewControllerLayoutGuide type="bottom" id="Yx4-GX-8iF"/>
@@ -322,10 +323,10 @@
             </objects>
             <point key="canvasLocation" x="1681" y="1097"/>
         </scene>
-        <!--User Info -->
+        <!--User-->
         <scene sceneID="tGt-F4-2UP">
             <objects>
-                <viewController title="User Info " id="TgY-ih-AZp" customClass="UserInfoViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="User" id="TgY-ih-AZp" customClass="UserInfoViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZZx-49-JGJ"/>
                         <viewControllerLayoutGuide type="bottom" id="9TB-6t-Eag"/>
@@ -334,41 +335,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be3-AB-V1s">
-                                <rect key="frame" x="173" y="164" width="68" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be3-AB-V1s">
+                                <rect key="frame" x="70" y="120" width="274" height="40"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Profile">
-                                    <color key="titleColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="KF8-4s-eeA" kind="show" id="QKA-3z-hnT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ar-sL-qVz">
-                                <rect key="frame" x="180" y="254" width="53" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ar-sL-qVz">
+                                <rect key="frame" x="70" y="190" width="274" height="40"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Posts">
-                                    <color key="titleColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="A70-To-TRa" kind="show" identifier="postIndex" id="kgJ-ep-Cb3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-kP-HHX">
-                                <rect key="frame" x="172" y="344" width="70" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-kP-HHX">
+                                <rect key="frame" x="70" y="260" width="274" height="40"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Logout">
-                                    <color key="titleColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="bXi-ja-TPu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Ar-sL-qVz" secondAttribute="trailing" constant="50" id="9ac-9a-VQV"/>
+                            <constraint firstItem="oCe-kP-HHX" firstAttribute="leading" secondItem="XzP-fy-NLX" secondAttribute="leadingMargin" constant="50" id="Gpu-vV-W0D"/>
                             <constraint firstItem="be3-AB-V1s" firstAttribute="centerX" secondItem="XzP-fy-NLX" secondAttribute="centerX" id="HPz-0r-poI"/>
-                            <constraint firstItem="3Ar-sL-qVz" firstAttribute="top" secondItem="be3-AB-V1s" secondAttribute="bottom" constant="50" id="MQM-6Y-zzL"/>
+                            <constraint firstItem="3Ar-sL-qVz" firstAttribute="top" secondItem="be3-AB-V1s" secondAttribute="bottom" constant="30" id="MQM-6Y-zzL"/>
+                            <constraint firstItem="3Ar-sL-qVz" firstAttribute="leading" secondItem="XzP-fy-NLX" secondAttribute="leadingMargin" constant="50" id="PCM-TU-pgo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oCe-kP-HHX" secondAttribute="trailing" constant="50" id="SSg-2L-nC8"/>
                             <constraint firstItem="be3-AB-V1s" firstAttribute="top" secondItem="ZZx-49-JGJ" secondAttribute="bottom" constant="100" id="Ytg-ME-tw9"/>
+                            <constraint firstItem="be3-AB-V1s" firstAttribute="leading" secondItem="XzP-fy-NLX" secondAttribute="leadingMargin" constant="50" id="ZJq-Ho-bLA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="be3-AB-V1s" secondAttribute="trailing" constant="50" id="ZXD-7h-OA0"/>
                             <constraint firstItem="3Ar-sL-qVz" firstAttribute="centerX" secondItem="XzP-fy-NLX" secondAttribute="centerX" id="jcz-OZ-4Qn"/>
-                            <constraint firstItem="oCe-kP-HHX" firstAttribute="top" secondItem="3Ar-sL-qVz" secondAttribute="bottom" constant="50" id="uSv-KG-K4S"/>
+                            <constraint firstItem="oCe-kP-HHX" firstAttribute="top" secondItem="3Ar-sL-qVz" secondAttribute="bottom" constant="30" id="uSv-KG-K4S"/>
                             <constraint firstItem="oCe-kP-HHX" firstAttribute="centerX" secondItem="XzP-fy-NLX" secondAttribute="centerX" id="vza-AO-LHW"/>
                         </constraints>
                     </view>
@@ -376,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKn-g7-WD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201" y="1104"/>
+            <point key="canvasLocation" x="1163" y="926"/>
         </scene>
         <!--Pet Description-->
         <scene sceneID="f3W-wI-8BH">
@@ -686,10 +699,10 @@
             </objects>
             <point key="canvasLocation" x="2229.5" y="1675.5"/>
         </scene>
-        <!--Post Details -->
+        <!--Pet Details-->
         <scene sceneID="9Lf-Dz-IfJ">
             <objects>
-                <viewController title="Post Details " id="rVb-gf-R9R" customClass="PostDetailsViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pet Details" id="rVb-gf-R9R" customClass="PostDetailsViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zc9-G9-pPV"/>
                         <viewControllerLayoutGuide type="bottom" id="yjF-Uq-7qA"/>
@@ -904,10 +917,10 @@
             </objects>
             <point key="canvasLocation" x="1826.5" y="1675.5"/>
         </scene>
-        <!--Post Pet!-->
+        <!--Publish!-->
         <scene sceneID="D55-1c-UZH">
             <objects>
-                <viewController title="Post Pet!" id="TWg-PQ-XpV" customClass="petNameDisplayViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Publish!" id="TWg-PQ-XpV" customClass="petNameDisplayViewController" customModule="Scruffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M3u-AP-wL5"/>
                         <viewControllerLayoutGuide type="bottom" id="5MI-7Y-psX"/>
@@ -926,14 +939,14 @@
                                 <rect key="frame" x="16" y="84" width="343" height="389"/>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-25-Fvl">
-                                <rect key="frame" x="163" y="560" width="56" height="33"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-25-Fvl">
+                                <rect key="frame" x="138" y="560" width="99" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-m2-IX2">
-                                        <rect key="frame" x="0.0" y="0.0" width="56" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="33"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                        <state key="normal" title="  post!  ">
+                                        <state key="normal" title=" ready to go! ">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -944,6 +957,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="k6S-m2-IX2" secondAttribute="bottom" constant="30" id="bP5-BK-6UF"/>
+                                    <constraint firstAttribute="bottom" secondItem="k6S-m2-IX2" secondAttribute="bottom" constant="30" id="u96-8n-n0l"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -956,12 +970,13 @@
                             <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="UBN-zY-GyY" secondAttribute="bottom" constant="100" id="JCT-Ay-xQX"/>
                             <constraint firstItem="dvi-EN-G3L" firstAttribute="top" secondItem="M3u-AP-wL5" secondAttribute="bottom" constant="20" id="RvO-AT-krI"/>
                             <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="dvi-EN-G3L" secondAttribute="bottom" constant="150" id="aZ4-nj-t6d"/>
+                            <constraint firstItem="k6S-m2-IX2" firstAttribute="centerX" secondItem="dpY-dN-AMF" secondAttribute="centerX" id="do0-5B-nAk"/>
                             <constraint firstItem="k6S-m2-IX2" firstAttribute="centerX" secondItem="dpY-dN-AMF" secondAttribute="centerX" id="o43-DD-WHX"/>
                             <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="KBa-25-Fvl" secondAttribute="bottom" constant="30" id="p1y-MA-2pA"/>
                             <constraint firstItem="KBa-25-Fvl" firstAttribute="centerX" secondItem="dpY-dN-AMF" secondAttribute="centerX" id="wcg-Y9-pLt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Post your pet!" id="L7f-85-B7z">
+                    <navigationItem key="navigationItem" id="L7f-85-B7z">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="lTn-i2-X9R">
                             <connections>
                                 <segue destination="4b7-Jm-hRT" kind="unwind" unwindAction="unwindToPostIndex:" id="dIE-eE-Ihl"/>
@@ -1116,7 +1131,7 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pod-Cx-Tpd">
-                                <rect key="frame" x="163" y="513" width="50" height="60"/>
+                                <rect key="frame" x="163" y="533" width="50" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ccI-eH-Ttp"/>
                                 </constraints>
@@ -1165,7 +1180,7 @@
                             <constraint firstItem="G3O-So-mFI" firstAttribute="leading" secondItem="7eh-mJ-gX6" secondAttribute="leadingMargin" id="ZyC-sy-0bV"/>
                             <constraint firstItem="4B6-oe-Q20" firstAttribute="top" secondItem="abN-uo-3rQ" secondAttribute="bottom" constant="20" id="a90-oY-V3d"/>
                             <constraint firstItem="abN-uo-3rQ" firstAttribute="top" secondItem="dSe-Kk-mm7" secondAttribute="bottom" constant="20" id="ahg-36-Cn6"/>
-                            <constraint firstItem="lUc-rw-6s8" firstAttribute="top" secondItem="pod-Cx-Tpd" secondAttribute="bottom" constant="50" id="clX-h7-CvZ"/>
+                            <constraint firstItem="lUc-rw-6s8" firstAttribute="top" secondItem="pod-Cx-Tpd" secondAttribute="bottom" constant="30" id="clX-h7-CvZ"/>
                             <constraint firstItem="db2-db-Ddu" firstAttribute="leading" secondItem="24D-zm-UfY" secondAttribute="leading" id="jb7-vs-K84"/>
                             <constraint firstItem="Y67-bK-fOT" firstAttribute="leading" secondItem="7eh-mJ-gX6" secondAttribute="leadingMargin" id="kCG-4Y-dC6"/>
                             <constraint firstItem="rIc-DX-gVw" firstAttribute="leading" secondItem="7eh-mJ-gX6" secondAttribute="leadingMargin" constant="180" id="m29-7T-NKn"/>
@@ -1323,7 +1338,7 @@
         <image name="share-file (1)" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GVq-o1-YfQ"/>
+        <segue reference="bXi-ja-TPu"/>
         <segue reference="4yH-HM-w9b"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

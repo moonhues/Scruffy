@@ -8,6 +8,8 @@
 
 import UIKit
 import Parse
+import JSSAlertView
+
 
 class LoginViewController: UIViewController {
     
@@ -21,22 +23,37 @@ class LoginViewController: UIViewController {
             let password = self.passwordField.text
             
             // Validate the text fields
+        
             if username?.characters.count < 5 {
-                
+                /*
                 let alertController = UIAlertController(title: "Username", message: "Username must be more than 5 characters", preferredStyle: .Alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                 alertController.addAction(defaultAction)
                 
                 presentViewController(alertController, animated: true, completion: nil)
+             */
+                JSSAlertView().show(
+                    self, // the parent view controller of the alert
+                    title: "Usernames must have at leaast 5 characters" // the alert's title
+                )
                 
             } else if password!.characters.count < 8 {
+                
+                
+            /*
                 let alertController = UIAlertController(title: "Password", message: "Password must be at least 8 characters", preferredStyle: .Alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                 alertController.addAction(defaultAction)
                 
                 presentViewController(alertController, animated: true, completion: nil)
+                */
+                
+                JSSAlertView().show(
+                    self, // the parent view controller of the alert
+                    title: "Passwords must have at least 8 characters" // the alert's title
+                )
                 
             } else {
                 // Run a spinner to show a task in progress
@@ -59,12 +76,17 @@ class LoginViewController: UIViewController {
                         })
                         
                     } else {
+                        /*
                         let alertController = UIAlertController(title: "Login error", message: "Wrong username or password.", preferredStyle: .Alert)
                         
                         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                         alertController.addAction(defaultAction)
                         
-                        self.presentViewController(alertController, animated: true, completion: nil)
+                        self.presentViewController(alertController, animated: true, completion: nil)*/
+                        JSSAlertView().show(
+                            self, // the parent view controller of the alert
+                            title: "Wrong username or password. Please try again." // the alert's title
+                        )
                     }
                 })
     }

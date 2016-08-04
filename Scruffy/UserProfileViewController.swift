@@ -60,9 +60,9 @@ class UserProfileViewController: UIViewController {
                 JSSAlertView().show(
                     self,
                     title: "USER PROFILE",
-                    text: "Your user profile is looking great!",
+                    text: "Your user profile is updated!",
                     buttonText: "Cool",
-                    color: UIColorFromHex(0xfcdb4c, alpha: 1))
+                    color: UIColorFromHex(0xeeb62a, alpha: 1))
                 
             } else {
                 let alertController = UIAlertController(title: "Something went wrong!", message: "User profile not updated!", preferredStyle: .Alert)
