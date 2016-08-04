@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JSSAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A5B1F81F88753B1391A054A079506A1</key>
+		<key>6EDC37F3FA92533C6AC3562458AA91F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EDC37F3FA92533C6AC3562458AA91F1</key>
+		<key>72D57DED5129BDCAEB112D61B15B08A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +122,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC4AC7E0346F06750B8287A769C5B265</key>
+		<key>BA0ED018954B2E035A694BF72506145C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA0ED018954B2E035A694BF72506145C</key>
+		<key>CFFFBFC2ECB7FC4410113E5064586B46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFF1F0F8E05481571F77BE8801862E50</key>
 		<dict>
 			<key>primary</key>
 			<true/>

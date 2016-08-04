@@ -331,7 +331,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9TB-6t-Eag"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XzP-fy-NLX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be3-AB-V1s">
@@ -372,6 +372,7 @@
                             <constraint firstItem="oCe-kP-HHX" firstAttribute="centerX" secondItem="XzP-fy-NLX" secondAttribute="centerX" id="vza-AO-LHW"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKn-g7-WD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -922,13 +923,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dvi-EN-G3L">
-                                <rect key="frame" x="16" y="64" width="343" height="409"/>
+                                <rect key="frame" x="16" y="84" width="343" height="389"/>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KBa-25-Fvl">
                                 <rect key="frame" x="163" y="560" width="56" height="33"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-m2-IX2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6S-m2-IX2">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="33"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
@@ -953,6 +954,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dvi-EN-G3L" secondAttribute="trailing" id="53w-Ls-3hb"/>
                             <constraint firstItem="dvi-EN-G3L" firstAttribute="top" secondItem="M3u-AP-wL5" secondAttribute="bottom" id="6eJ-d4-DLm"/>
                             <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="UBN-zY-GyY" secondAttribute="bottom" constant="100" id="JCT-Ay-xQX"/>
+                            <constraint firstItem="dvi-EN-G3L" firstAttribute="top" secondItem="M3u-AP-wL5" secondAttribute="bottom" constant="20" id="RvO-AT-krI"/>
                             <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="dvi-EN-G3L" secondAttribute="bottom" constant="150" id="aZ4-nj-t6d"/>
                             <constraint firstItem="k6S-m2-IX2" firstAttribute="centerX" secondItem="dpY-dN-AMF" secondAttribute="centerX" id="o43-DD-WHX"/>
                             <constraint firstItem="5MI-7Y-psX" firstAttribute="top" secondItem="KBa-25-Fvl" secondAttribute="bottom" constant="30" id="p1y-MA-2pA"/>

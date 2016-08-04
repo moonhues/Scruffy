@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import JSSAlertView
 
 class UserProfileViewController: UIViewController {
     
@@ -46,6 +47,7 @@ class UserProfileViewController: UIViewController {
         userObject.saveInBackgroundWithBlock { (success, error) in
             
             if (success) {
+                /*
                 let alertController = UIAlertController(title: "User Profile", message: "Update successful!", preferredStyle: .Alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
@@ -53,7 +55,14 @@ class UserProfileViewController: UIViewController {
                 
                 self.presentViewController(alertController, animated: true, completion: nil)
 
-                print ("saved to user!")
+                print ("saved to user!")*/
+                
+                JSSAlertView().show(
+                    self,
+                    title: "USER PROFILE",
+                    text: "Your user profile is looking great!",
+                    buttonText: "Cool",
+                    color: UIColorFromHex(0xfcdb4c, alpha: 1))
                 
             } else {
                 let alertController = UIAlertController(title: "Something went wrong!", message: "User profile not updated!", preferredStyle: .Alert)

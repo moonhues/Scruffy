@@ -15,5 +15,6 @@ target 'Scruffy' do
   pod 'IHKeyboardAvoiding'
   pod 'BTNavigationDropdownMenu'
   pod 'Static', git: 'https://github.com/venmo/Static'
+  pod 'JSSAlertView'
 
 end
