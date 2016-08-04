@@ -363,7 +363,7 @@ class FeedsViewController: UIViewController {
             
             //New Excluded Activities Code
             
-            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList,UIActivityTypeAssignToContact,UIActivityTypeAddToReadingList]
             
             
             activityVC.popoverPresentationController?.sourceView = sender
