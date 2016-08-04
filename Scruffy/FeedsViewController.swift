@@ -67,7 +67,7 @@ class FeedsViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
         
         //let items = ["Most Popular", "Latest", "Trending", "Nearest", "Top Picks"]
-        let items = ["Feeds", "Likes"]
+        let items = ["Feeds", "Likes","Puppies","HDB Approved"]
         let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Feeds", items: items)
         
         menuView.cellBackgroundColor = UIColor.grayColor()
@@ -77,7 +77,13 @@ class FeedsViewController: UIViewController {
         self.navigationItem.titleView = menuView
         menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
-            if indexPath == 1 {
+            if indexPath == 3 {
+                self!.currentPosition = 0
+                self!.reloadApprovedFromParse()
+            } else if indexPath == 2 {
+                self!.currentPosition = 0
+                self!.reloadPuppiesFromParse()
+            } else if indexPath == 1 {
                 self!.currentPosition = 0
                 self!.reloadLikesFromParse()
                 print("Likes")
@@ -157,6 +163,57 @@ class FeedsViewController: UIViewController {
         }
     }
     
+    func reloadPuppiesFromParse() {
+        
+        let allPostsQuery = Post.query()
+        allPostsQuery?.includeKey("user")
+        allPostsQuery?.whereKey("petType", equalTo: "Puppy")
+        allPostsQuery?.orderByDescending("createdAt")
+        allPostsQuery?.findObjectsInBackgroundWithBlock
+            {(result: [PFObject]?, error: NSError?) -> Void in
+                self.arrayOfPets = result as? [Post] ?? []
+                
+                //get all Post ids liked by user
+                let likeQuery = PFQuery(className: "Like")
+                likeQuery.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+                
+                likeQuery.findObjectsInBackgroundWithBlock
+                    {(result: [PFObject]?, error: NSError?) -> Void in
+                        self.arrayOfLikes = result!
+                        
+                        NSOperationQueue.mainQueue().addOperationWithBlock({
+                            
+                            self.reloadView()
+                        })
+                }
+        }
+    }
+    
+    func reloadApprovedFromParse() {
+        
+        let allPostsQuery = Post.query()
+        allPostsQuery?.includeKey("user")
+        allPostsQuery?.whereKey("hdbApproved", equalTo: "Yes")
+        allPostsQuery?.orderByDescending("createdAt")
+        allPostsQuery?.findObjectsInBackgroundWithBlock
+            {(result: [PFObject]?, error: NSError?) -> Void in
+                self.arrayOfPets = result as? [Post] ?? []
+                
+                //get all Post ids liked by user
+                let likeQuery = PFQuery(className: "Like")
+                likeQuery.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+                
+                likeQuery.findObjectsInBackgroundWithBlock
+                    {(result: [PFObject]?, error: NSError?) -> Void in
+                        self.arrayOfLikes = result!
+                        
+                        NSOperationQueue.mainQueue().addOperationWithBlock({
+                            
+                            self.reloadView()
+                        })
+                }
+        }
+    }
     
     // Generates a comma separated list of usernames from an array (e.g. "User1, User2")
     func stringFromUserList(userList: [PFUser]) -> String {
