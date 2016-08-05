@@ -105,10 +105,11 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
                 
                 // 1
                 let indexPath = tableView.indexPathForSelectedRow!
-                
-                print(indexPath.section)
+                let cell = tableView.cellForRowAtIndexPath(indexPath) as! PostTableViewCell
+                print("INDEX PATH IS: \(indexPath.section)")
                 // 2
-                let newPost = posts[indexPath.section]
+//                let newPost = posts[indexPath.section]
+                let newPost = cell.post!
                 // 3
                 let destVC = segue.destinationViewController as! imageCaptureViewController
                 // 4
@@ -144,7 +145,6 @@ extension PostIndexViewController: UITableViewDataSource {
         // 2
         
         let post = timelineComponent.content[indexPath.section]
-//        timelineComponent.targetWillDisplayEntry(indexPath.section)
         post.downloadImage()
         cell.post = post
         cell.timeline = self
@@ -164,9 +164,12 @@ extension PostIndexViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         timelineComponent.targetWillDisplayEntry(indexPath.section)
     }
-}
 
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
+
+    
+}
+
 
