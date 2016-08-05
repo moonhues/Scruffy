@@ -27,19 +27,21 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         }
     }
     
-    let defaultRange = 0...20
-    let additionalRangeSize = 20
+    let defaultRange = 0...4
+    let additionalRangeSize = 5
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         timelineComponent = TimelineComponent(target: self)
-        timelineComponent.refresh(posts)
+        
+        //timelineComponent.refresh(posts)
         timelineComponent.loadInitialIfRequired()
         
         //
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
+        tableView.delegate = self
     }
     
     
@@ -58,16 +60,11 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-          tableView.reloadData()
+        timelineComponent.loadInitialIfRequired()
+        tableView.reloadData()
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    /*
-     override func viewWillDisappear(animated: Bool) {
-     super.viewWillDisappear(animated)
-     
-     navigationController?.setNavigationBarHidden(false, animated: false)
-     } */
     
     // MARK: UIActionSheets
     
@@ -142,49 +139,34 @@ extension PostIndexViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostTableViewCell
         //
-            cell.layoutMargins = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
         
         // 2
         
         let post = timelineComponent.content[indexPath.section]
+//        timelineComponent.targetWillDisplayEntry(indexPath.section)
         post.downloadImage()
         cell.post = post
         cell.timeline = self
         cell.postImageView.image = post.image.value
         cell.petNameTextLabel.text = post.postTitle?.uppercaseString
-        //posts[indexPath.row] = post
-        //cell.postImageView.image = posts[indexPath.row].image.value
-        //cell.petNameTextLabel.text = posts[indexPath.row].postTitle
-        //cell.post = posts[indexPath.row]
-        //cell.timeline = self
-        
-        /*
-        cell.postImageView.layer.masksToBounds = true
-        cell.postImageView.layer.borderWidth = 10
-        cell.postImageView.layer.borderColor = UIColor.whiteColor().CGColor
-        */ 
         
         return cell
         
-        /*let post = posts[indexPath.row]
-         // 1
-         post.downloadImage()
-         // 2
-         cell.post = post
-         
-         return cell*/
+        
     }
 }
 
 
 extension PostIndexViewController: UITableViewDelegate {
     
+    
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         timelineComponent.targetWillDisplayEntry(indexPath.section)
     }
-    
+}
+
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
-}
 
