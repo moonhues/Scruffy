@@ -27,8 +27,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         }
     }
     
-    let defaultRange = 0...20
-    let additionalRangeSize = 20
+    let defaultRange = 0...4
+    let additionalRangeSize = 5
     
     override func viewDidLoad() {
         
@@ -40,6 +40,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         //
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
+        tableView.delegate = self
     }
     
     
@@ -108,10 +109,11 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
                 
                 // 1
                 let indexPath = tableView.indexPathForSelectedRow!
-                
-                print(indexPath.section)
+                let cell = tableView.cellForRowAtIndexPath(indexPath) as! PostTableViewCell
+                print("INDEX PATH IS: \(indexPath.section)")
                 // 2
-                let newPost = posts[indexPath.section]
+//                let newPost = posts[indexPath.section]
+                let newPost = cell.post!
                 // 3
                 let destVC = segue.destinationViewController as! imageCaptureViewController
                 // 4
@@ -147,6 +149,7 @@ extension PostIndexViewController: UITableViewDataSource {
         // 2
         
         let post = timelineComponent.content[indexPath.section]
+        
         post.downloadImage()
         cell.post = post
         cell.timeline = self
@@ -186,5 +189,6 @@ extension PostIndexViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
+    
 }
 
