@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import JSSAlertView
+import IHKeyboardAvoiding
 
 
 class LoginViewController: UIViewController {
@@ -96,11 +97,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ddd")
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         /*
          do {
-         try PFUser.logInWithUsername("veronica", password: "veronica")
+         try PFUser.logInWithUsername("veronica", password: "12341234")
          } catch {
          print("Unable to log in")
          }
@@ -112,6 +117,7 @@ class LoginViewController: UIViewController {
          }*/
          
     }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -126,6 +132,11 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
+    func dismissKeyboard() {
+        
+        self.view.endEditing(true)
+    }
+
 }
 
 

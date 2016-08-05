@@ -64,11 +64,6 @@
                                     <segue destination="KKU-ox-qHm" kind="show" identifier="toSignUp" id="ID3-9u-vwD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L41-mJ-yOP">
-                                <rect key="frame" x="241" y="420" width="123" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="forgot password"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pawglass-1" translatesAutoresizingMaskIntoConstraints="NO" id="GWP-cS-Jci">
                                 <rect key="frame" x="120" y="144" width="175" height="76"/>
                                 <constraints>
@@ -81,12 +76,9 @@
                         <constraints>
                             <constraint firstItem="AQW-fm-irS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="3jo-GO-E6N"/>
                             <constraint firstItem="NtX-kz-HUp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="761-Ih-AOJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L41-mJ-yOP" secondAttribute="trailing" constant="30" id="AoS-CO-Bpl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AQW-fm-irS" secondAttribute="trailing" constant="30" id="AwN-ER-Cv9"/>
                             <constraint firstItem="GWP-cS-Jci" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y0j-tZ-NgN"/>
-                            <constraint firstItem="L41-mJ-yOP" firstAttribute="top" secondItem="AQW-fm-irS" secondAttribute="bottom" constant="20" id="gqI-60-YYB"/>
                             <constraint firstItem="AQW-fm-irS" firstAttribute="top" secondItem="GWP-cS-Jci" secondAttribute="bottom" constant="50" id="hIh-Fu-bgA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L41-mJ-yOP" secondAttribute="trailing" constant="30" id="qY9-ue-HiI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NtX-kz-HUp" secondAttribute="bottom" constant="30" id="re2-kv-emB"/>
                             <constraint firstItem="GWP-cS-Jci" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="udY-Xi-WEr"/>
                         </constraints>
