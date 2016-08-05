@@ -27,8 +27,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         }
     }
     
-    let defaultRange = 0...4
-    let additionalRangeSize = 5
+    let defaultRange = 0...20
+    let additionalRangeSize = 20
     
     override func viewDidLoad() {
         
