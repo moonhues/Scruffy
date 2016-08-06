@@ -165,10 +165,15 @@ extension PostIndexViewController: UITableViewDelegate {
         timelineComponent.targetWillDisplayEntry(indexPath.section)
     }
 
+    /*
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
 
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return
+    }
+ */
     
 }
 
