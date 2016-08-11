@@ -17,9 +17,7 @@ class FeedsViewController: UIViewController {
     
     // MARK: Properties
     
-    //    @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var petImageView: PFImageView!
-   // @IBOutlet weak var petNameLabel: UILabel!
     @IBOutlet weak var petNameLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
@@ -64,9 +62,9 @@ class FeedsViewController: UIViewController {
         tapHandler!.numberOfTouchesRequired = 1
         self.view.addGestureRecognizer(tapHandler!)
         
+        //Drop down menu
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
         
-        //let items = ["Most Popular", "Latest", "Trending", "Nearest", "Top Picks"]
         let items = ["Feeds", "Likes","Puppies","HDB Approved"]
         let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Feeds", items: items)
         

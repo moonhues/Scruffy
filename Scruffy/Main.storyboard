@@ -302,8 +302,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="My Posts" id="n9z-QK-b1C">
-                        <barButtonItem key="backBarButtonItem" title=" " id="vrg-V9-q7W"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="vrg-V9-q7W">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="g7J-47-GPO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="nZ8-8O-1wh" kind="show" identifier="createImage" id="jsU-VK-pbO"/>
                             </connections>
@@ -529,13 +532,14 @@
             <objects>
                 <navigationController storyboardIdentifier="NavController" automaticallyAdjustsScrollViewInsets="NO" id="xcb-4E-pPe" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="AQf-JS-2C5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1317,8 +1321,8 @@
         <image name="share-file (1)-1" width="320" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cEt-5W-7fI"/>
+        <segue reference="bXi-ja-TPu"/>
         <segue reference="4yH-HM-w9b"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
