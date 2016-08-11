@@ -35,8 +35,8 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         super.viewDidLoad()
         timelineComponent = TimelineComponent(target: self)
         
-        //timelineComponent.refresh(posts)
         timelineComponent.loadInitialIfRequired()
+        // self.timelineComponent.refresh(self)
         
         //
         tableView.layoutMargins = UIEdgeInsetsZero
@@ -62,6 +62,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
         super.viewWillAppear(animated)
         timelineComponent.loadInitialIfRequired()
         tableView.reloadData()
+        timelineComponent.refresh(self)
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
@@ -87,6 +88,7 @@ class PostIndexViewController: UIViewController, TimelineComponentTarget {
             post.deleteInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if (success) {
                     self.timelineComponent.removeObject(post)
+                     self.timelineComponent.refresh(self)
                 } else {
                     // restore old state
                     self.timelineComponent.refresh(self)
