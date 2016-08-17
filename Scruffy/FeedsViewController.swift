@@ -64,8 +64,8 @@ class FeedsViewController: UIViewController {
         self.view.addGestureRecognizer(tapHandler!)
         
         //Drop down menu
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
-        
+        // NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadFeeds), name: "Feed_Data_Updated", object: nil)
         
         let items = ["Feeds", "Likes","Puppies","HDB Approved"]
         let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Feeds", items: items)
@@ -105,6 +105,7 @@ class FeedsViewController: UIViewController {
         let likeQuery = PFQuery(className: "Like")
         likeQuery.includeKey("fromUser")
         likeQuery.includeKey("toPost")
+        likeQuery.orderByDescending("createdAt")
         likeQuery.whereKey("fromUser", equalTo: PFUser.currentUser()!)
         
         likeQuery.findObjectsInBackgroundWithBlock
@@ -122,11 +123,11 @@ class FeedsViewController: UIViewController {
                 }
                 
                 
-//                let postArray = result!.map {
-//                    ($0["toPost"] as! Post).user = ($0["fromUser"] as! PFUser)
-////                    x.user =
-////                    return x
-//                }
+                //                let postArray = result!.map {
+                //                    ($0["toPost"] as! Post).user = ($0["fromUser"] as! PFUser)
+                ////                    x.user =
+                ////                    return x
+                //                }
                 self.arrayOfPets = arrayOfPosts
                 
                 likeQuery.findObjectsInBackgroundWithBlock
@@ -140,7 +141,7 @@ class FeedsViewController: UIViewController {
                 }
         }
     }
-
+    
     
     func reloadDataFromParse() {
         
@@ -261,8 +262,8 @@ class FeedsViewController: UIViewController {
             print("swiped up")
             
             //goes backward
-                
-                performSegueWithIdentifier("postDetailsView", sender: nil)
+            
+            performSegueWithIdentifier("postDetailsView", sender: nil)
         }
         
         if gesture == tapHandler {
@@ -278,6 +279,9 @@ class FeedsViewController: UIViewController {
         print("currentposition: \(currentPosition)")
         
         //       arrayOfPets[currentPosition].downloadImage()
+        if currentPosition == arrayOfPets.count {
+            currentPosition = arrayOfPets.count - 1
+        }
         petNameLabel.text = arrayOfPets[currentPosition].postTitle?.uppercaseString
         petImageView.file = arrayOfPets[currentPosition].imageFile
         petImageView.loadInBackground()
@@ -307,18 +311,35 @@ class FeedsViewController: UIViewController {
         for likeObject in arrayOfLikes {
             if let post = likeObject["toPost"] {
                 let likedPost = post as! PFObject
-                 let likedPostId = likedPost.objectId
+                let likedPostId = likedPost.objectId
                 if likedPostId == currentPostObjectId {
                     
                     return true
                 }
             }
             //let likedPost = likeObject["toPost"] as! PFObject
-
-
+            
+            
         }
         
         return false
+    }
+    
+    func reloadFeeds () {
+        
+        if filterChoice == 3 {
+            self.reloadApprovedFromParse()
+        } else if filterChoice == 2 {
+            self.reloadPuppiesFromParse()
+        } else if filterChoice == 1 {
+            self.reloadLikesFromParse()
+            print("Likes")
+        } else {
+            self.reloadDataFromParse()
+            print("Feeds")
+        }
+        
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -342,12 +363,14 @@ class FeedsViewController: UIViewController {
             //dislike it now
             ParseHelper.unlikePost(user, post: currentPost)
             likeButton.selected = false
+            print("unlike post")
         }
         else {
             
             //like it now
             ParseHelper.likePost(user, post: currentPost)
             likeButton.selected = true
+            print("like post")
         }
         
         
@@ -356,7 +379,7 @@ class FeedsViewController: UIViewController {
     @IBAction func shareButtonTapped(sender: UIButton) {
         
         //convert PFFile to Imagefile
-
+        
         let shareImage = petImageView.image
         let petName = arrayOfPets[currentPosition].postTitle
         let textToShare = petName! + " is looking for a home! Discover more adoptable dogs at ScruffyApp."
@@ -376,48 +399,50 @@ class FeedsViewController: UIViewController {
     }
     
     /*
-    //MARK: Bring up Login screen if user is not logged in 
-    override func viewWillAppear(animated: Bool) {
-        if (PFUser.currentUser() == nil) {
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") as! UIViewController
-                self.presentViewController(viewController, animated: true, completion: nil)
-            })
-        }
-    }*/
-
+     //MARK: Bring up Login screen if user is not logged in
+     override func viewWillAppear(animated: Bool) {
+     if (PFUser.currentUser() == nil) {
+     dispatch_async(dispatch_get_main_queue(), { () -> Void in
+     
+     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") as! UIViewController
+     self.presentViewController(viewController, animated: true, completion: nil)
+     })
+     }
+     }*/
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         //reloadDataFromParse()
         
-        if filterChoice == 3 {
-            self.reloadApprovedFromParse()
-        } else if filterChoice == 2 {
-            self.reloadPuppiesFromParse()
-        } else if filterChoice == 1 {
-            self.reloadLikesFromParse()
-            print("Likes")
-        } else {
-            self.reloadDataFromParse()
-            print("Feeds")
-        }
-
+        /*
+         if filterChoice == 3 {
+         self.reloadApprovedFromParse()
+         } else if filterChoice == 2 {
+         self.reloadPuppiesFromParse()
+         } else if filterChoice == 1 {
+         self.reloadLikesFromParse()
+         print("Likes")
+         } else {
+         self.reloadDataFromParse()
+         print("Feeds")
+         }*/
+        
+        reloadFeeds()
         
         self.navigationItem.hidesBackButton = true
         
-//        navigationController?.setNavigationBarHidden(true, animated: false)
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        //        navigationController?.setNavigationBarHidden(true, animated: false)
+        //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-//        navigationController?.setNavigationBarHidden(false, animated: false)
+        //        navigationController?.setNavigationBarHidden(false, animated: false)
     }
-
-
+    
+    
 }
 
 
