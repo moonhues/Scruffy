@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(configuration)
         
-        
+        /*
         do {
             try PFUser.logInWithUsername("veronica", password: "veronica")
         } catch {
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             print("No logged in user :(")
         }
-        
+        */
 
         let acl = PFACL()
         acl.publicReadAccess = true

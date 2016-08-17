@@ -12,6 +12,7 @@ import Parse
 import ParseUI
 import Bond
 import BTNavigationDropdownMenu
+import JSSAlertView
 
 class FeedsViewController: UIViewController {
     
@@ -243,6 +244,11 @@ class FeedsViewController: UIViewController {
             if currentPosition < arrayOfPets.count - 1 {
                 currentPosition = currentPosition + 1
                 reloadView()
+            } else {
+                JSSAlertView().show(
+                    self, // the parent view controller of the alert
+                    title: "This is the last post :)" // the alert's title
+                )
             }
         }
         
@@ -254,6 +260,11 @@ class FeedsViewController: UIViewController {
             if currentPosition > 0 {
                 currentPosition = currentPosition - 1
                 reloadView()
+            } else {
+                JSSAlertView().show(
+                    self, // the parent view controller of the alert
+                    title: "This is the first post :)" // the alert's title
+                )
             }
         }
         
