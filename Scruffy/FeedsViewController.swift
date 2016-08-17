@@ -31,6 +31,7 @@ class FeedsViewController: UIViewController {
     var arrayOfPets: [Post] = []
     var arrayOfLikes: [PFObject] = []
     var currentPosition: Int = 0
+    var filterChoice: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +64,8 @@ class FeedsViewController: UIViewController {
         self.view.addGestureRecognizer(tapHandler!)
         
         //Drop down menu
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadDataFromParse), name: "Feed_Data_Updated", object: nil)
+        
         
         let items = ["Feeds", "Likes","Puppies","HDB Approved"]
         let menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Feeds", items: items)
@@ -76,16 +78,20 @@ class FeedsViewController: UIViewController {
         menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
             if indexPath == 3 {
+                self!.filterChoice = 3
                 self!.currentPosition = 0
                 self!.reloadApprovedFromParse()
             } else if indexPath == 2 {
+                self!.filterChoice = 2
                 self!.currentPosition = 0
                 self!.reloadPuppiesFromParse()
             } else if indexPath == 1 {
+                self!.filterChoice = 1
                 self!.currentPosition = 0
                 self!.reloadLikesFromParse()
                 print("Likes")
             } else {
+                self!.filterChoice = 0
                 self!.currentPosition = 0
                 self!.reloadDataFromParse()
                 print("Feeds")
@@ -384,7 +390,20 @@ class FeedsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        reloadDataFromParse()
+        //reloadDataFromParse()
+        
+        if filterChoice == 3 {
+            self.reloadApprovedFromParse()
+        } else if filterChoice == 2 {
+            self.reloadPuppiesFromParse()
+        } else if filterChoice == 1 {
+            self.reloadLikesFromParse()
+            print("Likes")
+        } else {
+            self.reloadDataFromParse()
+            print("Feeds")
+        }
+
         
         self.navigationItem.hidesBackButton = true
         
